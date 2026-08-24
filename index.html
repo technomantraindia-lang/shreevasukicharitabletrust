@@ -284,10 +284,6 @@ h1,h2,h3,.serif{font-family:'Playfair Display',serif;line-height:1.18}
 .hero-progress-line.running{
   animation:heroProgressFillAnim 5000ms linear forwards;
 }
-.hero-controls.paused .hero-progress-fill,
-.hero-controls.paused .hero-progress-line{
-  animation-play-state:paused;
-}
 
 @keyframes heroProgressFillAnim{
   from{width:0%}
@@ -1596,7 +1592,6 @@ dots.forEach((dot, i) => {
 
   function startAutoPlay() {
     stopAutoPlay();
-    if (heroControls) heroControls.classList.remove('paused');
     resetProgress();
     timer = setInterval(() => {
       goToSlide(currentIndex + 1);
@@ -1605,7 +1600,6 @@ dots.forEach((dot, i) => {
 
   function stopAutoPlay() {
     if (timer) clearInterval(timer);
-    if (heroControls) heroControls.classList.add('paused');
   }
 
   if (prevBtn) {
@@ -1628,12 +1622,6 @@ dots.forEach((dot, i) => {
       startAutoPlay();
     });
   });
-
-  const heroSection = document.getElementById('home');
-  if (heroSection) {
-    heroSection.addEventListener('mouseenter', stopAutoPlay);
-    heroSection.addEventListener('mouseleave', startAutoPlay);
-  }
 
   updateCounter();
   startAutoPlay();
