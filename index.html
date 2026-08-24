@@ -194,12 +194,92 @@ h1,h2,h3,.serif{font-family:'Playfair Display',serif;line-height:1.18}
    ============================================================ */
 .hero{
   position:relative;
-  background:#fff url("home page banner.png") center right / cover no-repeat;
+  overflow:hidden;
+  background:#fff;
   padding:80px 0 140px;
   min-height:640px;
   display:flex;
   align-items:center;
 }
+.hero-slider{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+}
+.hero-slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center right;
+  background-repeat:no-repeat;
+  opacity:0;
+  transition:opacity 1s cubic-bezier(.22,.61,.36,1), transform 1.2s cubic-bezier(.22,.61,.36,1);
+  transform:scale(1.03);
+}
+.hero-slide.active{
+  opacity:1;
+  transform:scale(1);
+}
+
+/* Hero Controls */
+.hero-controls{
+  position:absolute;
+  bottom:32px;
+  right:48px;
+  z-index:10;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  padding:8px 18px;
+  border-radius:999px;
+  border:1px solid rgba(238,235,252,.9);
+  box-shadow:0 12px 30px rgba(22,22,79,.10);
+}
+.hero-arrow{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  background:#fff;
+  border:1px solid #ECE4FA;
+  color:var(--purple-2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:all .25s var(--ease);
+}
+.hero-arrow:hover{
+  background:var(--purple-2);
+  color:#fff;
+  border-color:var(--purple-2);
+  transform:translateY(-1px);
+}
+.hero-arrow svg{width:16px;height:16px}
+.hero-dots{
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.hero-dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:#D5CEF6;
+  border:none;
+  cursor:pointer;
+  padding:0;
+  transition:all .3s var(--ease);
+}
+.hero-dot.active{
+  width:28px;
+  border-radius:12px;
+  background:var(--purple-2);
+}
+
 .hero-copy{max-width:540px;position:relative;z-index:3}
 .hero-tag{
   display:inline-flex;align-items:center;gap:10px;
@@ -738,6 +818,13 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
 <main>
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
+  <div class="hero-slider" id="heroSlider">
+    <div class="hero-slide active" style="background-image: url('home page banner.png');"></div>
+    <div class="hero-slide" style="background-image: url('banner section 2.png');"></div>
+    <div class="hero-slide" style="background-image: url('banner sction 3.png');"></div>
+    <div class="hero-slide" style="background-image: url('banner section 4.png');"></div>
+  </div>
+
   <div class="container">
     <div class="hero-copy">
       <span class="hero-tag">
@@ -777,6 +864,21 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
         </span>
       </div>
     </div>
+  </div>
+
+  <div class="hero-controls" aria-label="Banner Slider Navigation">
+    <button class="hero-arrow prev" id="heroPrev" aria-label="Previous Slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+    </button>
+    <div class="hero-dots" id="heroDots">
+      <button class="hero-dot active" aria-label="Slide 1"></button>
+      <button class="hero-dot" aria-label="Slide 2"></button>
+      <button class="hero-dot" aria-label="Slide 3"></button>
+      <button class="hero-dot" aria-label="Slide 4"></button>
+    </div>
+    <button class="hero-arrow next" id="heroNext" aria-label="Next Slide">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+    </button>
   </div>
 </section>
 
@@ -1292,14 +1394,65 @@ dots.forEach((dot, i) => {
   });
 });
 
-/* ---------- Subtle hero parallax ---------- */
-const heroImg = document.querySelector('.hero-photo img');
-if (heroImg && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
-  window.addEventListener('scroll', () => {
-    const y = Math.min(window.scrollY, 600);
-    heroImg.style.transform = `translateY(${y * 0.06}px) scale(1.02)`;
-  }, {passive:true});
-}
+/* ---------- Hero Banner Slider ---------- */
+(function() {
+  const slides = document.querySelectorAll('.hero-slide');
+  const dots = document.querySelectorAll('#heroDots .hero-dot');
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let timer = null;
+
+  function goToSlide(index) {
+    slides[currentIndex].classList.remove('active');
+    if (dots[currentIndex]) dots[currentIndex].classList.remove('active');
+    currentIndex = (index + slides.length) % slides.length;
+    slides[currentIndex].classList.add('active');
+    if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+  }
+
+  function startAutoPlay() {
+    stopAutoPlay();
+    timer = setInterval(() => {
+      goToSlide(currentIndex + 1);
+    }, 5000);
+  }
+
+  function stopAutoPlay() {
+    if (timer) clearInterval(timer);
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      goToSlide(currentIndex - 1);
+      startAutoPlay();
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      goToSlide(currentIndex + 1);
+      startAutoPlay();
+    });
+  }
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      goToSlide(i);
+      startAutoPlay();
+    });
+  });
+
+  const heroSection = document.getElementById('home');
+  if (heroSection) {
+    heroSection.addEventListener('mouseenter', stopAutoPlay);
+    heroSection.addEventListener('mouseleave', startAutoPlay);
+  }
+
+  startAutoPlay();
+})();
 
 /* ---------- Active nav on scroll ---------- */
 const sections = document.querySelectorAll('main section[id], div[id="news"]');
