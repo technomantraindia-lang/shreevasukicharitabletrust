@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#16164F">
+<meta name="description" content="Shree Vasuki Charitable Trust — serving humanity through Old Age Home care, Gau Seva, Hospital & Street Food Service, and Student Education Support. Compassion today, dignity always.">
+<meta property="og:title" content="Shree Vasuki Charitable Trust">
+<meta property="og:description" content="Compassion Today, Dignity Always. Old Age Home Care – Our Primary Mission.">
+<meta property="og:type" content="website">
+<title>Shree Vasuki Charitable Trust | Old Age Home, Gau Seva, Food Seva & Education Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,600&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   SHREE VASUKI CHARITABLE TRUST — rebuilt to master reference
+   ============================================================ */
+:root{
+  --purple:#34259A;
+  --purple-2:#4B3BC5;
+  --navy:#16164F;
+  --band:#33289B;
+  --lav:#F7F6FF;
+  --lav-2:#EEEBFC;
+  --ink:#12143D;
+  --muted:#555875;
+  --white:#FFFFFF;
+  --radius-lg:22px;
+  --radius-md:18px;
+  --shadow-soft:0 24px 60px rgba(22,22,79,.10);
+  --shadow-lift:0 32px 70px rgba(22,22,79,.16);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  font-family:'Poppins',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;background:none;border:none;cursor:pointer;color:inherit}
+section{scroll-margin-top:92px}
+
+.container{width:min(1280px,100% - 48px);margin-inline:auto}
+
+/* ---------- Typography helpers ---------- */
+h1,h2,h3,.serif{font-family:'Playfair Display',serif;line-height:1.18}
+.eyebrow{
+  display:inline-block;
+  font-size:11.5px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--purple-2);
+  margin-bottom:14px;
+}
+.section-head{text-align:center;max-width:640px;margin:0 auto 52px}
+.section-head h2{font-size:clamp(30px,3.4vw,42px);font-weight:700;color:var(--ink)}
+.section-head p{margin-top:12px;font-size:15px;color:var(--muted)}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'Poppins',sans-serif;font-size:14px;font-weight:600;
+  padding:13px 28px;border-radius:999px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s,border-color .3s;
+  white-space:nowrap;
+}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 12px 26px rgba(52,37,154,.28)}
+.btn-primary:hover{background:var(--purple-2);transform:translateY(-2px);box-shadow:0 16px 32px rgba(52,37,154,.34)}
+.btn-outline{border:1.6px solid var(--purple);color:var(--purple);background:transparent}
+.btn-outline:hover{background:var(--purple);color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--purple)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 14px 30px rgba(0,0,0,.22)}
+.btn-ghost-white{border:1.6px solid rgba(255,255,255,.75);color:#fff}
+.btn-ghost-white:hover{background:#fff;color:var(--purple);transform:translateY(-2px)}
+.btn-sm{padding:10px 20px;font-size:13px}
+
+/* ---------- Reveal animations ---------- */
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.12s}
+.reveal[data-delay="2"]{transition-delay:.24s}
+.reveal[data-delay="3"]{transition-delay:.36s}
+.reveal[data-delay="4"]{transition-delay:.48s}
+@media (prefers-reduced-motion:reduce){
+  .reveal{opacity:1;transform:none;transition:none}
+  *{animation-duration:.01ms !important;animation-iteration-count:1 !important}
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:sticky;top:0;z-index:100;
+  background:#fff;
+  border-bottom:1px solid #EFEDFA;
+  transition:box-shadow .3s var(--ease);
+}
+.header.scrolled{box-shadow:0 10px 30px rgba(22,22,79,.08)}
+.header-inner{
+  max-width:1440px;margin-inline:auto;
+  height:78px;padding-inline:32px;
+  display:flex;align-items:center;justify-content:space-between;gap:24px;
+}
+.logo img{height:46px;width:auto}
+.nav{display:flex;align-items:center;gap:26px}
+.nav > a,.nav-drop-toggle{
+  position:relative;display:inline-flex;align-items:center;gap:5px;
+  font-size:13.5px;font-weight:500;color:var(--ink);
+  padding:6px 0;transition:color .25s;
+}
+.nav > a:hover,.nav-drop-toggle:hover{color:var(--purple)}
+.nav > a.active{color:var(--purple);font-weight:600}
+.nav > a.active::after{
+  content:"";position:absolute;left:0;right:0;bottom:-4px;height:2.5px;
+  border-radius:3px;background:var(--purple);
+}
+.nav-drop{position:relative}
+.nav-drop .chev{width:11px;height:11px;transition:transform .25s}
+.nav-drop.open .chev,.nav-drop:hover .chev{transform:rotate(180deg)}
+.drop-menu{
+  position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,8px);
+  min-width:230px;background:#fff;border:1px solid #EFEDFA;border-radius:14px;
+  box-shadow:0 22px 50px rgba(22,22,79,.14);
+  padding:10px;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .28s var(--ease),transform .28s var(--ease);
+}
+.nav-drop:hover .drop-menu,.nav-drop:focus-within .drop-menu,.nav-drop.open .drop-menu{
+  opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0);
+}
+.drop-menu a{
+  display:block;padding:9px 14px;border-radius:9px;
+  font-size:13px;font-weight:500;color:var(--ink);transition:background .2s,color .2s,padding-left .2s;
+}
+.drop-menu a:hover{background:var(--lav);color:var(--purple);padding-left:18px}
+.header-actions{display:flex;align-items:center;gap:14px}
+.phone-btn{
+  display:inline-flex;align-items:center;gap:8px;
+  border:1.6px solid var(--lav-2);border-radius:999px;
+  padding:10px 18px;font-size:13px;font-weight:600;color:var(--ink);
+  transition:border-color .25s,color .25s,transform .25s;
+}
+.phone-btn svg{width:15px;height:15px;color:var(--purple)}
+.phone-btn:hover{border-color:var(--purple);color:var(--purple);transform:translateY(-1px)}
+
+/* Hamburger */
+.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;z-index:130}
+.hamburger span{width:24px;height:2.4px;border-radius:3px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7.4px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7.4px) rotate(-45deg)}
+
+/* Mobile menu */
+.mobile-menu{
+  position:fixed;inset:0 0 0 auto;width:min(340px,88vw);z-index:120;
+  background:#fff;box-shadow:-24px 0 60px rgba(22,22,79,.18);
+  padding:96px 28px 32px;
+  transform:translateX(105%);transition:transform .4s var(--ease);
+  display:flex;flex-direction:column;gap:4px;overflow-y:auto;
+}
+.mobile-menu.open{transform:none}
+.mobile-menu > nav{display:flex;flex-direction:column}
+.mobile-menu a.mlink{
+  padding:12px 4px;font-size:15px;font-weight:500;color:var(--ink);
+  border-bottom:1px solid #F3F1FC;
+}
+.mobile-menu a.mlink:hover{color:var(--purple)}
+.mm-group-toggle{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:12px 4px;font-size:15px;font-weight:500;color:var(--ink);
+  border-bottom:1px solid #F3F1FC;text-align:left;
+}
+.mm-group-toggle svg{width:12px;height:12px;transition:transform .3s}
+.mm-group-toggle.open svg{transform:rotate(180deg)}
+.mm-sub{max-height:0;overflow:hidden;transition:max-height .35s var(--ease)}
+.mm-sub.open{max-height:320px}
+.mm-sub a{display:block;padding:9px 4px 9px 18px;font-size:13.5px;color:var(--muted)}
+.mm-sub a:hover{color:var(--purple)}
+.mm-actions{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.menu-backdrop{
+  position:fixed;inset:0;z-index:110;background:rgba(18,20,61,.45);
+  opacity:0;visibility:hidden;transition:opacity .35s;
+}
+.menu-backdrop.show{opacity:1;visibility:visible}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{position:relative;background:#fff}
+.hero-grid{
+  display:grid;grid-template-columns:42fr 58fr;align-items:center;
+  min-height:560px;
+}
+.hero-copy{padding:64px 24px 130px 0;position:relative;z-index:3}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--lav);border:1px solid var(--lav-2);color:var(--purple);
+  font-size:11.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;
+  padding:8px 16px;border-radius:999px;margin-bottom:22px;
+}
+.hero-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--purple-2)}
+.hero h1{font-size:clamp(40px,4.6vw,62px);font-weight:800;letter-spacing:-.01em}
+.hero h1 .l1{color:var(--ink);display:block}
+.hero h1 .l2{color:var(--purple);display:block}
+.hero-sub{margin:22px 0 30px;max-width:480px;font-size:15.5px;color:var(--muted)}
+.hero-btns{display:flex;flex-wrap:wrap;gap:14px;margin-bottom:34px}
+.hero-benefits{display:flex;flex-wrap:wrap;gap:12px 26px}
+.benefit{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;color:var(--ink)}
+.benefit i{
+  width:36px;height:36px;flex:none;border-radius:50%;
+  background:var(--lav);border:1px solid var(--lav-2);
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.benefit i svg{width:17px;height:17px;color:var(--purple)}
+
+/* Hero media */
+.hero-media{position:relative;height:560px;z-index:1}
+.hero-photo{
+  position:absolute;inset:6px 0 30px 0;
+  border-radius:0 0 0 250px;overflow:hidden;
+  box-shadow:0 40px 80px rgba(22,22,79,.18);
+}
+.hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center 30%;will-change:transform}
+.hero-photo::after{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(200deg,rgba(52,37,154,.10) 0%,rgba(22,22,79,.06) 45%,rgba(52,37,154,.22) 100%);
+  pointer-events:none;
+}
+/* curved purple swoosh beneath the image */
+.hero-swoosh{
+  position:absolute;left:0;right:0;bottom:-1px;height:130px;
+  z-index:2;pointer-events:none;
+}
+.hero-swoosh svg{width:100%;height:100%;display:block}
+/* floating circular badge */
+.hero-badge{
+  position:absolute;right:44px;bottom:74px;z-index:4;
+  width:150px;height:150px;border-radius:50%;
+  background:#fff;box-shadow:0 22px 50px rgba(22,22,79,.22);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  animation:badgeFloat 6s ease-in-out infinite;
+}
+.hero-badge b{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:var(--ink);line-height:1.25}
+.hero-badge b em{font-style:normal;color:var(--purple)}
+.hero-badge .bh{margin-top:5px;color:var(--purple);font-size:15px}
+@keyframes badgeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+
+/* ============================================================
+   STATS FLOATING CARD
+   ============================================================ */
+.stats-wrap{position:relative;z-index:5;padding:0 24px}
+.stats-card{
+  width:min(1240px,100%);margin:-86px auto 0;
+  background:#fff;border-radius:var(--radius-lg);
+  box-shadow:var(--shadow-soft);
+  display:flex;align-items:stretch;
+  padding:34px 8px;
+}
+.stat{flex:1;text-align:center;padding:6px 18px;position:relative}
+.stat + .stat::before{
+  content:"";position:absolute;left:0;top:14%;bottom:14%;width:1px;background:#EEECFA;
+}
+.stat-icon{
+  width:48px;height:48px;margin:0 auto 12px;border-radius:50%;
+  background:var(--lav);border:1px solid var(--lav-2);
+  display:flex;align-items:center;justify-content:center;
+}
+.stat-icon svg{width:23px;height:23px;color:var(--purple)}
+.stat-num{
+  font-family:'Poppins',sans-serif;font-size:26px;font-weight:700;
+  color:var(--purple);letter-spacing:-.01em;line-height:1.2;
+}
+.stat-label{margin-top:4px;font-size:12.5px;font-weight:500;color:var(--muted)}
+
+/* ============================================================
+   SERVICES
+   ============================================================ */
+.services{padding:104px 0 96px;background:linear-gradient(180deg,#fff 0%,var(--lav) 18%,var(--lav) 82%,#fff 100%)}
+.services-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
+.service-card{
+  background:#fff;border:1px solid #ECEAFB;border-radius:20px;
+  padding:12px 12px 24px;display:flex;flex-direction:column;
+  box-shadow:0 10px 26px rgba(22,22,79,.06);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+}
+.service-card:hover{transform:translateY(-7px);box-shadow:var(--shadow-lift)}
+.service-img{border-radius:14px;overflow:hidden;height:172px}
+.service-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.service-card:hover .service-img img{transform:scale(1.06)}
+.service-icon{
+  width:54px;height:54px;margin:-27px auto 0;position:relative;z-index:2;
+  border-radius:50%;background:var(--purple);color:#fff;
+  border:4px solid #fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 22px rgba(52,37,154,.32);
+  transition:background .3s;
+}
+.service-card:hover .service-icon{background:var(--purple-2)}
+.service-icon svg{width:23px;height:23px}
+.service-card h3{margin-top:14px;text-align:center;font-family:'Poppins',sans-serif;font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.35}
+.service-card p{margin-top:8px;text-align:center;font-size:12.5px;color:var(--muted);line-height:1.6;flex:1}
+.learn-more{
+  margin-top:14px;display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  font-size:12.5px;font-weight:600;color:var(--purple);
+}
+.learn-more .arr{transition:transform .3s var(--ease)}
+.service-card:hover .learn-more .arr{transform:translateX(5px)}
+
+/* ============================================================
+   ABOUT
+   ============================================================ */
+.about{padding:100px 0}
+.about-grid{display:grid;grid-template-columns:1.02fr 1fr .92fr;gap:52px;align-items:start}
+.about-copy h2{font-size:clamp(30px,3.2vw,40px);font-weight:700;color:var(--ink)}
+.about-copy > p{margin:18px 0 24px;font-size:14.5px;color:var(--muted)}
+.about-checks{display:flex;flex-direction:column;gap:13px;margin-bottom:30px}
+.about-checks li{display:flex;align-items:center;gap:11px;font-size:14px;font-weight:600;color:var(--ink)}
+.check-dot{
+  width:24px;height:24px;flex:none;border-radius:50%;
+  background:var(--lav);display:inline-flex;align-items:center;justify-content:center;
+}
+.check-dot svg{width:12px;height:12px;color:var(--purple)}
+
+.about-collage{display:grid;grid-template-columns:1.25fr 1fr;grid-template-rows:1fr 1fr;gap:14px;height:470px}
+.collage-item{border-radius:18px;overflow:hidden}
+.collage-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.collage-item:hover img{transform:scale(1.05)}
+.collage-big{grid-row:1 / span 2}
+
+.about-values{display:flex;flex-direction:column}
+.value-item{display:flex;gap:16px;padding:20px 0}
+.value-item + .value-item{border-top:1px solid #EFEDFA}
+.value-icon{
+  width:48px;height:48px;flex:none;border-radius:50%;
+  background:var(--lav);border:1px solid var(--lav-2);
+  display:flex;align-items:center;justify-content:center;
+}
+.value-icon svg{width:21px;height:21px;color:var(--purple)}
+.value-item h4{font-family:'Poppins',sans-serif;font-size:15.5px;font-weight:600;color:var(--ink)}
+.value-item p{margin-top:5px;font-size:13px;color:var(--muted);line-height:1.65}
+
+/* ============================================================
+   PROGRAMS — HOW WE HELP EVERY DAY
+   ============================================================ */
+.programs{padding:20px 0 104px;background:#fff}
+.programs-row{display:grid;grid-template-columns:repeat(5,1fr);gap:34px 26px}
+.program{text-align:center;padding:0 6px}
+.program-icon{
+  width:58px;height:58px;margin:0 auto 16px;border-radius:50%;
+  background:var(--lav);border:1px solid var(--lav-2);
+  display:flex;align-items:center;justify-content:center;
+  transition:transform .3s var(--ease),background .3s;
+}
+.program:hover .program-icon{transform:translateY(-4px);background:#fff}
+.program-icon svg{width:25px;height:25px;color:var(--purple)}
+.program h4{font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:600;color:var(--purple)}
+.program p{margin-top:8px;font-size:12.5px;color:var(--muted);line-height:1.65}
+
+/* ============================================================
+   MOMENTS OF IMPACT — GALLERY BAND
+   ============================================================ */
+.gallery-band{background:var(--band);padding:58px 0 62px}
+.band-head{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:30px}
+.band-head h2{font-size:clamp(26px,2.8vw,34px);font-weight:700;color:#fff}
+.band-btn{
+  display:inline-flex;align-items:center;gap:8px;flex:none;
+  border:1.5px solid rgba(255,255,255,.55);border-radius:999px;
+  padding:10px 22px;font-size:13px;font-weight:600;color:#fff;
+  transition:background .3s,color .3s,transform .3s;
+}
+.band-btn:hover{background:#fff;color:var(--band);transform:translateY(-2px)}
+.gallery-track{
+  display:grid;grid-auto-flow:column;grid-auto-columns:216px;gap:16px;
+  overflow-x:auto;padding-bottom:8px;
+  scrollbar-width:thin;scrollbar-color:rgba(255,255,255,.4) transparent;
+  scroll-snap-type:x proximity;
+}
+.gallery-track::-webkit-scrollbar{height:6px}
+.gallery-track::-webkit-scrollbar-thumb{background:rgba(255,255,255,.35);border-radius:99px}
+.gallery-item{
+  height:152px;border-radius:11px;overflow:hidden;scroll-snap-align:start;
+  border:1px solid rgba(255,255,255,.35);
+}
+.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .55s var(--ease)}
+.gallery-item:hover img{transform:scale(1.07)}
+
+/* ============================================================
+   SPECIAL SERVICES & CELEBRATIONS
+   ============================================================ */
+.celebrate{padding:96px 0}
+.celebrate-card{
+  position:relative;width:min(1180px,100%);margin-inline:auto;
+  background:linear-gradient(130deg,var(--purple-2) 0%,var(--purple) 52%,#2A1E86 100%);
+  border-radius:28px;
+  padding:66px 120px;text-align:center;
+  box-shadow:0 40px 90px rgba(52,37,154,.35);
+  overflow:hidden;
+}
+.celebrate-card::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(600px 240px at 12% 0%,rgba(255,255,255,.10),transparent 60%),
+             radial-gradient(600px 240px at 88% 100%,rgba(255,255,255,.08),transparent 60%);
+  pointer-events:none;
+}
+.celebrate-deco{position:absolute;top:50%;transform:translateY(-50%);color:rgba(255,255,255,.30);pointer-events:none}
+.celebrate-deco svg{width:104px;height:104px}
+.celebrate-deco.left{left:52px}
+.celebrate-deco.right{right:52px}
+.celebrate-card h2{position:relative;font-size:clamp(26px,3vw,36px);font-weight:700;color:var(--lav)}
+.celebrate-card p{
+  position:relative;margin:18px auto 0;max-width:780px;
+  font-size:14.5px;line-height:1.85;color:rgba(255,255,255,.88);
+}
+
+/* ============================================================
+   TESTIMONIALS
+   ============================================================ */
+.testimonials{padding:20px 0 104px;background:linear-gradient(180deg,#fff,var(--lav) 60%,#fff)}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.testi-card{
+  background:#fff;border:1px solid #ECEAFB;border-radius:var(--radius-md);
+  padding:30px 28px 26px;display:flex;flex-direction:column;
+  box-shadow:0 12px 30px rgba(22,22,79,.06);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease),opacity .3s;
+}
+.testi-card:hover{transform:translateY(-5px);box-shadow:var(--shadow-lift)}
+.quote-mark{font-family:'Playfair Display',serif;font-size:62px;line-height:.6;color:var(--purple);margin-bottom:18px}
+.testi-text{font-size:13.5px;color:var(--muted);line-height:1.8;flex:1}
+.testi-divider{height:1px;background:#EFEDFA;margin:20px 0 16px}
+.testi-person{display:flex;align-items:center;gap:13px}
+.testi-avatar{width:48px;height:48px;border-radius:50%;overflow:hidden;flex:none;border:2px solid var(--lav-2)}
+.testi-avatar img{width:100%;height:100%;object-fit:cover}
+.testi-person b{display:block;font-size:14.5px;font-weight:600;color:var(--ink);line-height:1.3}
+.testi-person .role{font-size:12px;color:var(--muted)}
+.testi-dots{display:flex;justify-content:center;gap:9px;margin-top:34px}
+.testi-dots button{
+  width:9px;height:9px;border-radius:99px;background:#D9D5F2;
+  transition:width .3s var(--ease),background .3s;
+}
+.testi-dots button.active{width:26px;background:var(--purple)}
+
+/* ============================================================
+   FINAL CTA STRIP
+   ============================================================ */
+.final-cta{
+  background:linear-gradient(115deg,#2A1E86 0%,var(--band) 55%,var(--purple) 100%);
+  padding:34px 0;
+}
+.cta-inner{display:flex;align-items:center;gap:34px}
+.cta-logo{
+  flex:none;width:76px;height:76px;border-radius:18px;background:#fff;
+  display:flex;align-items:center;justify-content:center;padding:10px;
+  box-shadow:0 14px 34px rgba(0,0,0,.25);
+}
+.cta-logo img{max-height:100%;width:auto}
+.cta-center{flex:1;min-width:0}
+.cta-center h2{font-size:clamp(20px,2.2vw,27px);font-weight:700;color:#fff}
+.cta-center p{margin-top:6px;font-size:13px;color:rgba(255,255,255,.82);line-height:1.65}
+.cta-btns{display:flex;flex-wrap:wrap;gap:12px;flex:none}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{background:var(--navy);color:#fff;padding:68px 0 0}
+.footer-grid{
+  display:grid;grid-template-columns:1.7fr 1fr 1.15fr 1.1fr 1.35fr;gap:38px;
+  padding-bottom:52px;
+}
+.footer-brand img{height:52px;width:auto;margin-bottom:18px}
+.footer-brand p{font-size:13px;color:rgba(255,255,255,.68);line-height:1.75;max-width:270px}
+.footer-social{display:flex;gap:10px;margin-top:20px}
+.footer-social a{
+  width:36px;height:36px;border-radius:50%;
+  border:1px solid rgba(255,255,255,.22);
+  display:inline-flex;align-items:center;justify-content:center;
+  color:#fff;transition:background .3s,transform .3s,border-color .3s;
+}
+.footer-social a:hover{background:var(--purple-2);border-color:var(--purple-2);transform:translateY(-3px)}
+.footer-social svg{width:15px;height:15px}
+.footer h4{
+  font-family:'Poppins',sans-serif;font-size:14.5px;font-weight:600;color:#fff;
+  margin-bottom:20px;position:relative;padding-bottom:12px;
+}
+.footer h4::after{content:"";position:absolute;left:0;bottom:0;width:34px;height:2.5px;border-radius:3px;background:var(--purple-2)}
+.footer-links li{margin-bottom:11px}
+.footer-links a{
+  font-size:13px;color:rgba(255,255,255,.68);
+  transition:color .25s,padding-left .25s;
+}
+.footer-links a:hover{color:#fff;padding-left:6px}
+.footer-contact li{display:flex;gap:12px;margin-bottom:15px;font-size:13px;color:rgba(255,255,255,.68);line-height:1.65}
+.footer-contact svg{width:16px;height:16px;flex:none;margin-top:3px;color:#A79DF0}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);
+  padding:22px 0;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+  font-size:12.5px;color:rgba(255,255,255,.6);
+}
+.footer-bottom .heart{color:#FF7BAC}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width:1180px){
+  .nav{gap:18px}
+  .phone-btn span{display:none}
+  .phone-btn{padding:10px 12px}
+}
+@media (max-width:1080px){
+  .nav,.header-actions .btn-primary{display:none}
+  .hamburger{display:flex}
+  /* hero 50/50 */
+  .hero-grid{grid-template-columns:1fr 1fr}
+  .hero-copy{padding-right:0}
+  /* stats 3 + 2 */
+  .stats-card{flex-wrap:wrap;row-gap:26px}
+  .stat{flex:0 0 33.333%}
+  .stat:nth-child(4)::before{display:none}
+  /* services 3 cols */
+  .services-grid{grid-template-columns:repeat(3,1fr)}
+  .service-img{height:190px}
+  /* about stacks */
+  .about-grid{grid-template-columns:1fr 1fr;gap:44px}
+  .about-values{grid-column:1 / -1;flex-direction:row;flex-wrap:wrap;gap:8px 40px}
+  .value-item{flex:1 1 240px;border-top:none !important;padding:14px 0}
+  /* programs 2-3 cols */
+  .programs-row{grid-template-columns:repeat(3,1fr)}
+  .celebrate-card{padding:56px 64px}
+  .celebrate-deco svg{width:76px;height:76px}
+  .celebrate-deco.left{left:28px}
+  .celebrate-deco.right{right:28px}
+  .testi-grid{grid-template-columns:1fr 1fr}
+  .testi-card:nth-child(3){display:none}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media (max-width:860px){
+  /* hero stacks: text first, image below */
+  .hero-grid{grid-template-columns:1fr;min-height:0}
+  .hero-copy{padding:56px 0 34px}
+  .hero-media{height:400px;margin:0 -24px}
+  .hero-photo{inset:0 0 22px 0;border-radius:0 0 0 150px}
+  .hero-swoosh{height:88px}
+  .hero-badge{width:118px;height:118px;right:26px;bottom:52px}
+  .hero-badge b{font-size:15px}
+  .stats-card{margin-top:-64px;padding:26px 6px}
+  .stat{flex:0 0 50%}
+  .stat:nth-child(3)::before{display:none}
+  .stat:nth-child(odd)::before{display:none}
+  .services{padding:84px 0 76px}
+  .services-grid{grid-template-columns:1fr 1fr}
+  .about{padding:80px 0}
+  .about-grid{grid-template-columns:1fr}
+  .about-collage{height:380px}
+  .programs{padding-bottom:84px}
+  .programs-row{grid-template-columns:1fr 1fr;gap:30px 20px}
+  .band-head{flex-direction:column;align-items:flex-start}
+  .celebrate{padding:76px 0}
+  .celebrate-card{padding:48px 34px;border-radius:24px}
+  .celebrate-deco{display:none}
+  .testi-grid{grid-template-columns:1fr}
+  .testi-card:nth-child(3){display:flex}
+  .cta-inner{flex-direction:column;text-align:center;gap:20px}
+  .cta-btns{justify-content:center}
+  .final-cta{padding:40px 0}
+}
+@media (max-width:560px){
+  .container{width:calc(100% - 36px)}
+  .header-inner{padding-inline:18px;height:70px}
+  .logo img{height:40px}
+  .hero h1{font-size:clamp(34px,9.4vw,44px)}
+  .hero-media{height:330px}
+  .hero-btns .btn{flex:1 1 auto;justify-content:center}
+  .hero-benefits{gap:10px 18px}
+  .benefit{font-size:11.5px}
+  .benefit i{width:31px;height:31px}
+  .stats-card{flex-direction:column;align-items:stretch;gap:0;padding:10px 0}
+  .stat{flex:auto;padding:16px 10px}
+  .stat::before{display:none !important}
+  .stat + .stat{border-top:1px solid #EEECFA}
+  .services-grid{grid-template-columns:1fr}
+  .service-img{height:210px}
+  .about-collage{grid-template-columns:1fr 1fr;height:auto}
+  .collage-big{grid-row:auto;grid-column:1 / -1;height:220px}
+  .collage-item:not(.collage-big){height:170px}
+  .programs-row{grid-template-columns:1fr 1fr}
+  .gallery-track{grid-auto-columns:170px}
+  .gallery-item{height:126px}
+  .footer-grid{grid-template-columns:1fr;gap:34px}
+  .footer-bottom{justify-content:center;text-align:center}
+}
+
+/* Focus visibility */
+a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a class="logo" href="#home" aria-label="Shree Vasuki Charitable Trust — home">
+      <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust logo">
+    </a>
+
+    <nav class="nav" aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#about">About Us</a>
+      <div class="nav-drop">
+        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-haspopup="true">
+          Our Programs
+          <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="#services">All Programs</a>
+          <a role="menuitem" href="#svc-oldage">Old Age Home</a>
+          <a role="menuitem" href="#svc-gauseva">Gau Seva</a>
+          <a role="menuitem" href="#svc-hospital">Hospital Food Service</a>
+          <a role="menuitem" href="#svc-street">Street Food Service</a>
+          <a role="menuitem" href="#svc-education">Student Education Support</a>
+        </div>
+      </div>
+      <div class="nav-drop">
+        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-haspopup="true">
+          Get Involved
+          <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="drop-menu" role="menu">
+          <a role="menuitem" href="#donate">Donate Now</a>
+          <a role="menuitem" href="#celebrate">Sponsor a Meal</a>
+          <a role="menuitem" href="#contact">Become a Volunteer</a>
+        </div>
+      </div>
+      <a href="#gallery">Gallery</a>
+      <a href="#news">News & Updates</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+
+    <div class="header-actions">
+      <a class="phone-btn" href="tel:+919876543210">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 98765 43210</span>
+      </a>
+      <a href="#donate" class="btn btn-primary btn-sm">Donate Now</a>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+<div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <nav>
+    <a class="mlink" href="#home">Home</a>
+    <a class="mlink" href="#about">About Us</a>
+    <button type="button" class="mm-group-toggle" aria-expanded="false">
+      Our Programs
+      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mm-sub">
+      <a href="#services">All Programs</a>
+      <a href="#svc-oldage">Old Age Home</a>
+      <a href="#svc-gauseva">Gau Seva</a>
+      <a href="#svc-hospital">Hospital Food Service</a>
+      <a href="#svc-street">Street Food Service</a>
+      <a href="#svc-education">Student Education Support</a>
+    </div>
+    <button type="button" class="mm-group-toggle" aria-expanded="false">
+      Get Involved
+      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="mm-sub">
+      <a href="#donate">Donate Now</a>
+      <a href="#celebrate">Sponsor a Meal</a>
+      <a href="#contact">Become a Volunteer</a>
+    </div>
+    <a class="mlink" href="#gallery">Gallery</a>
+    <a class="mlink" href="#news">News & Updates</a>
+    <a class="mlink" href="#contact">Contact Us</a>
+  </nav>
+  <div class="mm-actions">
+    <a class="phone-btn" href="tel:+919876543210" style="justify-content:center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+91 98765 43210</span>
+    </a>
+    <a href="#donate" class="btn btn-primary">♥ Donate Now</a>
+  </div>
+</div>
+
+<main>
+<!-- ================= HERO ================= -->
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="hero-tag">Old Age Home Care – Our Primary Mission</span>
+      <h1>
+        <span class="l1">Compassion Today,</span>
+        <span class="l2">Dignity Always.</span>
+      </h1>
+      <p class="hero-sub">At Shree Vasuki Charitable Trust, we serve the elderly with love and respect, ensuring a safe, healthy, and dignified life in our Old Age Home.</p>
+      <div class="hero-btns">
+        <a href="#donate" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          Donate Now
+        </a>
+        <a href="#about" class="btn btn-outline">Join Our Mission</a>
+      </div>
+      <div class="hero-benefits">
+        <span class="benefit">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></i>
+          Safe & Loving Environment
+        </span>
+        <span class="benefit">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></i>
+          Nutritious Food & Healthcare
+        </span>
+        <span class="benefit">
+          <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></i>
+          24/7 Care & Support
+        </span>
+      </div>
+    </div>
+
+    <div class="hero-media" aria-hidden="false">
+      <div class="hero-photo">
+        <img src="image/12.jpeg" alt="Indian caregiver lovingly holding hands with a smiling elderly woman at the Old Age Home" fetchpriority="high">
+      </div>
+      <div class="hero-swoosh" aria-hidden="true">
+        <svg viewBox="0 0 1440 140" preserveAspectRatio="none">
+          <defs>
+            <linearGradient id="swooshGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#4B3BC5"/>
+              <stop offset=".55" stop-color="#34259A"/>
+              <stop offset="1" stop-color="#2A1E86"/>
+            </linearGradient>
+          </defs>
+          <path d="M0,96 C240,142 430,58 720,76 C1010,94 1210,34 1440,82 L1440,140 L0,140 Z" fill="url(#swooshGrad)"/>
+        </svg>
+      </div>
+      <div class="hero-badge" aria-hidden="true">
+        <b>Serving<br><em>Humanity</em><br>with Heart</b>
+        <span class="bh">♥</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STATISTICS FLOATING CARD ================= -->
+<div class="stats-wrap">
+  <div class="stats-card reveal" role="list" aria-label="Trust impact statistics">
+    <div class="stat" role="listitem">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+      <div class="stat-num" data-count="2350" data-suffix="+">0</div>
+      <div class="stat-label">Elders in Our Care</div>
+    </div>
+    <div class="stat" role="listitem">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+      <div class="stat-num" data-count="1250000" data-suffix="+">0</div>
+      <div class="stat-label">Meals Served</div>
+    </div>
+    <div class="stat" role="listitem">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></div>
+      <div class="stat-num" data-count="180000" data-suffix="+">0</div>
+      <div class="stat-label">Lives Impacted</div>
+    </div>
+    <div class="stat" role="listitem">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+      <div class="stat-num" data-count="3500" data-suffix="+">0</div>
+      <div class="stat-label">Students Supported</div>
+    </div>
+    <div class="stat" role="listitem">
+      <div class="stat-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.2 5.5C3 5.5 2 6.6 2 8c0 .9.5 1.7 1.2 2.1L3 13.5C3 15.4 4.6 17 6.5 17h.3v2.3c0 .4.3.7.7.7s.7-.3.7-.7V17h7.6v2.3c0 .4.3.7.7.7s.7-.3.7-.7V17h.3c1.9 0 3.5-1.6 3.5-3.5l-.2-3.4c.7-.4 1.2-1.2 1.2-2.1 0-1.4-1-2.5-2.2-2.5-.6 0-1.2.3-1.5.8H5.7c-.3-.5-.9-.8-1.5-.8z"/></svg></div>
+      <div class="stat-num" data-count="1200" data-suffix="+">0</div>
+      <div class="stat-label">Cows Under Care</div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= OUR MAIN SERVICES ================= -->
+<section class="services" id="services">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">What We Do</span>
+      <h2>Our Main Services</h2>
+      <p>Every service we provide is an act of love and humanity.</p>
+    </div>
+    <div class="services-grid">
+      <article class="service-card reveal" id="svc-oldage">
+        <div class="service-img"><img src="image/12.jpeg" alt="Caregiver holding hands with an elderly resident" loading="lazy" decoding="async"></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></div>
+        <h3>Old Age Home</h3>
+        <p>A safe, loving home where elders receive round-the-clock care, companionship and dignity.</p>
+        <a class="learn-more" href="#about">Learn More <span class="arr">→</span></a>
+      </article>
+      <article class="service-card reveal" data-delay="1" id="svc-gauseva">
+        <div class="service-img"><img src="image/8.jpeg" alt="White cow being cared for at the Gaushala" loading="lazy" decoding="async"></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.2 5.5C3 5.5 2 6.6 2 8c0 .9.5 1.7 1.2 2.1L3 13.5C3 15.4 4.6 17 6.5 17h.3v2.3c0 .4.3.7.7.7s.7-.3.7-.7V17h7.6v2.3c0 .4.3.7.7.7s.7-.3.7-.7V17h.3c1.9 0 3.5-1.6 3.5-3.5l-.2-3.4c.7-.4 1.2-1.2 1.2-2.1 0-1.4-1-2.5-2.2-2.5-.6 0-1.2.3-1.5.8H5.7c-.3-.5-.9-.8-1.5-.8z"/></svg></div>
+        <h3>Gau Seva</h3>
+        <p>Shelter, nourishment and loving care for rescued cows at our gaushala.</p>
+        <a class="learn-more" href="#about">Learn More <span class="arr">→</span></a>
+      </article>
+      <article class="service-card reveal" data-delay="2" id="svc-hospital">
+        <div class="service-img"><img src="image/3.jpeg" alt="Volunteers serving hygienic meals to patients" loading="lazy" decoding="async"></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></div>
+        <h3>Hospital Food Service</h3>
+        <p>Fresh, hygienic meals served daily to patients and their families in hospitals.</p>
+        <a class="learn-more" href="#about">Learn More <span class="arr">→</span></a>
+      </article>
+      <article class="service-card reveal" data-delay="3" id="svc-street">
+        <div class="service-img"><img src="image/5.jpeg" alt="Street food seva serving the needy on the streets" loading="lazy" decoding="async"></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Street Food Service</h3>
+        <p>Hot, nutritious food distributed to the hungry on the streets, every single day.</p>
+        <a class="learn-more" href="#about">Learn More <span class="arr">→</span></a>
+      </article>
+      <article class="service-card reveal" data-delay="4" id="svc-education">
+        <div class="service-img"><img src="image/20.jpeg" alt="Student studying with education support" loading="lazy" decoding="async"></div>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 10L12 5 2 10l10 5 10-5z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg></div>
+        <h3>Student Education Support</h3>
+        <p>Books, fees and mentoring that help deserving students continue their education.</p>
+        <a class="learn-more" href="#about">Learn More <span class="arr">→</span></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT US ================= -->
+<section class="about" id="about">
+  <div class="container about-grid">
+    <div class="about-copy reveal">
+      <span class="eyebrow">About Us</span>
+      <h2>Shree Vasuki<br>Charitable Trust</h2>
+      <p>A registered public charitable trust dedicated to serving humanity selflessly — from elder care and Gau Seva to food distribution and education support, every act of seva is carried out with compassion, transparency and love.</p>
+      <ul class="about-checks">
+        <li><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Registered Trust</li>
+        <li><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>Transparent & Accountable</li>
+        <li><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg></span>100% Donation to Seva</li>
+      </ul>
+      <a href="#contact" class="btn btn-primary">Know More About Us</a>
+    </div>
+
+    <div class="about-collage reveal" data-delay="1">
+      <div class="collage-item collage-big"><img src="image/15.jpeg" alt="Smiling elderly man at the trust" loading="lazy" decoding="async"></div>
+      <div class="collage-item"><img src="image/8.jpeg" alt="Gau Seva — caring for cows" loading="lazy" decoding="async"></div>
+      <div class="collage-item"><img src="image/3.jpeg" alt="Volunteers serving food" loading="lazy" decoding="async"></div>
+    </div>
+
+    <div class="about-values reveal" data-delay="2">
+      <div class="value-item">
+        <span class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg></span>
+        <div>
+          <h4>Our Vision</h4>
+          <p>A compassionate society where every living being lives with dignity and respect.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg></span>
+        <div>
+          <h4>Our Mission</h4>
+          <p>To serve selflessly through care, service, and support to those in need.</p>
+        </div>
+      </div>
+      <div class="value-item">
+        <span class="value-icon"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg></span>
+        <div>
+          <h4>Our Values</h4>
+          <p>Compassion, Integrity, Transparency, and Selfless Service.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= HOW WE HELP EVERY DAY ================= -->
+<section class="programs">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Programs</span>
+      <h2>How We Help Every Day</h2>
+    </div>
+    <div class="programs-row">
+      <div class="program reveal">
+        <span class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+        <h4>Daily Care & Support</h4>
+        <p>Round-the-clock personal care, health monitoring and emotional companionship for every elder.</p>
+      </div>
+      <div class="program reveal" data-delay="1">
+        <span class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg></span>
+        <h4>Nutritious Meals</h4>
+        <p>Thousands of fresh, hygienic meals served daily in hospitals, streets and our old age home.</p>
+      </div>
+      <div class="program reveal" data-delay="2">
+        <span class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h4>Community Outreach</h4>
+        <p>Regular seva drives that take food, clothing and care directly to those who need it most.</p>
+      </div>
+      <div class="program reveal" data-delay="3">
+        <span class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+        <h4>Education for All</h4>
+        <p>Scholarships, supplies and guidance that keep underprivileged students learning.</p>
+      </div>
+      <div class="program reveal" data-delay="4">
+        <span class="program-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/><path d="M12 8v4"/><path d="M10 10h4"/></svg></span>
+        <h4>Compassion in Action</h4>
+        <p>Gau Seva and celebration sevas that spread kindness on every meaningful occasion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- anchor kept for existing News & Updates links -->
+<div id="news" aria-hidden="true"></div>
+
+<!-- ================= MOMENTS OF IMPACT ================= -->
+<section class="gallery-band" id="gallery">
+  <div class="container">
+    <div class="band-head reveal">
+      <h2>Moments of Impact</h2>
+      <a href="#gallery" class="band-btn">View Full Gallery <span aria-hidden="true">→</span></a>
+    </div>
+    <div class="gallery-track reveal" data-delay="1">
+      <figure class="gallery-item"><img src="image/3.jpeg" alt="Food serving seva" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/8.jpeg" alt="Cow care at the Gaushala" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/12.jpeg" alt="Elderly care at the Old Age Home" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/1.jpeg" alt="Hospital meals service" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/20.jpeg" alt="Student education support" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/5.jpeg" alt="Street food seva" loading="lazy" decoding="async"></figure>
+      <figure class="gallery-item"><img src="image/15.jpeg" alt="Volunteers in action" loading="lazy" decoding="async"></figure>
+    </div>
+  </div>
+</section>
+
+<!-- anchor kept for existing Get Involved links -->
+<div id="get-involved" aria-hidden="true"></div>
+
+<!-- ================= SPECIAL SERVICES & CELEBRATIONS ================= -->
+<section class="celebrate" id="celebrate">
+  <div class="container">
+    <div class="celebrate-card reveal">
+      <span class="celebrate-deco left" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 17h16a8 8 0 0 0-16 0z"/><path d="M2 17h20"/><path d="M12 9V7"/><path d="M10 7h4"/></svg>
+      </span>
+      <span class="celebrate-deco right" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/><path d="M3 22c2-1.5 4-1.5 6 0M15 22c2-1.5 4-1.5 6 0"/></svg>
+      </span>
+      <h2>Special Services & Celebrations</h2>
+      <p>On occasions such as birthdays, marriage anniversaries, Shravan month, Adhik month, Agiyaras, and other special festivals or meaningful days, you can celebrate with the elders at our old age home by sponsoring meals and sharing joy with them.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= TESTIMONIALS ================= -->
+<section class="testimonials">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Voices of Trust</span>
+      <h2>What People Say About Us</h2>
+    </div>
+    <div class="testi-grid">
+      <article class="testi-card reveal">
+        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+        <p class="testi-text">My mother has found a second family here. The care, warmth and respect she receives every single day brings peace to our entire family.</p>
+        <div class="testi-divider"></div>
+        <div class="testi-person">
+          <div class="testi-avatar"><img src="image/25.jpeg" alt="Meena Shah" loading="lazy" decoding="async"></div>
+          <div>
+            <b>Meena Shah</b>
+            <div class="role">Daughter of Resident</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card reveal" data-delay="1">
+        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+        <p class="testi-text">I have seen their seva up close — hygienic food, genuine care and complete transparency. A trust that truly serves humanity with its whole heart.</p>
+        <div class="testi-divider"></div>
+        <div class="testi-person">
+          <div class="testi-avatar"><img src="image/30.jpeg" alt="Rajesh Patel" loading="lazy" decoding="async"></div>
+          <div>
+            <b>Rajesh Patel</b>
+            <div class="role">Social Worker</div>
+          </div>
+        </div>
+      </article>
+      <article class="testi-card reveal" data-delay="2">
+        <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+        <p class="testi-text">The education support kept my daughter in school when we had lost all hope. We will forever be grateful to this trust and its kind donors.</p>
+        <div class="testi-divider"></div>
+        <div class="testi-person">
+          <div class="testi-avatar"><img src="image/35.jpeg" alt="Nilesh Parmar" loading="lazy" decoding="async"></div>
+          <div>
+            <b>Nilesh Parmar</b>
+            <div class="role">Parent</div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="testi-dots" id="testiDots" role="tablist" aria-label="Testimonial pages">
+      <button class="active" aria-label="Show testimonials page 1"></button>
+      <button aria-label="Show testimonials page 2"></button>
+      <button aria-label="Show testimonials page 3"></button>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FINAL CTA ================= -->
+<section class="final-cta" id="donate">
+  <div class="container cta-inner">
+    <div class="cta-logo">
+      <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust">
+    </div>
+    <div class="cta-center">
+      <h2>Be the Reason Someone Smiles Today.</h2>
+      <p>Your support can bring food to the hungry, care to the elderly, education to a child, and hope to many lives.</p>
+    </div>
+    <div class="cta-btns">
+      <a href="#donate" class="btn btn-white">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        Donate Now
+      </a>
+      <a href="#contact" class="btn btn-ghost-white">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        Become a Volunteer
+      </a>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer" id="contact">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust">
+        <p>Serving humanity through Old Age Care, Gau Seva, Food Seva and Education Support.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#16164F"/></svg></a>
+          <a href="#" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Our Programs</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#news">News & Updates</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Our Services</h4>
+        <ul class="footer-links">
+          <li><a href="#svc-oldage">Old Age Home</a></li>
+          <li><a href="#svc-gauseva">Gau Seva</a></li>
+          <li><a href="#svc-hospital">Hospital Food Service</a></li>
+          <li><a href="#svc-street">Street Food Service</a></li>
+          <li><a href="#svc-education">Student Education Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get Involved</h4>
+        <ul class="footer-links">
+          <li><a href="#donate">Donate Now</a></li>
+          <li><a href="#contact">Become a Volunteer</a></li>
+          <li><a href="#celebrate">Sponsor a Meal</a></li>
+          <li><a href="#svc-education">Support Education</a></li>
+          <li><a href="#contact">Help Us Grow</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Shree Vasuki Charitable Trust,<br>Ahmedabad, Gujarat, India</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 98765 43210</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@vasukicharitabletrust.org</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>www.vasukicharitabletrust.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Shree Vasuki Charitable Trust. All Rights Reserved.</span>
+      <span>Designed with <span class="heart">♥</span> for Humanity</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+/* ---------- Sticky header shadow ---------- */
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 10);
+}, {passive:true});
+
+/* ---------- Mobile menu ---------- */
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+const backdrop = document.getElementById('menuBackdrop');
+function setMenu(open){
+  mobileMenu.classList.toggle('open', open);
+  hamburger.classList.toggle('open', open);
+  hamburger.setAttribute('aria-expanded', String(open));
+  backdrop.classList.toggle('show', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+hamburger.addEventListener('click', () => setMenu(!mobileMenu.classList.contains('open')));
+backdrop.addEventListener('click', () => setMenu(false));
+mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+document.querySelectorAll('.mm-group-toggle').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const open = btn.classList.toggle('open');
+    btn.nextElementSibling.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', String(open));
+  });
+});
+
+/* ---------- Desktop dropdown click/touch support ---------- */
+document.querySelectorAll('.nav-drop').forEach(drop => {
+  const toggle = drop.querySelector('.nav-drop-toggle');
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = drop.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+    document.querySelectorAll('.nav-drop').forEach(d => {
+      if (d !== drop){ d.classList.remove('open'); d.querySelector('.nav-drop-toggle').setAttribute('aria-expanded','false'); }
+    });
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-drop.open').forEach(d => {
+    d.classList.remove('open');
+    d.querySelector('.nav-drop-toggle').setAttribute('aria-expanded','false');
+  });
+});
+
+/* ---------- Reveal on scroll ---------- */
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('visible');
+      revealObserver.unobserve(e.target);
+    }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+/* ---------- Statistic count-up (Indian numbering) ---------- */
+function formatIndian(n){
+  return n.toLocaleString('en-IN');
+}
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    statObserver.unobserve(el);
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    const dur = 2000;
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start) / dur, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = formatIndian(Math.round(target * eased)) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}, {threshold:0.5});
+document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+/* ---------- Testimonial slider dots (rotating carousel) ---------- */
+const dots = document.querySelectorAll('#testiDots button');
+const cards = Array.from(document.querySelectorAll('.testi-card'));
+const originals = cards.map(c => c.innerHTML);
+dots.forEach((dot, i) => {
+  dot.addEventListener('click', () => {
+    if (dot.classList.contains('active')) return;
+    dots.forEach((d, j) => d.classList.toggle('active', j === i));
+    const rotated = originals.slice(i).concat(originals.slice(0, i));
+    cards.forEach(c => { c.style.opacity = 0; });
+    setTimeout(() => {
+      cards.forEach((c, j) => { c.innerHTML = rotated[j]; });
+      cards.forEach(c => { c.style.opacity = 1; });
+    }, 280);
+  });
+});
+
+/* ---------- Subtle hero parallax ---------- */
+const heroImg = document.querySelector('.hero-photo img');
+if (heroImg && window.matchMedia('(prefers-reduced-motion: no-preference)').matches){
+  window.addEventListener('scroll', () => {
+    const y = Math.min(window.scrollY, 600);
+    heroImg.style.transform = `translateY(${y * 0.06}px) scale(1.02)`;
+  }, {passive:true});
+}
+
+/* ---------- Active nav on scroll ---------- */
+const sections = document.querySelectorAll('main section[id], div[id="news"]');
+const navLinks = document.querySelectorAll('.nav > a');
+window.addEventListener('scroll', () => {
+  let current = 'home';
+  sections.forEach(sec => {
+    if (sec.id && window.scrollY >= sec.offsetTop - 140) current = sec.id;
+  });
+  navLinks.forEach(link => {
+    link.classList.toggle('active', link.getAttribute('href') === '#' + current);
+  });
+}, {passive:true});
+</script>
+</body>
+</html>
