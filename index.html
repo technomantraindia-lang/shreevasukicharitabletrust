@@ -222,7 +222,17 @@ h1,h2,h3,.serif{font-family:'Playfair Display',serif;line-height:1.18}
   transform:scale(1);
 }
 
-/* Hero Controls */
+/* Hero Controls & Progress Bar */
+.hero-progress-line{
+  position:absolute;
+  top:0;
+  left:0;
+  height:4px;
+  width:0%;
+  background:linear-gradient(90deg, var(--purple) 0%, #7B6BFA 100%);
+  z-index:12;
+  box-shadow:0 2px 8px rgba(75,59,197,.4);
+}
 .hero-controls{
   position:absolute;
   bottom:32px;
@@ -239,6 +249,51 @@ h1,h2,h3,.serif{font-family:'Playfair Display',serif;line-height:1.18}
   border:1px solid rgba(238,235,252,.9);
   box-shadow:0 12px 30px rgba(22,22,79,.10);
 }
+.hero-progress-wrap{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  padding-inline:4px;
+}
+.hero-counter{
+  font-size:12px;
+  font-weight:700;
+  color:var(--purple-2);
+  letter-spacing:.05em;
+  font-variant-numeric:tabular-nums;
+  min-width:44px;
+}
+.hero-progress-track{
+  width:70px;
+  height:4px;
+  background:#E8E3FA;
+  border-radius:999px;
+  overflow:hidden;
+  position:relative;
+}
+.hero-progress-fill{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:0%;
+  background:var(--purple-2);
+  border-radius:999px;
+}
+.hero-progress-fill.running,
+.hero-progress-line.running{
+  animation:heroProgressFillAnim 5000ms linear forwards;
+}
+.hero-controls.paused .hero-progress-fill,
+.hero-controls.paused .hero-progress-line{
+  animation-play-state:paused;
+}
+
+@keyframes heroProgressFillAnim{
+  from{width:0%}
+  to{width:100%}
+}
+
 .hero-arrow{
   width:34px;
   height:34px;
@@ -818,6 +873,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
 <main>
 <!-- ================= HERO ================= -->
 <section class="hero" id="home">
+  <div class="hero-progress-line" id="heroProgressLine"></div>
   <div class="hero-slider" id="heroSlider">
     <div class="hero-slide active" style="background-image: url('home page banner.png');"></div>
     <div class="hero-slide" style="background-image: url('banner section 2.png');"></div>
@@ -870,6 +926,14 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
     <button class="hero-arrow prev" id="heroPrev" aria-label="Previous Slide">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
+
+    <div class="hero-progress-wrap">
+      <span class="hero-counter" id="heroCounter">01 / 04</span>
+      <div class="hero-progress-track">
+        <div class="hero-progress-fill" id="heroProgressFill"></div>
+      </div>
+    </div>
+
     <div class="hero-dots" id="heroDots">
       <button class="hero-dot active" aria-label="Slide 1"></button>
       <button class="hero-dot" aria-label="Slide 2"></button>
@@ -1394,16 +1458,42 @@ dots.forEach((dot, i) => {
   });
 });
 
-/* ---------- Hero Banner Slider ---------- */
+/* ---------- Hero Banner Slider with Progress Bar ---------- */
 (function() {
   const slides = document.querySelectorAll('.hero-slide');
   const dots = document.querySelectorAll('#heroDots .hero-dot');
   const prevBtn = document.getElementById('heroPrev');
   const nextBtn = document.getElementById('heroNext');
+  const counterEl = document.getElementById('heroCounter');
+  const progressFill = document.getElementById('heroProgressFill');
+  const progressLine = document.getElementById('heroProgressLine');
+  const heroControls = document.querySelector('.hero-controls');
   if (!slides.length) return;
 
   let currentIndex = 0;
   let timer = null;
+  const slideDuration = 5000;
+
+  function resetProgress() {
+    if (progressFill) {
+      progressFill.classList.remove('running');
+      void progressFill.offsetWidth;
+      progressFill.classList.add('running');
+    }
+    if (progressLine) {
+      progressLine.classList.remove('running');
+      void progressLine.offsetWidth;
+      progressLine.classList.add('running');
+    }
+  }
+
+  function updateCounter() {
+    if (counterEl) {
+      const num = String(currentIndex + 1).padStart(2, '0');
+      const total = String(slides.length).padStart(2, '0');
+      counterEl.textContent = `${num} / ${total}`;
+    }
+  }
 
   function goToSlide(index) {
     slides[currentIndex].classList.remove('active');
@@ -1411,17 +1501,23 @@ dots.forEach((dot, i) => {
     currentIndex = (index + slides.length) % slides.length;
     slides[currentIndex].classList.add('active');
     if (dots[currentIndex]) dots[currentIndex].classList.add('active');
+
+    updateCounter();
+    resetProgress();
   }
 
   function startAutoPlay() {
     stopAutoPlay();
+    if (heroControls) heroControls.classList.remove('paused');
+    resetProgress();
     timer = setInterval(() => {
       goToSlide(currentIndex + 1);
-    }, 5000);
+    }, slideDuration);
   }
 
   function stopAutoPlay() {
     if (timer) clearInterval(timer);
+    if (heroControls) heroControls.classList.add('paused');
   }
 
   if (prevBtn) {
@@ -1451,6 +1547,7 @@ dots.forEach((dot, i) => {
     heroSection.addEventListener('mouseleave', startAutoPlay);
   }
 
+  updateCounter();
   startAutoPlay();
 })();
 
