@@ -113,74 +113,94 @@ html[lang="gu"] .btn{font-family:'Noto Sans Gujarati','DM Sans',sans-serif}
   transform:scaleX(0);transform-origin:0 50%;pointer-events:none
 }
 
-/* Header */
+/* Top Bar (Standardized) */
+.topbar{
+  background:#11142e;
+  color:#e2e8f0;
+  font-size:13px;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.topbar .container, .topbar-inner{
+  max-width:1240px;margin-inline:auto;
+  padding-inline:24px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.topbar-left, .topbar-info{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.topbar-link, .topbar-info a, .topbar-info span{
+  display:inline-flex;align-items:center;gap:6px;
+  color:#cbd5e1;font-size:13px;transition:color .2s;text-decoration:none;
+}
+.topbar-link svg, .topbar-info svg{width:14px;height:14px;color:#a78bfa;flex-shrink:0}
+.topbar-link:hover, .topbar-info a:hover{color:#ffffff}
+.topbar-right{
+  display:flex;align-items:center;gap:18px;
+}
+.topbar-tag{
+  background:rgba(167, 139, 250, 0.18);
+  color:#c4b5fd;
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11.5px;
+  font-weight:600;
+  border:1px solid rgba(167, 139, 250, 0.3);
+  display:inline-block;
+}
+
+/* Header (Standardized) */
 .header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(255,255,255,.82);
-  backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
-  border-bottom:1px solid transparent;
-  transition:box-shadow .3s,border-color .3s,background .3s
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  border-bottom:1px solid #f0eefc;
+  transition:box-shadow .3s,background .3s;
 }
-.header.scrolled{box-shadow:0 10px 30px rgba(22,22,79,.08);border-bottom-color:#EFEDFA;background:rgba(255,255,255,.94)}
+.header.scrolled{box-shadow:0 10px 30px rgba(22,22,79,.08);background:rgba(255,255,255,.98)}
 .header-inner{
-  max-width:1440px;margin-inline:auto;
-  height:78px;padding-inline:32px;
-  display:flex;align-items:center;justify-content:space-between;gap:24px
+  max-width:1240px;margin-inline:auto;
+  padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
 }
-.logo img{height:46px;width:auto}
-.nav{display:flex;align-items:center;gap:26px}
-.nav > a,.nav-drop-toggle{
-  position:relative;display:inline-flex;align-items:center;gap:5px;
-  font-size:13.5px;font-weight:500;color:var(--ink);
-  padding:6px 0;transition:color .25s
+.logo img{height:48px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:24px}
+.nav > a{
+  position:relative;display:inline-flex;align-items:center;
+  font-size:14.5px;font-weight:600;color:#151838;
+  padding:8px 12px;border-radius:8px;transition:color .25s;text-decoration:none;
 }
-.nav > a:hover,.nav-drop-toggle:hover{color:var(--purple)}
-.nav > a.active{color:var(--purple);font-weight:600}
+.nav > a:hover,.nav > a.active{color:var(--purple)}
 .nav > a.active::after{
-  content:"";position:absolute;left:0;right:0;bottom:-4px;height:2.5px;
-  border-radius:3px;background:var(--purple)
+  content:"";position:absolute;left:12px;right:12px;bottom:0;height:2.5px;
+  border-radius:99px;background:var(--purple);
 }
-.nav-drop{position:relative}
-.nav-drop .chev{width:11px;height:11px;transition:transform .25s}
-.nav-drop.open .chev,.nav-drop:hover .chev{transform:rotate(180deg)}
-.drop-menu{
-  position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,8px);
-  min-width:230px;background:#fff;border:1px solid #EFEDFA;border-radius:14px;
-  box-shadow:0 22px 50px rgba(22,22,79,.14);
-  padding:10px;opacity:0;visibility:hidden;pointer-events:none;
-  transition:opacity .28s var(--ease),transform .28s var(--ease)
-}
-.nav-drop:hover .drop-menu,.nav-drop:focus-within .drop-menu,.nav-drop.open .drop-menu{
-  opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)
-}
-.drop-menu a{
-  display:block;padding:9px 14px;border-radius:9px;
-  font-size:13px;font-weight:500;color:var(--ink);transition:background .2s,color .2s,padding-left .2s
-}
-.drop-menu a:hover{background:var(--lav);color:var(--purple);padding-left:18px}
-.header-actions{display:flex;align-items:center;gap:12px}
+
+.header-actions{display:flex;align-items:center;gap:14px}
 .lang-switch{
-  display:inline-flex;align-items:center;background:var(--lav);
-  border:1px solid var(--lav-2);border-radius:999px;padding:3px
+  display:inline-flex;align-items:center;background:#f1f5f9;
+  border:1px solid #e2e8f0;border-radius:99px;padding:3px;
 }
 .lang-switch button{
-  font-size:11.5px;font-weight:700;letter-spacing:.04em;
-  padding:6px 10px;border-radius:999px;color:var(--muted)
+  font-size:12px;font-weight:700;letter-spacing:.02em;
+  padding:4px 10px;border-radius:99px;color:#64748b;
+  cursor:pointer;border:none;background:none;transition:all .25s;
 }
-.lang-switch button.active{background:var(--purple);color:#fff}
-.phone-btn{
-  display:inline-flex;align-items:center;gap:8px;
-  border:1.6px solid var(--lav-2);border-radius:999px;
-  padding:10px 18px;font-size:13px;font-weight:600;color:var(--ink);
-  transition:border-color .25s,color .25s,transform .25s
+.lang-switch button.active{background:var(--purple);color:#fff;box-shadow:0 2px 6px rgba(52,37,154,.25)}
+.search-btn{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#f1f5f9;color:#151838;transition:background .2s,color .2s;
+  cursor:pointer;border:none;
 }
-.phone-btn svg{width:15px;height:15px;color:var(--purple)}
-.phone-btn:hover{border-color:var(--purple);color:var(--purple);transform:translateY(-1px)}
-.hamburger{display:none;flex-direction:column;gap:5px;padding:8px;z-index:130}
-.hamburger span{width:24px;height:2.4px;border-radius:3px;background:var(--ink);transition:transform .3s var(--ease),opacity .3s}
-.hamburger.open span:nth-child(1){transform:translateY(7.4px) rotate(45deg)}
+.search-btn:hover{background:var(--lav);color:var(--purple)}
+.search-btn svg{width:17px;height:17px}
+.hamburger{display:none;flex-direction:column;gap:5px;width:36px;height:36px;justify-content:center;align-items:center;border-radius:8px;background:#f1f5f9;border:none;cursor:pointer;z-index:130}
+.hamburger span{width:20px;height:2px;border-radius:3px;background:#151838;transition:transform .3s var(--ease),opacity .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
-.hamburger.open span:nth-child(3){transform:translateY(-7.4px) rotate(-45deg)}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .mobile-menu{
   position:fixed;inset:0 0 0 auto;width:min(340px,88vw);z-index:120;
   background:#fff;box-shadow:-24px 0 60px rgba(22,22,79,.18);
@@ -423,11 +443,16 @@ html[lang="gu"] .why-card h3{font-family:'Noto Sans Gujarati',sans-serif}
 .film{padding:40px 0 100px;background:#fff}
 .film-stage{
   position:relative;border-radius:28px;overflow:hidden;
+  background:#08091c;
   min-height:min(72vh,720px);
-  box-shadow:0 40px 90px rgba(22,22,79,.22)
+  box-shadow:0 40px 90px rgba(22,22,79,.22);
+  display:flex;align-items:center;justify-content:center
 }
 .film-stage video,.film-stage .film-poster{
-  width:100%;height:100%;min-height:min(72vh,720px);object-fit:cover
+  width:100%;height:100%;min-height:min(72vh,720px);object-fit:cover;transition:all .3s var(--ease)
+}
+.film-stage.playing video{
+  height:auto;max-height:85vh;object-fit:contain;background:#000
 }
 .film-overlay{
   position:absolute;inset:0;z-index:2;
@@ -538,8 +563,16 @@ html[lang="gu"] .program h4{font-family:'Noto Sans Gujarati',sans-serif}
   break-inside:avoid;margin-bottom:14px;border-radius:14px;overflow:hidden;
   cursor:zoom-in;position:relative;border:1px solid rgba(255,255,255,.2)
 }
-.masonry figure img{width:100%;height:auto;transition:transform .55s var(--ease)}
-.masonry figure:hover img{transform:scale(1.06)}
+.masonry figure img,.masonry figure video{width:100%;height:auto;display:block;transition:transform .55s var(--ease)}
+.masonry figure:hover img,.masonry figure:hover video{transform:scale(1.06)}
+.video-play-badge{
+  position:absolute;top:12px;left:12px;z-index:3;
+  background:rgba(52,37,154,.9);color:#fff;
+  padding:5px 12px;border-radius:999px;font-size:11.5px;font-weight:700;
+  display:inline-flex;align-items:center;gap:6px;backdrop-filter:blur(6px);
+  box-shadow:0 4px 14px rgba(0,0,0,.3);border:1px solid rgba(255,255,255,.25);
+  pointer-events:none
+}
 .masonry figure figcaption{
   position:absolute;left:0;right:0;bottom:0;padding:12px 14px;
   font-size:12px;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55));
@@ -774,54 +807,51 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
   <span class="pre-word">Helping Humanity</span>
 </div>
 <div class="page-progress" id="pageProgress"></div>
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <a href="tel:+919876543210" aria-label="Helpline number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="top.phone">+91 98765 43210</span>
+      </a>
+      <a href="mailto:info@shreevasuki.org" aria-label="Email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>info@shreevasuki.org</span>
+      </a>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="top.loc">Rajkot, Gujarat, India</span>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-tag" data-i18n="top.tag">Vatsalya Group Support Initiative</span>
+    </div>
+  </div>
+</div>
 
+<!-- Header -->
 <header class="header" id="header">
   <div class="header-inner">
-    <a class="logo" href="#home" aria-label="Shree Vasuki Charitable Trust — home">
+    <a class="logo" href="index.html" aria-label="Shree Vasuki Charitable Trust — home">
       <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust logo">
     </a>
     <nav class="nav" aria-label="Main navigation">
-      <a href="#home" class="active" data-i18n="nav.home">Home</a>
-      <a href="#about" data-i18n="nav.about">About Us</a>
-      <div class="nav-drop">
-        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-haspopup="true">
-          <span data-i18n="nav.programs">Our Programs</span>
-          <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="drop-menu" role="menu">
-          <a role="menuitem" href="#services" data-i18n="nav.all">All Programs</a>
-          <a role="menuitem" href="#svc-oldage" data-i18n="svc.old">Old Age Home</a>
-          <a role="menuitem" href="#svc-gauseva" data-i18n="svc.gau">Gau Seva</a>
-          <a role="menuitem" href="#svc-hospital" data-i18n="svc.hospital">Hospital Food Service</a>
-          <a role="menuitem" href="#svc-street" data-i18n="svc.street">Street Food Service</a>
-          <a role="menuitem" href="#svc-education" data-i18n="svc.edu">Student Education Support</a>
-        </div>
-      </div>
-      <div class="nav-drop">
-        <button type="button" class="nav-drop-toggle" aria-expanded="false" aria-haspopup="true">
-          <span data-i18n="nav.involve">Get Involved</span>
-          <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </button>
-        <div class="drop-menu" role="menu">
-          <a role="menuitem" href="#donate" data-i18n="cta.donate">Donate Now</a>
-          <a role="menuitem" href="#celebrate" data-i18n="cta.meal">Sponsor a Meal</a>
-          <a role="menuitem" href="#contact" data-i18n="cta.vol">Become a Volunteer</a>
-        </div>
-      </div>
-      <a href="#gallery" data-i18n="nav.gallery">Gallery</a>
-      <a href="#news" data-i18n="nav.news">News & Updates</a>
-      <a href="#contact" data-i18n="nav.contact">Contact Us</a>
+      <a href="index.html" class="active" data-i18n="nav.home">Home</a>
+      <a href="about-us.html" data-i18n="nav.about">About Us</a>
+      <a href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+      <a href="contact-us.html" data-i18n="nav.contact">Contact</a>
     </nav>
     <div class="header-actions">
       <div class="lang-switch" role="group" aria-label="Language">
         <button type="button" class="active" data-lang="en">EN</button>
         <button type="button" data-lang="gu">ગુ</button>
       </div>
-      <a class="phone-btn" href="tel:+919974063064">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        <span>+91 99740 63064</span>
-      </a>
-      <a href="#donate" class="btn btn-primary btn-sm" data-i18n="cta.donate">Donate Now</a>
+      <button class="search-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
       <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
         <span></span><span></span><span></span>
       </button>
@@ -830,50 +860,30 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
 </header>
 
 <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+<!-- Mobile Menu -->
 <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
   <nav>
-    <a class="mlink" href="#home" data-i18n="nav.home">Home</a>
-    <a class="mlink" href="#about" data-i18n="nav.about">About Us</a>
-    <button type="button" class="mm-group-toggle" aria-expanded="false"><span data-i18n="nav.programs">Our Programs</span>
-      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="mm-sub">
-      <a href="#services" data-i18n="nav.all">All Programs</a>
-      <a href="#svc-oldage" data-i18n="svc.old">Old Age Home</a>
-      <a href="#svc-gauseva" data-i18n="svc.gau">Gau Seva</a>
-      <a href="#svc-hospital" data-i18n="svc.hospital">Hospital Food Service</a>
-      <a href="#svc-street" data-i18n="svc.street">Street Food Service</a>
-      <a href="#svc-education" data-i18n="svc.edu">Student Education Support</a>
-    </div>
-    <button type="button" class="mm-group-toggle" aria-expanded="false"><span data-i18n="nav.involve">Get Involved</span>
-      <svg viewBox="0 0 12 12" aria-hidden="true"><path d="M2 4l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
-    <div class="mm-sub">
-      <a href="#donate" data-i18n="cta.donate">Donate Now</a>
-      <a href="#celebrate" data-i18n="cta.meal">Sponsor a Meal</a>
-      <a href="#contact" data-i18n="cta.vol">Become a Volunteer</a>
-    </div>
-    <a class="mlink" href="#gallery" data-i18n="nav.gallery">Gallery</a>
-    <a class="mlink" href="#news" data-i18n="nav.news">News & Updates</a>
-    <a class="mlink" href="#contact" data-i18n="nav.contact">Contact Us</a>
+    <a class="mlink" href="index.html" data-i18n="nav.home">Home</a>
+    <a class="mlink" href="about-us.html" data-i18n="nav.about">About Us</a>
+    <a class="mlink" href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a>
+    <a class="mlink" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+    <a class="mlink" href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+    <a class="mlink" href="contact-us.html" data-i18n="nav.contact">Contact</a>
   </nav>
   <div class="mm-actions">
-    <a class="phone-btn" href="tel:+919974063064" style="justify-content:center">
+    <a class="phone-btn" href="tel:+919876543210" style="justify-content:center">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-      <span>+91 99740 63064</span>
+      <span>+91 98765 43210</span>
     </a>
     <a href="#donate" class="btn btn-primary" data-i18n="cta.donate">Donate Now</a>
   </div>
 </div>
 
 <main>
-<section class="hero" id="home" data-theme="dark">
+<section class="hero" id="home" data-theme="light">
   <div class="hero-progress-line" id="heroProgressLine"></div>
   <div class="hero-slider" id="heroSlider">
-    <div class="hero-slide hero-slide--video active" data-theme="dark">
-      <video class="hero-video" src="vidoes/1.mp4" autoplay muted loop playsinline poster="home page banner.png"></video>
-    </div>
-    <div class="hero-slide" data-theme="light"><img src="home page banner.png" alt="Elder resident at Vatsalya Vrudhashram"></div>
+    <div class="hero-slide active" data-theme="light"><img src="home page banner.png" alt="Elder resident at Vatsalya Vrudhashram"></div>
     <div class="hero-slide" data-theme="light"><img src="banner section 2.png" alt="Elder woman receiving a nutritious meal"></div>
     <div class="hero-slide" data-theme="light"><img src="banner sction 3.png" alt="Resident offering namaste after a meal"></div>
     <div class="hero-slide" data-theme="light"><img src="banner section 4.png" alt="Community of residents and caregivers"></div>
@@ -884,13 +894,13 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
     <div class="hero-copy" id="heroCopy">
       <span class="hero-tag">
         <span class="dot"></span>
-        <span id="heroTagText">Live from our seva</span>
+        <span id="heroTagText">Old Age Home Care – Our Primary Mission</span>
       </span>
       <h1>
-        <span class="l1" id="heroLine1">Every Day, Seva.</span>
-        <span class="l2" id="heroLine2">Every Life, Dignity.</span>
+        <span class="l1" id="heroLine1">Compassion Today,</span>
+        <span class="l2" id="heroLine2">Dignity Always.</span>
       </h1>
-      <p class="hero-sub" id="heroSub">Watch the living heartbeat of Shree Vasuki Charitable Trust — elder care, meals, and compassion in motion at Vatsalya Vrudhashram, Ahmedabad.</p>
+      <p class="hero-sub" id="heroSub">At Shree Vasuki Charitable Trust, we serve the elderly with love and respect, ensuring a safe, healthy, and dignified life in our Old Age Home.</p>
       <div class="hero-btns">
         <a href="#donate" class="btn btn-primary">
           <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
@@ -910,7 +920,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
     </button>
     <div class="hero-progress-wrap">
-      <span class="hero-counter" id="heroCounter">01 / 05</span>
+      <span class="hero-counter" id="heroCounter">01 / 04</span>
       <div class="hero-progress-track"><div class="hero-progress-fill" id="heroProgressFill"></div></div>
     </div>
     <div class="hero-dots" id="heroDots">
@@ -918,7 +928,6 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
       <button class="hero-dot" aria-label="Slide 2"></button>
       <button class="hero-dot" aria-label="Slide 3"></button>
       <button class="hero-dot" aria-label="Slide 4"></button>
-      <button class="hero-dot" aria-label="Slide 5"></button>
     </div>
     <button class="hero-arrow next" id="heroNext" aria-label="Next slide">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
@@ -1057,7 +1066,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
       <p data-i18n="film.sub">A living document of care — from our home, our kitchen, and our streets.</p>
     </div>
     <div class="film-stage reveal" id="filmStage">
-      <video id="filmVideo" src="vidoes/1.mp4" poster="image/70.jpeg" playsinline loop preload="metadata"></video>
+      <video id="filmVideo" src="vidoes/seva.mp4" poster="image/70.jpeg" playsinline loop preload="metadata"></video>
       <div class="film-overlay">
         <button class="play-btn" id="filmPlay" aria-label="Play video">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
@@ -1082,7 +1091,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
         <li><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="about.c2">Transparent & Accountable</span></li>
         <li><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span data-i18n="about.c3">80G Tax Benefit Eligible</span></li>
       </ul>
-      <a href="#contact" class="btn btn-primary" data-i18n="about.btn">Know More About Us</a>
+      <a href="contact-us.html" class="btn btn-primary" data-i18n="about.btn">Know More About Us</a>
     </div>
     <div class="about-collage reveal" data-delay="1">
       <div class="collage-item collage-big"><img src="image/31.jpeg" alt="Elder resident with a complete thali meal" loading="lazy"></div>
@@ -1216,6 +1225,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
     </div>
     <div class="gallery-filters" id="galleryFilters">
       <button class="g-filter active" data-filter="all" data-i18n="gal.all">All</button>
+      <button class="g-filter" data-filter="video">🎥 Videos</button>
       <button class="g-filter" data-filter="elders" data-i18n="gal.elders">Elders</button>
       <button class="g-filter" data-filter="food" data-i18n="gal.food">Food Seva</button>
       <button class="g-filter" data-filter="edu" data-i18n="gal.edu">Education</button>
@@ -1279,7 +1289,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
     <div class="testi-grid">
       <article class="testi-card reveal">
         <div class="quote-mark" aria-hidden="true">&ldquo;</div>
-        <p class="testi-text" data-i18n="tes.1">My mother has found a second family here. The care, warmth and respect she receives every single day brings peace to our entire family.</p>
+        <p class="testi-text" data-i18n="tes.1">From housing and food to medical care and lifelong support till the very end, this trust provides selfless charity and takes care of every elder just like their own parents.</p>
         <div class="testi-divider"></div>
         <div class="testi-person">
           <div class="testi-avatar">MS</div>
@@ -1342,7 +1352,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
         <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
         <span data-i18n="cta.donate">Donate Now</span>
       </a>
-      <a href="#contact" class="btn btn-ghost-white">
+      <a href="contact-us.html" class="btn btn-ghost-white">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <span data-i18n="cta.vol">Become a Volunteer</span>
       </a>
@@ -1368,11 +1378,12 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
         <h4 data-i18n="foot.quick">Quick Links</h4>
         <ul class="footer-links">
           <li><a href="#home" data-i18n="nav.home">Home</a></li>
-          <li><a href="#about" data-i18n="nav.about">About Us</a></li>
+          <li><a href="about-us.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="trustee.html" data-i18n="nav.trustee">Trustee</a></li>
           <li><a href="#services" data-i18n="nav.programs">Our Programs</a></li>
-          <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
           <li><a href="#news" data-i18n="nav.news">News & Updates</a></li>
-          <li><a href="#contact" data-i18n="nav.contact">Contact Us</a></li>
+          <li><a href="contact-us.html" data-i18n="nav.contact">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -1389,7 +1400,7 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
         <h4 data-i18n="nav.involve">Get Involved</h4>
         <ul class="footer-links">
           <li><a href="#donate" data-i18n="cta.donate">Donate Now</a></li>
-          <li><a href="#contact" data-i18n="cta.vol">Become a Volunteer</a></li>
+          <li><a href="contact-us.html" data-i18n="cta.vol">Become a Volunteer</a></li>
           <li><a href="#celebrate" data-i18n="cta.meal">Sponsor a Meal</a></li>
           <li><a href="#svc-education" data-i18n="svc.edu">Support Education</a></li>
         </ul>
@@ -1423,10 +1434,11 @@ a:focus-visible,button:focus-visible{outline:2.5px solid var(--purple-2);outline
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 11.4A8.4 8.4 0 0 1 7.2 18.5L4 20l1.6-3.1A8.4 8.4 0 1 1 20 11.4zm-8.4-6A6 6 0 0 0 7 16.3l.2.4-.9 1.8 1.9-.8.3.2A6 6 0 1 0 11.6 5.4zM8.4 7.6c.2-.4.3-.4.6-.4h.5c.2 0 .4 0 .5.4l.7 1.7c.1.2 0 .4-.1.5l-.4.5c-.1.1-.1.3 0 .4.3.5.8 1.1 1.3 1.5.4.4.9.8 1.5 1.1.2.1.3.1.4 0l.5-.4c.2-.1.4-.2.5-.1l1.7.7c.3.1.4.3.4.5v.5c0 .3 0 .4-.4.6A5.2 5.2 0 0 1 8.4 7.6z"/></svg>
 </a>
 
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image preview">
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media preview">
   <button class="lb-btn lb-close" id="lbClose" aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
   <button class="lb-btn lb-prev" id="lbPrev" aria-label="Previous"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
   <img id="lbImg" alt="">
+  <video id="lbVideo" controls style="display:none;max-width:min(1100px,92vw);max-height:82vh;border-radius:12px;outline:none;background:#000;"></video>
   <button class="lb-btn lb-next" id="lbNext" aria-label="Next"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
   <p class="lb-cap" id="lbCap"></p>
 </div>
@@ -1446,14 +1458,12 @@ const ICONS = {
 
 const SLIDES = {
   en: [
-    { tag:'Live from our seva', line1:'Every Day, Seva.', line2:'Every Life, Dignity.', sub:'Watch the living heartbeat of Shree Vasuki Charitable Trust — elder care, meals, and compassion in motion at Vatsalya Vrudhashram, Ahmedabad.', benefits:[{icon:ICONS.heart,label:'Real footage'},{icon:ICONS.people,label:'Ahmedabad, India'},{icon:ICONS.shield,label:'Registered Trust'}] },
     { tag:'Old Age Home Care – Our Primary Mission', line1:'Compassion Today,', line2:'Dignity Always.', sub:'At Shree Vasuki Charitable Trust, we serve the elderly with love and respect, ensuring a safe, healthy, and dignified life in our Old Age Home.', benefits:[{icon:ICONS.shield,label:'Safe & Loving Environment'},{icon:ICONS.meal,label:'Nutritious Food & Healthcare'},{icon:ICONS.clock,label:'24/7 Care & Support'}] },
     { tag:'Daily Food Seva – Serving The Needy', line1:'Nourishing Lives,', line2:'Spreading Hope.', sub:'Serving thousands of fresh, hygienic meals every single day to hospital patients, elderly residents, and needy families on the streets.', benefits:[{icon:ICONS.meal,label:'Fresh Hygienic Meals'},{icon:ICONS.people,label:'Hospital & Street Seva'},{icon:ICONS.shield,label:'100% Free Daily Meals'}] },
     { tag:'Selfless Care – Honoring Senior Citizens', line1:'A Safe Haven,', line2:'A Loving Family.', sub:'Providing round-the-clock shelter, medical assistance, companionship and emotional warmth to homeless and vulnerable elders.', benefits:[{icon:ICONS.people,label:'Dedicated Caregivers'},{icon:ICONS.clock,label:'Healthcare & Checkups'},{icon:ICONS.heart,label:'Dignity & Respect'}] },
     { tag:'Community Seva & Education Support', line1:'Together We Serve,', line2:'Together We Empower.', sub:'Supporting student education with books and fees, caring for cows in our Gaushala, and bringing communities together in selfless service.', benefits:[{icon:ICONS.book,label:'Student Scholarships'},{icon:ICONS.cow,label:'Sacred Gau Seva'},{icon:ICONS.people,label:'Volunteer Community'}] }
   ],
   gu: [
-    { tag:'અમારી સેવા — જીવંત ઝલક', line1:'દરરોજ સેવા.', line2:'દરેક જીવને ગૌરવ.', sub:'શ્રી વાસુકી ચેરિટેબલ ટ્રસ્ટનું હૃદય જુઓ — વાત્સલ્ય વૃદ્ધાશ્રમ, અમદાવાદમાં વડીલ સંભાળ, અન્નસેવા અને કરુણા.', benefits:[{icon:ICONS.heart,label:'અસલ ફૂટેજ'},{icon:ICONS.people,label:'અમદાવાદ, ભારત'},{icon:ICONS.shield,label:'નોંધાયેલ ટ્રસ્ટ'}] },
     { tag:'વૃદ્ધાશ્રમ સંભાળ — અમારું મુખ્ય મિશન', line1:'આજે કરુણા,', line2:'સદા ગૌરવ.', sub:'શ્રી વાસુકી ચેરિટેબલ ટ્રસ્ટમાં અમે વડીલોને પ્રેમ અને આદર સાથે સેવા આપીએ છીએ — સુરક્ષિત, સ્વસ્થ અને ગૌરવભર્યું જીવન.', benefits:[{icon:ICONS.shield,label:'સુરક્ષિત વાતાવરણ'},{icon:ICONS.meal,label:'પોષણ અને આરોગ્ય'},{icon:ICONS.clock,label:'૨૪/૭ સંભાળ'}] },
     { tag:'દૈનિક અન્નસેવા', line1:'જીવનને પોષણ,', line2:'આશાનો પ્રસાર.', sub:'દરરોજ હજારો તાજા, સ્વચ્છ ભોજન હોસ્પિટલના દર્દીઓ, વડીલો અને જરૂરિયાતમંદ પરિવારો સુધી પહોંચે છે.', benefits:[{icon:ICONS.meal,label:'તાજું ભોજન'},{icon:ICONS.people,label:'હોસ્પિટલ અને શેરી સેવા'},{icon:ICONS.shield,label:'સંપૂર્ણ મફત'}] },
     { tag:'નિઃસ્વાર્થ સંભાળ — વડીલોનું સન્માન', line1:'સુરક્ષિત આશ્રય,', line2:'પ્રેમાળ પરિવાર.', sub:'બેઘર અને અસહાય વડીલોને આશ્રય, તબીબી મદદ, સાથ અને ભાવનાત્મક હૂંફ.', benefits:[{icon:ICONS.people,label:'સમર્પિત સેવકો'},{icon:ICONS.clock,label:'આરોગ્ય તપાસ'},{icon:ICONS.heart,label:'ગૌરવ અને આદર'}] },
@@ -1463,7 +1473,8 @@ const SLIDES = {
 
 const DICT = {
   en: {
-    'nav.home':'Home','nav.about':'About Us','nav.programs':'Our Programs','nav.involve':'Get Involved','nav.gallery':'Gallery','nav.news':'News & Updates','nav.contact':'Contact Us','nav.all':'All Programs',
+    'top.phone':'+91 98765 43210','top.loc':'Rajkot, Gujarat, India','top.tag':'Vatsalya Group Support Initiative',
+    'nav.home':'Home','nav.about':'About Us','nav.work':'Our Work','nav.vatsalya':'Vatsalya Group','nav.trustee':'Trustee','nav.programs':'Our Programs','nav.involve':'Get Involved','nav.gallery':'Gallery','nav.news':'News','nav.contact':'Contact','nav.all':'All Programs',
     'svc.old':'Old Age Home','svc.gau':'Gau Seva','svc.hospital':'Hospital Food Service','svc.street':'Street Food Service','svc.edu':'Student Education Support',
     'cta.donate':'Donate Now','cta.meal':'Sponsor a Meal','cta.vol':'Become a Volunteer','cta.watch':'Watch Our Story','cta.more':'Learn More','cta.strip':'Join hands. Serve humanity.','cta.stripp':'Volunteer with us, sponsor a celebration, or simply visit Vatsalya Vrudhashram.',
     'hint.scroll':'Scroll','stat.elders':'Elders in Our Care','stat.meals':'Meals Served','stat.lives':'Lives Impacted','stat.students':'Students Supported','stat.cows':'Cows Under Care',
@@ -1501,7 +1512,7 @@ const DICT = {
     'news.2m':'Annaseva','news.2t':'Meals at the hospital gate','news.2p':'Volunteers serve hot food to patients and waiting families — hygiene, dignity, no questions asked.',
     'news.3m':'Education','news.3t':'Colour, culture, classroom','news.3p':'From scholarships to festivals, we keep children seen, supported, and celebrating who they are.',
     'tes.eye':'Voices of Trust','tes.title':'What people say about us',
-    'tes.1':'My mother has found a second family here. The care, warmth and respect she receives every single day brings peace to our entire family.','tes.1r':'Daughter of Resident',
+    'tes.1':'From housing and food to medical care and lifelong support till the very end, this trust provides selfless charity and takes care of every elder just like their own parents.','tes.1r':'Daughter of Resident',
     'tes.2':'I have seen their seva up close — hygienic food, genuine care and complete transparency. A trust that truly serves humanity with its whole heart.','tes.2r':'Social Worker',
     'tes.3':'The education support kept my daughter in school when we had lost all hope. We will forever be grateful to this trust and its kind donors.','tes.3r':'Parent',
     'don.eye':'Give with intention','don.title':'Be the reason someone smiles today','don.p':'Your support brings food to the hungry, care to the elderly, education to a child, and hope to many lives. Donate via WhatsApp — Google Pay, PhonePe or Paytm.',
@@ -1509,7 +1520,8 @@ const DICT = {
     'foot.about':'Serving humanity through Old Age Care, Gau Seva, Food Seva and Education Support. Registered charitable trust, Ahmedabad.','foot.quick':'Quick Links','foot.svc':'Our Services'
   },
   gu: {
-    'nav.home':'હોમ','nav.about':'અમારા વિશે','nav.programs':'અમારા કાર્યક્રમો','nav.involve':'જોડાઓ','nav.gallery':'ગેલેરી','nav.news':'સમાચાર','nav.contact':'સંપર્ક','nav.all':'બધા કાર્યક્રમો',
+    'top.phone':'+91 98765 43210','top.loc':'રાજકોટ, ગુજરાત, ભારત','top.tag':'વાત્સલ્ય ગ્રુપ સહાય પહેલ',
+    'nav.home':'હોમ','nav.about':'અમારા વિશે','nav.work':'અમારું કાર્ય','nav.vatsalya':'વાત્સલ્ય ગ્રુપ','nav.trustee':'ટ્રસ્ટી','nav.programs':'અમારા કાર્યક્રમો','nav.involve':'જોડાઓ','nav.gallery':'ગેલેરી','nav.news':'સમાચાર','nav.contact':'સંપર્ક','nav.all':'બધા કાર્યક્રમો',
     'svc.old':'વૃદ્ધાશ્રમ','svc.gau':'ગૌ સેવા','svc.hospital':'હોસ્પિટલ અન્નસેવા','svc.street':'શેરી અન્નસેવા','svc.edu':'વિદ્યાર્થી શિક્ષણ સહાય',
     'cta.donate':'દાન કરો','cta.meal':'ભોજન પ્રાયોજિત કરો','cta.vol':'સેવક બનો','cta.watch':'અમારી વાર્તા જુઓ','cta.more':'વધુ જાણો','cta.strip':'હાથ મિલાવો. માનવતાની સેવા કરો.','cta.stripp':'સેવક બનો, ઉજવણી પ્રાયોજિત કરો, અથવા વાત્સલ્ય વૃદ્ધાશ્રમની મુલાકાત લો.',
     'hint.scroll':'સ્ક્રોલ','stat.elders':'અમારી સંભાળમાં વડીલો','stat.meals':'પીરસાયેલા ભોજન','stat.lives':'પ્રભાવિત જીવન','stat.students':'સહાયિત વિદ્યાર્થીઓ','stat.cows':'સંભાળ હેઠળ ગાયો',
@@ -1547,7 +1559,7 @@ const DICT = {
     'news.2m':'અન્નસેવા','news.2t':'હોસ્પિટલ દ્વારે ભોજન','news.2p':'સેવકો દર્દીઓ અને રાહ જોતા પરિવારોને ગરમ ભોજન પીરસે — સ્વચ્છતા, ગૌરવ.',
     'news.3m':'શિક્ષણ','news.3t':'રંગ, સંસ્કૃતિ, વર્ગખંડ','news.3p':'શિષ્યવૃત્તિથી ઉત્સવ સુધી — બાળકોને જોવા, સહારો આપવા અને ઉજવવા.',
     'tes.eye':'વિશ્વાસના અવાજો','tes.title':'લોકો અમારા વિશે શું કહે છે',
-    'tes.1':'મારી માતાને અહીં બીજો પરિવાર મળ્યો છે. દરરોજ મળતી સંભાળ, હૂંફ અને આદર આખા પરિવારને શાંતિ આપે છે.','tes.1r':'નિવાસીની પુત્રી',
+    'tes.1':'ઘર-આશ્રય અને ભોજનથી લઈને સંપૂર્ણ તબીબી સારવાર અને જીવનના અંત સુધી, આ ટ્રસ્ટ નિઃસ્વાર્થ સેવા-દાન આપે છે અને દરેક વડીલની પોતાના માતા-પિતાની જેમ સંભાળ રાખે છે.','tes.1r':'નિવાસીની પુત્રી',
     'tes.2':'મેં તેમની સેવા નજીકથી જોઈ છે — સ્વચ્છ ભોજન, સાચી કાળજી અને સંપૂર્ણ પારદર્શિતા.','tes.2r':'સમાજ સેવક',
     'tes.3':'શિક્ષણ સહાયે મારી દીકરીને શાળામાં રાખી. અમે આ ટ્રસ્ટ અને દાતાઓના સદા આભારી છીએ.','tes.3r':'પિતા',
     'don.eye':'ભાવપૂર્વક દાન','don.title':'આજે કોઈના હાસ્યનું કારણ બનો','don.p':'તમારો સહારો ભૂખ્યાને ભોજન, વડીલોને સંભાળ, બાળકને શિક્ષણ આપે છે. WhatsApp પર દાન કરો — Google Pay, PhonePe અથવા Paytm.',
@@ -1737,6 +1749,13 @@ const marqueeHTML = MARQUEE.map(n => `<figure><img src="image/${n}" alt="" loadi
 track.innerHTML = marqueeHTML + marqueeHTML;
 
 const GALLERY = [
+  {src:'home page banner.png', video:'vidoes/janmashtami.mp4', cat:'video', cap:'Janmashtami Special Seva — Live Video'},
+  {src:'banner section 2.png', video:'vidoes/2.mp4', cat:'video', cap:'Elder Care & Compassion — Video Seva 2'},
+  {src:'banner sction 3.png', video:'vidoes/3.mp4', cat:'video', cap:'Daily Food Seva & Serving — Video Seva 3'},
+  {src:'banner section 4.png', video:'vidoes/4.mp4', cat:'video', cap:'Vatsalya Vrudhashram Moments — Video Seva 4'},
+  {src:'image/21.jpeg', video:'vidoes/5.mp4', cat:'video', cap:'Dignified Elder Care & Warmth — Video Seva 5'},
+  {src:'image/38.jpeg', video:'vidoes/6.mp4', cat:'video', cap:'Community Seva & Support — Video Seva 6'},
+  {src:'image/54.jpeg', video:'vidoes/7.mp4', cat:'video', cap:'Special Celebrations with Elders — Video Seva 7'},
   {src:'image/31.jpeg', cat:'elders', cap:'Mealtime dignity at the old age home'},
   {src:'image/70.jpeg', cat:'elders', cap:'A family of residents and caregivers'},
   {src:'image/51.jpeg', cat:'elders', cap:'Birthday seva with our elders'},
@@ -1758,8 +1777,18 @@ const GALLERY = [
 ];
 const masonry = document.getElementById('masonry');
 function renderGallery(filter){
-  const items = filter === 'all' ? GALLERY : GALLERY.filter(g => g.cat === filter);
-  masonry.innerHTML = items.map((g,i) => `<figure data-idx="${GALLERY.indexOf(g)}" data-cat="${g.cat}"><img src="${g.src}" alt="${g.cap}" loading="lazy"><figcaption>${g.cap}</figcaption></figure>`).join('');
+  const items = filter === 'all' ? GALLERY : GALLERY.filter(g => g.cat === filter || (filter === 'video' && g.video));
+  masonry.innerHTML = items.map((g,i) => {
+    const realIdx = GALLERY.indexOf(g);
+    if (g.video){
+      return `<figure data-idx="${realIdx}" data-cat="${g.cat}" class="gallery-video-figure">
+        <video src="${g.video}" muted loop playsinline poster="${g.src}" preload="metadata"></video>
+        <div class="video-play-badge"><svg viewBox="0 0 24 24" fill="currentColor" width="12" height="12"><path d="M8 5v14l11-7z"/></svg> Video Seva</div>
+        <figcaption>${g.cap}</figcaption>
+      </figure>`;
+    }
+    return `<figure data-idx="${realIdx}" data-cat="${g.cat}"><img src="${g.src}" alt="${g.cap}" loading="lazy"><figcaption>${g.cap}</figcaption></figure>`;
+  }).join('');
 }
 renderGallery('all');
 document.querySelectorAll('.g-filter').forEach(btn => {
@@ -1772,18 +1801,32 @@ document.querySelectorAll('.g-filter').forEach(btn => {
 
 const lightbox = document.getElementById('lightbox');
 const lbImg = document.getElementById('lbImg');
+const lbVideo = document.getElementById('lbVideo');
 const lbCap = document.getElementById('lbCap');
 let lbIndex = 0;
 function openLb(i){
   lbIndex = i;
   const g = GALLERY[i];
-  lbImg.src = g.src;
-  lbImg.alt = g.cap;
+  if (g.video){
+    lbImg.style.display = 'none';
+    lbVideo.style.display = 'block';
+    lbVideo.src = g.video;
+    lbVideo.play().catch(()=>{});
+  } else {
+    if (lbVideo){ lbVideo.pause(); lbVideo.style.display = 'none'; }
+    lbImg.style.display = 'block';
+    lbImg.src = g.src;
+    lbImg.alt = g.cap;
+  }
   lbCap.textContent = g.cap;
   lightbox.classList.add('open');
   document.body.style.overflow = 'hidden';
 }
-function closeLb(){ lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+function closeLb(){
+  lightbox.classList.remove('open');
+  document.body.style.overflow = '';
+  if (lbVideo){ lbVideo.pause(); }
+}
 masonry.addEventListener('click', e => {
   const fig = e.target.closest('figure');
   if (!fig) return;
@@ -1804,12 +1847,12 @@ const filmStage = document.getElementById('filmStage');
 const filmVideo = document.getElementById('filmVideo');
 document.getElementById('filmPlay').addEventListener('click', () => {
   filmStage.classList.add('playing');
+  filmVideo.controls = true;
   filmVideo.muted = false;
   filmVideo.play();
 });
 filmVideo.addEventListener('click', () => {
   if (filmVideo.paused){ filmVideo.play(); filmStage.classList.add('playing'); }
-  else { filmVideo.pause(); filmStage.classList.remove('playing'); }
 });
 
 document.querySelectorAll('.amount').forEach(a => {

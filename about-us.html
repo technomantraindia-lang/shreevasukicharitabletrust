@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#16164F">
+<meta name="description" content="About Shree Vasuki Charitable Trust — Compassion in Action, Service for All. Dedicated to animal welfare, community empowerment, and humanitarian service in Ahmedabad.">
+<title>About Us — Shree Vasuki Charitable Trust | Compassion in Action, Service for All</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#34259A;
+  --purple-2:#4B3BC5;
+  --navy:#16164F;
+  --band:#2D218A;
+  --lav:#F4F2FF;
+  --lav-card:#F8F7FF;
+  --lav-border:#E7E3FB;
+  --ink:#12143D;
+  --muted:#585B7A;
+  --white:#FFFFFF;
+  --gold:#C4A574;
+  --radius-lg:22px;
+  --radius-md:16px;
+  --shadow-soft:0 20px 50px rgba(22,22,79,.08);
+  --shadow-lift:0 28px 60px rgba(22,22,79,.14);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+html[lang="gu"] body{font-family:'Noto Sans Gujarati','DM Sans',sans-serif}
+img,video{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;background:none;border:none;cursor:pointer;color:inherit}
+section{scroll-margin-top:92px}
+.container{width:min(1280px,100% - 48px);margin-inline:auto}
+
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-spacing:-.02em}
+html[lang="gu"] h1,html[lang="gu"] h2,html[lang="gu"] h3,html[lang="gu"] .serif{
+  font-family:'Noto Sans Gujarati','Cormorant Garamond',serif;letter-spacing:0;line-height:1.35
+}
+
+.eyebrow{
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--purple);margin-bottom:14px
+}
+
+.section-flourish{
+  display:flex;align-items:center;gap:8px;margin-top:8px;margin-bottom:18px;
+}
+.section-flourish::before,.section-flourish::after{
+  content:"";height:1.5px;width:32px;background:linear-gradient(90deg,var(--purple),transparent);
+}
+.section-flourish::after{background:linear-gradient(-90deg,var(--purple),transparent)}
+.section-flourish span{width:6px;height:6px;border-radius:50%;background:var(--purple);display:inline-block}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;
+  padding:14px 28px;border-radius:999px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s,border-color .3s;
+  white-space:nowrap
+}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 12px 26px rgba(52,37,154,.28)}
+.btn-primary:hover{background:var(--purple-2);transform:translateY(-2px);box-shadow:0 16px 32px rgba(52,37,154,.34)}
+.btn-outline{border:1.6px solid var(--purple);color:var(--purple);background:transparent}
+.btn-outline:hover{background:var(--purple);color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--purple);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.22)}
+.btn-sm{padding:10px 22px;font-size:13.5px}
+
+.reveal{opacity:0;transform:translateY(34px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.visible{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.12s}
+.reveal[data-delay="2"]{transition-delay:.24s}
+.reveal[data-delay="3"]{transition-delay:.36s}
+
+/* Preloader */
+#preloader{
+  position:fixed;inset:0;z-index:4000;background:var(--navy);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;
+  transition:opacity .7s var(--ease),visibility .7s
+}
+#preloader.done{opacity:0;visibility:hidden;pointer-events:none}
+#preloader img{height:76px;width:auto;filter:brightness(12)}
+.pre-bar{width:120px;height:2px;background:rgba(255,255,255,.15);border-radius:99px;overflow:hidden}
+.pre-bar span{display:block;height:100%;width:0;background:#fff;animation:preFill 1.1s var(--ease) forwards}
+@keyframes preFill{to{width:100%}}
+.pre-word{font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+
+/* Top Bar */
+/* Top Bar (Standardized) */
+.topbar{
+  background:#11142e;
+  color:#e2e8f0;
+  font-size:13px;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.topbar .container, .topbar-inner{
+  max-width:1240px;margin-inline:auto;
+  padding-inline:24px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.topbar-left, .topbar-info{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.topbar-link, .topbar-info a, .topbar-info span{
+  display:inline-flex;align-items:center;gap:6px;
+  color:#cbd5e1;font-size:13px;transition:color .2s;text-decoration:none;
+}
+.topbar-link svg, .topbar-info svg{width:14px;height:14px;color:#a78bfa;flex-shrink:0}
+.topbar-link:hover, .topbar-info a:hover{color:#ffffff}
+.topbar-right{
+  display:flex;align-items:center;gap:18px;
+}
+.topbar-tag{
+  background:rgba(167, 139, 250, 0.18);
+  color:#c4b5fd;
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11.5px;
+  font-weight:600;
+  border:1px solid rgba(167, 139, 250, 0.3);
+  display:inline-block;
+}
+
+/* Header (Standardized) */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  border-bottom:1px solid #f0eefc;
+  transition:box-shadow .3s,background .3s;
+}
+.header.scrolled{box-shadow:0 10px 30px rgba(22,22,79,.08);background:rgba(255,255,255,.98)}
+.header-inner{
+  max-width:1240px;margin-inline:auto;
+  padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo img{height:48px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:24px}
+.nav > a{
+  position:relative;display:inline-flex;align-items:center;
+  font-size:14.5px;font-weight:600;color:#151838;
+  padding:8px 12px;border-radius:8px;transition:color .25s;text-decoration:none;
+}
+.nav > a:hover,.nav > a.active{color:var(--purple)}
+.nav > a.active::after{
+  content:"";position:absolute;left:12px;right:12px;bottom:0;height:2.5px;
+  border-radius:999px;background:var(--purple);
+}
+
+.header-actions{display:flex;align-items:center;gap:14px}
+.lang-switch{
+  display:inline-flex;align-items:center;background:#f1f5f9;
+  border:1px solid #e2e8f0;border-radius:99px;padding:3px;
+}
+.lang-switch button{
+  font-size:12px;font-weight:700;letter-spacing:.02em;
+  padding:4px 10px;border-radius:99px;color:#64748b;
+  cursor:pointer;border:none;background:none;transition:all .25s;
+}
+.lang-switch button.active{background:var(--purple);color:#fff;box-shadow:0 2px 6px rgba(52,37,154,.25)}
+.search-btn{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#f1f5f9;color:#151838;transition:background .2s,color .2s;
+  cursor:pointer;border:none;
+}
+.search-btn:hover{background:var(--lav);color:var(--purple)}
+.search-btn svg{width:17px;height:17px}
+.hamburger{display:none;flex-direction:column;gap:5px;width:36px;height:36px;justify-content:center;align-items:center;border-radius:8px;background:#f1f5f9;border:none;cursor:pointer;z-index:130}
+.hamburger span{width:20px;height:2px;border-radius:3px;background:#151838;transition:transform .3s var(--ease),opacity .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:0 0 0 auto;width:min(340px,88vw);z-index:120;
+  background:#fff;box-shadow:-24px 0 60px rgba(22,22,79,.18);
+  padding:96px 28px 32px;
+  transform:translateX(105%);transition:transform .4s var(--ease);
+  display:flex;flex-direction:column;gap:4px;overflow-y:auto
+}
+.mobile-menu.open{transform:none}
+.mobile-menu a.mlink{
+  padding:12px 4px;font-size:15px;font-weight:500;color:var(--ink);
+  border-bottom:1px solid #F3F1FC
+}
+
+/* =========================================================
+   HERO SECTION
+   ========================================================= */
+.about-hero{
+  position:relative;
+  padding:64px 0 80px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#F8F7FF 100%);
+  overflow:hidden;
+}
+.about-hero-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:60px;
+}
+.about-hero-content{
+  max-width:580px;
+}
+.about-hero-content h1{
+  font-size:clamp(38px,4.5vw,56px);
+  font-weight:600;
+  color:var(--navy);
+  line-height:1.12;
+  margin-bottom:20px;
+}
+.about-hero-content p{
+  font-size:16px;
+  color:var(--muted);
+  line-height:1.7;
+  margin-bottom:32px;
+}
+.hero-cta-group{
+  display:flex;align-items:center;gap:16px;flex-wrap:wrap;margin-bottom:44px;
+}
+.trusted-badge{
+  display:inline-flex;align-items:center;gap:14px;
+  background:#fff;padding:10px 18px;border-radius:999px;
+  box-shadow:0 8px 24px rgba(22,22,79,.06);border:1px solid #F0EDFD;
+}
+.trusted-avatars{
+  display:flex;align-items:center;margin-right:-4px;
+}
+.trusted-avatars img{
+  width:32px;height:32px;border-radius:50%;border:2px solid #fff;margin-left:-8px;object-fit:cover;
+}
+.trusted-avatars img:first-child{margin-left:0}
+.trusted-text{
+  font-size:13px;font-weight:600;color:var(--ink);
+}
+.trusted-text span{color:var(--purple);font-weight:700}
+
+.about-hero-visual{
+  position:relative;
+  display:flex;justify-content:center;align-items:center;
+}
+.hero-blob-bg{
+  position:absolute;
+  inset:-20px -20px -20px -20px;
+  background:radial-gradient(circle at 60% 40%, rgba(75,59,197,0.15) 0%, rgba(244,242,255,0.8) 70%);
+  border-radius:40% 60% 70% 30% / 40% 50% 50% 60%;
+  z-index:1;
+  filter:blur(20px);
+}
+.hero-image-wrap{
+  position:relative;
+  z-index:2;
+  border-radius:32px;
+  overflow:hidden;
+  box-shadow:0 24px 60px rgba(22,22,79,.12);
+  width:100%;max-width:540px;
+  aspect-ratio:1.15 / 1;
+}
+.hero-image-wrap img{
+  width:100%;height:100%;object-fit:cover;
+}
+.hero-floating-card{
+  position:absolute;
+  bottom:24px;left:-24px;
+  z-index:3;
+  background:#fff;
+  padding:16px 22px;
+  border-radius:20px;
+  box-shadow:0 18px 45px rgba(22,22,79,.14);
+  display:flex;align-items:center;gap:14px;
+  border:1px solid #F0EEFC;
+  max-width:320px;
+}
+.floating-icon{
+  width:44px;height:44px;border-radius:50%;
+  background:var(--purple);color:#fff;
+  display:flex;align-items:center;justify-content:center;flex:none;
+}
+.floating-icon svg{width:22px;height:22px}
+.floating-text{
+  font-size:14px;font-weight:600;color:var(--navy);line-height:1.3;
+}
+
+/* =========================================================
+   CORE VALUES SECTION
+   ========================================================= */
+.core-values-sec{
+  padding:0 0 80px;
+}
+.core-values-box{
+  background:var(--lav-card);
+  border:1px solid var(--lav-border);
+  border-radius:24px;
+  padding:44px 36px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  box-shadow:0 12px 36px rgba(52,37,154,.04);
+}
+.value-card{
+  text-align:center;
+  padding:0 12px;
+  position:relative;
+}
+.value-card + .value-card::before{
+  content:"";position:absolute;left:0;top:10%;bottom:10%;width:1px;
+  background:var(--lav-border);
+}
+.value-icon{
+  width:56px;height:56px;margin:0 auto 18px;
+  color:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+}
+.value-icon svg{width:40px;height:40px;stroke-width:1.5}
+.value-card h3{
+  font-size:20px;font-weight:600;color:var(--navy);margin-bottom:8px;
+}
+.value-card p{
+  font-size:13.5px;color:var(--muted);line-height:1.6;
+}
+
+/* =========================================================
+   OUR STORY SECTION
+   ========================================================= */
+.our-story-sec{
+  padding:80px 0;
+}
+.story-grid{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.story-content h2{
+  font-size:clamp(34px,4vw,48px);
+  font-weight:600;
+  color:var(--navy);
+  margin-bottom:16px;
+}
+.story-content p{
+  font-size:15.5px;color:var(--muted);line-height:1.7;margin-bottom:28px;
+}
+.story-bullets{
+  display:flex;flex-direction:column;gap:14px;margin-bottom:34px;
+}
+.story-bullet-item{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:14.5px;font-weight:500;color:var(--ink);
+}
+.story-bullet-item i{
+  width:22px;height:22px;border-radius:50%;
+  background:var(--lav);color:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+  flex:none;margin-top:2px;
+}
+.story-bullet-item i svg{width:13px;height:13px}
+
+.story-gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  grid-template-rows:auto auto auto;
+  gap:16px;
+}
+.story-img-card{
+  border-radius:18px;overflow:hidden;
+  box-shadow:0 12px 30px rgba(22,22,79,.08);
+  height:180px;
+}
+.story-img-card img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s var(--ease);
+}
+.story-img-card:hover img{transform:scale(1.05)}
+.story-img-card.wide{
+  grid-column:span 2;
+  height:180px;
+}
+
+/* =========================================================
+   IMPACT COUNTER BANNER
+   ========================================================= */
+.impact-banner{
+  background:var(--band);
+  color:#fff;
+  padding:54px 0;
+  position:relative;
+  overflow:hidden;
+}
+.impact-banner::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 10% 20%, rgba(255,255,255,0.06), transparent 40%),
+              radial-gradient(circle at 90% 80%, rgba(255,255,255,0.06), transparent 40%);
+  pointer-events:none;
+}
+.impact-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+  text-align:center;
+  position:relative;z-index:2;
+}
+.impact-item{
+  padding:12px;
+  position:relative;
+}
+.impact-item + .impact-item::before{
+  content:"";position:absolute;left:0;top:15%;bottom:15%;width:1px;
+  background:rgba(255,255,255,0.18);
+}
+.impact-icon{
+  width:44px;height:44px;margin:0 auto 12px;
+  display:flex;align-items:center;justify-content:center;
+  color:rgba(255,255,255,0.85);
+}
+.impact-icon svg{width:36px;height:36px}
+.impact-num{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(38px,4vw,52px);
+  font-weight:700;
+  line-height:1;
+  margin-bottom:6px;
+}
+.impact-label{
+  font-size:14px;
+  font-weight:500;
+  color:rgba(255,255,255,0.85);
+}
+
+/* =========================================================
+   FOCUS AREAS (WHAT WE DO)
+   ========================================================= */
+.focus-sec{
+  padding:90px 0;
+  background:#FAF9FF;
+}
+.center-head{
+  text-align:center;max-width:640px;margin:0 auto 52px;
+}
+.center-head h2{
+  font-size:clamp(32px,4vw,46px);font-weight:600;color:var(--navy);
+}
+.focus-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+.focus-card{
+  background:#fff;
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid #EFEDFC;
+  box-shadow:0 14px 34px rgba(22,22,79,.06);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  display:flex;flex-direction:column;
+}
+.focus-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 22px 50px rgba(22,22,79,.12);
+}
+.focus-thumb{
+  position:relative;height:190px;overflow:hidden;
+}
+.focus-thumb img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s var(--ease);
+}
+.focus-card:hover .focus-thumb img{transform:scale(1.06)}
+.focus-category-icon{
+  position:absolute;bottom:-20px;left:20px;
+  width:44px;height:44px;border-radius:50%;
+  background:var(--purple);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 18px rgba(52,37,154,.3);
+  border:3px solid #fff;
+}
+.focus-category-icon svg{width:20px;height:20px}
+.focus-body{
+  padding:32px 22px 24px;
+  display:flex;flex-direction:column;flex:1;
+}
+.focus-body h3{
+  font-size:19px;font-weight:600;color:var(--navy);margin-bottom:10px;
+}
+.focus-body p{
+  font-size:13.5px;color:var(--muted);line-height:1.6;margin-bottom:20px;flex:1;
+}
+.focus-link{
+  display:inline-flex;align-items:center;gap:6px;
+  font-size:13.5px;font-weight:600;color:var(--purple);
+  transition:gap .25s;
+}
+.focus-card:hover .focus-link{gap:10px}
+.focus-link svg{width:14px;height:14px}
+
+/* =========================================================
+   OUR PROMISE TO YOU (WHY PEOPLE TRUST US)
+   ========================================================= */
+.promise-sec{
+  padding:90px 0;
+}
+.promise-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:24px;
+}
+.promise-card{
+  background:var(--lav-card);
+  border:1px solid var(--lav-border);
+  border-radius:18px;
+  padding:32px 24px;
+  transition:transform .3s var(--ease),background .3s;
+}
+.promise-card:hover{
+  background:#fff;
+  transform:translateY(-4px);
+  box-shadow:0 18px 40px rgba(22,22,79,.08);
+}
+.promise-icon{
+  width:48px;height:48px;border-radius:14px;
+  background:#fff;color:var(--purple);
+  box-shadow:0 6px 18px rgba(52,37,154,.08);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+}
+.promise-icon svg{width:24px;height:24px}
+.promise-card h3{
+  font-size:18px;font-weight:600;color:var(--navy);margin-bottom:8px;
+}
+.promise-card p{
+  font-size:13.5px;color:var(--muted);line-height:1.6;
+}
+
+/* =========================================================
+   MOMENTS OF COMPASSION (CAROUSEL)
+   ========================================================= */
+.moments-sec{
+  padding:80px 0 90px;
+  background:#FAF9FF;
+}
+.moments-slider-wrap{
+  position:relative;
+  margin-top:40px;
+  overflow:hidden;
+}
+.moments-track{
+  display:flex;
+  gap:20px;
+  transition:transform .5s var(--ease);
+}
+.moment-slide{
+  flex:0 0 calc(20% - 16px);
+  min-width:240px;
+  border-radius:18px;
+  overflow:hidden;
+  height:260px;
+  box-shadow:0 12px 30px rgba(22,22,79,.08);
+}
+.moment-slide img{
+  width:100%;height:100%;object-fit:cover;
+  transition:transform .4s var(--ease);
+}
+.moment-slide:hover img{transform:scale(1.06)}
+.moments-next-btn{
+  position:absolute;right:10px;top:50%;transform:translateY(-50%);
+  width:46px;height:46px;border-radius:50%;
+  background:var(--purple);color:#fff;
+  box-shadow:0 10px 24px rgba(52,37,154,.35);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;z-index:5;
+  transition:transform .25s,background .25s;
+}
+.moments-next-btn:hover{background:var(--purple-2);transform:translateY(-50%) scale(1.08)}
+.moments-next-btn svg{width:20px;height:20px}
+
+/* =========================================================
+   CTA BANNER
+   ========================================================= */
+.cta-banner{
+  background:linear-gradient(135deg, var(--band) 0%, #1D1564 100%);
+  color:#fff;
+  padding:64px 0;
+  position:relative;
+}
+.cta-banner-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:32px;
+}
+.cta-banner-text h2{
+  font-size:clamp(30px,3.8vw,44px);
+  font-weight:600;
+  color:#fff;
+  margin-bottom:10px;
+}
+.cta-banner-text p{
+  font-size:15.5px;
+  color:rgba(255,255,255,0.85);
+  max-width:580px;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer{
+  background:var(--navy);
+  color:rgba(255,255,255,.78);
+  padding:80px 0 32px;
+  font-size:14px;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1.2fr;
+  gap:48px;
+  margin-bottom:60px;
+}
+.footer-brand img{height:46px;width:auto;margin-bottom:18px;filter:brightness(12)}
+.footer-brand p{font-size:13.5px;line-height:1.75;color:rgba(255,255,255,.65);margin-bottom:22px;max-width:320px}
+.social-links{display:flex;gap:12px}
+.social-links a{
+  width:36px;height:36px;border-radius:50%;
+  background:rgba(255,255,255,.1);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .25s,transform .25s
+}
+.social-links a:hover{background:var(--purple);transform:translateY(-2px)}
+.social-links svg{width:16px;height:16px}
+.footer-col h4{
+  font-size:16px;font-weight:600;color:#fff;margin-bottom:20px;
+}
+.footer-col ul{display:flex;flex-direction:column;gap:12px}
+.footer-col a{transition:color .2s}
+.footer-col a:hover{color:#fff}
+.footer-contact-list li{
+  display:flex;align-items:flex-start;gap:12px;
+  font-size:13.5px;line-height:1.6;color:rgba(255,255,255,.75)
+}
+.footer-contact-list svg{width:18px;height:18px;color:var(--purple-2);flex:none;margin-top:2px}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);
+  padding-top:28px;
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:13px;color:rgba(255,255,255,.55);
+}
+.footer-links{display:flex;gap:24px}
+.footer-links a:hover{color:#fff}
+
+/* =========================================================
+   DONATION MODAL
+   ========================================================= */
+.modal-overlay{
+  position:fixed;inset:0;z-index:2000;
+  background:rgba(10,11,36,.75);
+  backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  padding:20px;opacity:0;visibility:hidden;pointer-events:none;
+  transition:opacity .3s var(--ease),visibility .3s;
+}
+.modal-overlay.open{opacity:1;visibility:visible;pointer-events:auto}
+.modal-card{
+  background:#fff;border-radius:24px;
+  max-width:540px;width:100%;padding:36px;
+  position:relative;box-shadow:0 24px 60px rgba(0,0,0,.3);
+  transform:scale(.94);transition:transform .3s var(--ease);
+}
+.modal-overlay.open .modal-card{transform:scale(1)}
+.modal-close{
+  position:absolute;top:20px;right:20px;
+  width:36px;height:36px;border-radius:50%;
+  background:var(--lav);color:var(--ink);
+  display:flex;align-items:center;justify-content:center;
+  cursor:pointer;
+}
+.modal-card h3{font-size:24px;font-weight:600;color:var(--navy);margin-bottom:8px}
+.modal-card p{font-size:14px;color:var(--muted);margin-bottom:24px}
+.bank-info{
+  background:var(--lav-card);border:1px solid var(--lav-border);
+  border-radius:16px;padding:20px;margin-bottom:24px;
+}
+.bank-row{display:flex;justify-content:space-between;padding:6px 0;font-size:13.5px;border-bottom:1px dashed #E6E2F8}
+.bank-row:last-child{border-bottom:none}
+.bank-row span:first-child{color:var(--muted)}
+.bank-row span:last-child{font-weight:600;color:var(--navy)}
+
+/* Responsive styles */
+@media (max-width:1080px){
+  .nav,.header-actions .btn-primary{display:none}
+  .hamburger{display:flex}
+  .about-hero-grid{grid-template-columns:1fr;gap:40px}
+  .about-hero-content{max-width:100%;text-align:center}
+  .hero-cta-group{justify-content:center}
+  .core-values-box{grid-template-columns:repeat(2,1fr);gap:32px 20px}
+  .value-card + .value-card::before{display:none}
+  .story-grid{grid-template-columns:1fr}
+  .impact-grid{grid-template-columns:repeat(2,1fr);gap:32px 20px}
+  .impact-item + .impact-item::before{display:none}
+  .focus-grid{grid-template-columns:repeat(2,1fr)}
+  .promise-grid{grid-template-columns:repeat(2,1fr)}
+  .cta-banner-inner{flex-direction:column;text-align:center}
+  .footer-grid{grid-template-columns:1fr 1fr;gap:36px}
+}
+@media (max-width:640px){
+  .container{width:calc(100% - 32px)}
+  .header-inner{padding-inline:18px;height:70px}
+  .logo img{height:40px}
+  .core-values-box{grid-template-columns:1fr}
+  .impact-grid{grid-template-columns:1fr}
+  .focus-grid{grid-template-columns:1fr}
+  .promise-grid{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .hero-floating-card{left:10px;bottom:10px;padding:12px 16px;max-width:280px}
+  .floating-text{font-size:12.5px}
+  .footer-bottom{flex-direction:column;gap:16px;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<div id="preloader" aria-hidden="true">
+  <img src="vasuk-logo-light.png" alt="">
+  <div class="pre-bar"><span></span></div>
+  <span class="pre-word">Helping Humanity</span>
+</div>
+
+<!-- Top Bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <a href="tel:+919876543210" aria-label="Helpline number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="top.phone">+91 98765 43210</span>
+      </a>
+      <a href="mailto:info@shreevasuki.org" aria-label="Email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>info@shreevasuki.org</span>
+      </a>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="top.loc">Rajkot, Gujarat, India</span>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-tag" data-i18n="top.tag">Vatsalya Group Support Initiative</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a class="logo" href="index.html" aria-label="Shree Vasuki Charitable Trust — home">
+      <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust logo">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about-us.html" class="active" data-i18n="nav.about">About Us</a>
+      <a href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a>
+      <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+      <a href="contact-us.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="active" data-lang="en">EN</button>
+        <button type="button" data-lang="gu">ગુ</button>
+      </div>
+      <button class="search-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <nav>
+    <a class="mlink" href="index.html" data-i18n="nav.home">Home</a>
+    <a class="mlink" href="about-us.html" style="color:var(--purple);font-weight:700" data-i18n="nav.about">About Us</a>
+    <a class="mlink" href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a>
+    <a class="mlink" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+    <a class="mlink" href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+    <a class="mlink" href="contact-us.html" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <div class="mm-actions">
+    <a class="phone-btn" href="tel:+919876543210" style="justify-content:center">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>+91 98765 43210</span>
+    </a>
+    <a href="index.html#donate" class="btn btn-primary" data-i18n="cta.donate">Donate Now</a>
+  </div>
+</div>
+
+<main>
+
+  <!-- HERO SECTION -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="about-hero-grid">
+        <div class="about-hero-content reveal">
+          <span class="eyebrow" data-i18n="about.eyebrow">ABOUT SHREE VASUKI TRUST</span>
+          <h1 data-i18n="about.title">Compassion in Action,<br>Service for All</h1>
+          <p data-i18n="about.desc">Shree Vasuki Trust is a non-profit organization dedicated to animal welfare, community empowerment, and humanitarian service. Rooted in compassion and guided by values, we work every day to bring hope and dignity to those in need.</p>
+          
+          <div class="hero-cta-group">
+            <a href="#story" class="btn btn-primary">
+              <span data-i18n="about.journey">Our Journey</span> &rarr;
+            </a>
+            <button type="button" class="btn btn-outline open-donate-modal">
+              <span data-i18n="about.involved">Get Involved</span> &rarr;
+            </button>
+          </div>
+
+          <div class="trusted-badge">
+            <div class="trusted-avatars">
+              <img src="image/21.jpeg" alt="Supporter">
+              <img src="image/31.jpeg" alt="Supporter">
+              <img src="image/70.jpeg" alt="Supporter">
+              <img src="image/85.jpeg" alt="Supporter">
+            </div>
+            <div class="trusted-text">
+              Trusted by Thousands &bull; <span>10K+ Lives Touched</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-hero-visual reveal" data-delay="1">
+          <div class="hero-blob-bg"></div>
+          <div class="hero-image-wrap">
+            <img src="image/70.jpeg" alt="Elderly woman smiling peacefully - Shree Vasuki Trust">
+          </div>
+          <div class="hero-floating-card">
+            <div class="floating-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="floating-text">
+              Every Act of Kindness<br>Creates Change.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4 CORE VALUES SECTION -->
+  <section class="core-values-sec">
+    <div class="container">
+      <div class="core-values-box reveal">
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <h3 data-i18n="val.c1.t">Compassion</h3>
+          <p data-i18n="val.c1.d">We serve with empathy and kindness, respecting every life and human dignity.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3 data-i18n="val.c2.t">Integrity</h3>
+          <p data-i18n="val.c2.d">We uphold transparency, honesty, and accountability in everything we do.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M11 15h2a2 2 0 1 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 17"/><path d="M7 21h8a2 2 0 0 0 2-2v-1a2 2 0 0 0-2-2h-1"/><path d="M14 11V7a2 2 0 0 0-2-2H9"/></svg>
+          </div>
+          <h3 data-i18n="val.c3.t">Commitment</h3>
+          <p data-i18n="val.c3.d">We are dedicated to sustainable impact and continuous service.</p>
+        </div>
+
+        <div class="value-card">
+          <div class="value-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 data-i18n="val.c4.t">Community</h3>
+          <p data-i18n="val.c4.d">We believe in togetherness and empowering communities to build a better tomorrow.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY SECTION -->
+  <section class="our-story-sec" id="story">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-content reveal">
+          <span class="eyebrow" data-i18n="story.eyebrow">OUR STORY</span>
+          <h2 data-i18n="story.title">A Journey of<br>Faith, Love & Service</h2>
+          <div class="section-flourish"><span></span></div>
+          <p data-i18n="story.desc">Founded on the timeless values of compassion and selfless service, Shree Vasuki Trust began as a humble effort to help stray animals and people in distress. Over the years, with the blessings of our community and supporters, we have grown into a movement of hope.</p>
+          
+          <div class="story-bullets">
+            <div class="story-bullet-item">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></i>
+              <span data-i18n="story.b1">Inspired by the teachings of love, service and humanity.</span>
+            </div>
+            <div class="story-bullet-item">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></i>
+              <span data-i18n="story.b2">From feeding the hungry to caring for voiceless animals.</span>
+            </div>
+            <div class="story-bullet-item">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></i>
+              <span data-i18n="story.b3">Empowering communities through health, education and support programs.</span>
+            </div>
+            <div class="story-bullet-item">
+              <i><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></i>
+              <span data-i18n="story.b4">Every small act, when done with love, creates a ripple of change.</span>
+            </div>
+          </div>
+
+          <a href="index.html#services" class="btn btn-primary">
+            <span data-i18n="story.btn">Learn More About Our Journey</span> &rarr;
+          </a>
+        </div>
+
+        <div class="story-gallery-grid reveal" data-delay="1">
+          <div class="story-img-card">
+            <img src="image/gau_seva.png" alt="Gau Seva - Cow shelter">
+          </div>
+          <div class="story-img-card">
+            <img src="image/8.jpeg" alt="Community meal food distribution">
+          </div>
+          <div class="story-img-card">
+            <img src="image/40.jpeg" alt="Food ration kit distribution">
+          </div>
+          <div class="story-img-card">
+            <img src="image/73.jpeg" alt="Community welfare gathering">
+          </div>
+          <div class="story-img-card wide">
+            <img src="image/75.jpeg" alt="Volunteers standing with banners and relief supplies">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT COUNTER BANNER -->
+  <section class="impact-banner">
+    <div class="container">
+      <div class="impact-grid">
+        <div class="impact-item reveal">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="impact-num stat-num" data-count="10000" data-suffix="+">0+</div>
+          <div class="impact-label" data-i18n="imp.l1">Lives Touched</div>
+        </div>
+
+        <div class="impact-item reveal" data-delay="1">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c-3 0-5 2-5 5s2 7 5 7 5-4 5-7-2-5-5-5z"/><path d="M7 10c-2 0-3-1-3-3s2-3 4-3"/><path d="M17 10c2 0 3-1 3-3s-2-3-4-3"/></svg>
+          </div>
+          <div class="impact-num stat-num" data-count="2500" data-suffix="+">0+</div>
+          <div class="impact-label" data-i18n="imp.l2">Animals Rescued & Cared For</div>
+        </div>
+
+        <div class="impact-item reveal" data-delay="2">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/><path d="M12 8v8"/></svg>
+          </div>
+          <div class="impact-num stat-num" data-count="500" data-suffix="+">0+</div>
+          <div class="impact-label" data-i18n="imp.l3">Food Distribution Drives</div>
+        </div>
+
+        <div class="impact-item reveal" data-delay="3">
+          <div class="impact-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="impact-num stat-num" data-count="50" data-suffix="+">0+</div>
+          <div class="impact-label" data-i18n="imp.l4">Dedicated Volunteers</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOCUS AREAS (WHAT WE DO) -->
+  <section class="focus-sec">
+    <div class="container">
+      <div class="center-head reveal">
+        <span class="eyebrow" data-i18n="focus.eyebrow">WHAT WE DO</span>
+        <h2 data-i18n="focus.title">Our Focus Areas</h2>
+        <div class="section-flourish" style="justify-content:center"><span></span></div>
+      </div>
+
+      <div class="focus-grid">
+        <div class="focus-card reveal">
+          <div class="focus-thumb">
+            <img src="image/gau_seva.png" alt="Cow & Animal Welfare">
+            <div class="focus-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5c-3 0-5 2-5 5s2 7 5 7 5-4 5-7-2-5-5-5z"/></svg>
+            </div>
+          </div>
+          <div class="focus-body">
+            <h3 data-i18n="focus.c1.t">Cow & Animal Welfare</h3>
+            <p data-i18n="focus.c1.d">Rescue, shelter, and care for cows and animals. We provide food, medical care, and a safe home for the voiceless.</p>
+            <a href="index.html#svc-gauseva" class="focus-link">
+              <span data-i18n="focus.more">Explore More</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="focus-card reveal" data-delay="1">
+          <div class="focus-thumb">
+            <img src="image/8.jpeg" alt="Community Support">
+            <div class="focus-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+            </div>
+          </div>
+          <div class="focus-body">
+            <h3 data-i18n="focus.c2.t">Community Support</h3>
+            <p data-i18n="focus.c2.d">Supporting underprivileged families through food, clothing, and essential resources with love and respect.</p>
+            <a href="index.html#svc-street" class="focus-link">
+              <span data-i18n="focus.more">Explore More</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="focus-card reveal" data-delay="2">
+          <div class="focus-thumb">
+            <img src="image/13.jpeg" alt="Health & Nutrition">
+            <div class="focus-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+          </div>
+          <div class="focus-body">
+            <h3 data-i18n="focus.c3.t">Health & Nutrition</h3>
+            <p data-i18n="focus.c3.d">Organizing health camps, medical aid, and nutrition support for healthier and stronger communities.</p>
+            <a href="index.html#svc-hospital" class="focus-link">
+              <span data-i18n="focus.more">Explore More</span> &rarr;
+            </a>
+          </div>
+        </div>
+
+        <div class="focus-card reveal" data-delay="3">
+          <div class="focus-thumb">
+            <img src="image/93.jpeg" alt="Education Support">
+            <div class="focus-category-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+          </div>
+          <div class="focus-body">
+            <h3 data-i18n="focus.c4.t">Education Support</h3>
+            <p data-i18n="focus.c4.d">Encouraging education by providing learning materials, fees support, and creating brighter futures for children.</p>
+            <a href="index.html#svc-education" class="focus-link">
+              <span data-i18n="focus.more">Explore More</span> &rarr;
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PEOPLE TRUST US / OUR PROMISE -->
+  <section class="promise-sec">
+    <div class="container">
+      <div class="center-head reveal">
+        <span class="eyebrow" data-i18n="promise.eyebrow">WHY PEOPLE TRUST US</span>
+        <h2 data-i18n="promise.title">Our Promise to You</h2>
+        <div class="section-flourish" style="justify-content:center"><span></span></div>
+      </div>
+
+      <div class="promise-grid">
+        <div class="promise-card reveal">
+          <div class="promise-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+          </div>
+          <h3 data-i18n="promise.p1.t">Transparent & Accountable</h3>
+          <p data-i18n="promise.p1.d">We maintain complete transparency in our operations and use of donations.</p>
+        </div>
+
+        <div class="promise-card reveal" data-delay="1">
+          <div class="promise-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <h3 data-i18n="promise.p2.t">100% for the Cause</h3>
+          <p data-i18n="promise.p2.d">Every contribution goes directly to the welfare of animals and people in need.</p>
+        </div>
+
+        <div class="promise-card reveal" data-delay="2">
+          <div class="promise-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <h3 data-i18n="promise.p3.t">Impact Driven</h3>
+          <p data-i18n="promise.p3.d">We focus on measurable, sustainable impact that changes lives.</p>
+        </div>
+
+        <div class="promise-card reveal" data-delay="3">
+          <div class="promise-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+          </div>
+          <h3 data-i18n="promise.p4.t">Community First</h3>
+          <p data-i18n="promise.p4.d">We work closely with local communities to create lasting change together.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MOMENTS OF COMPASSION (CAROUSEL) -->
+  <section class="moments-sec">
+    <div class="container">
+      <div class="center-head reveal">
+        <span class="eyebrow" data-i18n="moments.eyebrow">MOMENTS OF COMPASSION</span>
+        <h2 data-i18n="moments.title">Real Stories. Real Impact.</h2>
+        <div class="section-flourish" style="justify-content:center"><span></span></div>
+      </div>
+
+      <div class="moments-slider-wrap reveal">
+        <div class="moments-track" id="momentsTrack">
+          <div class="moment-slide">
+            <img src="image/8.jpeg" alt="Food Seva Drive">
+          </div>
+          <div class="moment-slide">
+            <img src="image/gau_seva.png" alt="Gau Seva Sanctuary">
+          </div>
+          <div class="moment-slide">
+            <img src="image/40.jpeg" alt="Elderly Food Relief">
+          </div>
+          <div class="moment-slide">
+            <img src="image/73.jpeg" alt="Community Gathering">
+          </div>
+          <div class="moment-slide">
+            <img src="image/13.jpeg" alt="Medical Seva">
+          </div>
+          <div class="moment-slide">
+            <img src="image/31.jpeg" alt="Vrudhashram Care">
+          </div>
+        </div>
+
+        <button type="button" class="moments-next-btn" id="momentsNext" aria-label="Next Slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-inner reveal">
+        <div class="cta-banner-text">
+          <h2 data-i18n="cta.b.title">Together, We Can Create<br>a Better Tomorrow</h2>
+          <p data-i18n="cta.b.desc">Your support empowers lives, protects animals, and builds stronger communities. Be a part of change.</p>
+        </div>
+        <div>
+          <button type="button" class="btn btn-white open-donate-modal">
+            <span data-i18n="cta.b.btn">Support Us Today</span> &rarr;
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="vasuk-logo-light.png" alt="Shree Vasuki Trust">
+        <p data-i18n="ft.desc">Dedicated to compassion, service, and the welfare of all living beings. Together, we create a better world.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="#fff"/></svg></a>
+          <a href="https://wa.me/919974063064" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="ft.quick">Quick Links</h4>
+        <ul>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="about-us.html" data-i18n="nav.about">About Us</a></li>
+          <li><a href="trustee.html" data-i18n="nav.trustee">Trustee</a></li>
+          <li><a href="index.html#services" data-i18n="nav.programs">Our Work</a></li>
+          <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+          <li><a href="index.html#news" data-i18n="nav.news">News & Events</a></li>
+          <li><a href="contact-us.html" data-i18n="nav.contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="ft.work">Our Work</h4>
+        <ul>
+          <li><a href="index.html#svc-gauseva" data-i18n="svc.gau">Cow & Animal Welfare</a></li>
+          <li><a href="index.html#svc-street" data-i18n="svc.street">Community Support</a></li>
+          <li><a href="index.html#svc-hospital" data-i18n="svc.hospital">Health & Nutrition</a></li>
+          <li><a href="index.html#svc-education" data-i18n="svc.edu">Education Support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 data-i18n="ft.contact">Contact Us</h4>
+        <ul class="footer-contact-list">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>123, Vasuki Nagar, Near Gaushala, Ahmedabad, Gujarat 380001, India</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91 99740 63064</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <span>info@shreevasukittrust.org</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            <span>www.shreevasukittrust.org</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 Shree Vasuki Trust. All Rights Reserved.</div>
+      <div class="footer-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms &amp; Conditions</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Donation Modal -->
+<div class="modal-overlay" id="donateModal" aria-hidden="true">
+  <div class="modal-card">
+    <button type="button" class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+    <h3 data-i18n="mod.t">Support Shree Vasuki Trust</h3>
+    <p data-i18n="mod.d">Your donations directly support elder care, Gau Seva, food drives, and student education.</p>
+    
+    <div class="bank-info">
+      <div class="bank-row"><span>Account Name:</span><span>Shree Vasuki Charitable Trust</span></div>
+      <div class="bank-row"><span>Bank Name:</span><span>State Bank of India</span></div>
+      <div class="bank-row"><span>Account No:</span><span>40982394821</span></div>
+      <div class="bank-row"><span>IFSC Code:</span><span>SBIN0001234</span></div>
+      <div class="bank-row"><span>UPI ID:</span><span>shreevasuki@sbi</span></div>
+    </div>
+
+    <div style="text-align:center">
+      <a href="https://wa.me/919974063064?text=Hello,%20I%20would%20like%20to%20donate%20to%20Shree%20Vasuki%20Charitable%20Trust" target="_blank" class="btn btn-primary" style="width:100%">
+        <span>Donate via WhatsApp</span> &rarr;
+      </a>
+    </div>
+  </div>
+</div>
+
+<script>
+// Preloader
+window.addEventListener('load', () => {
+  document.getElementById('preloader').classList.add('done');
+});
+
+// Sticky Header & Mobile menu
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 40);
+});
+
+const hamburger = document.getElementById('hamburger');
+const mobileMenu = document.getElementById('mobileMenu');
+hamburger.addEventListener('click', () => {
+  const open = mobileMenu.classList.toggle('open');
+  hamburger.classList.toggle('open', open);
+});
+
+// Dropdowns
+document.querySelectorAll('.nav-drop').forEach(drop => {
+  const toggle = drop.querySelector('.nav-drop-toggle');
+  toggle.addEventListener('click', e => {
+    e.stopPropagation();
+    const open = drop.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', String(open));
+  });
+});
+document.addEventListener('click', () => {
+  document.querySelectorAll('.nav-drop.open').forEach(d => d.classList.remove('open'));
+});
+
+// Scroll Reveal
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting){ e.target.classList.add('visible'); revealObserver.unobserve(e.target); }
+  });
+}, {threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Number Counters
+function formatIndian(n){ return n.toLocaleString('en-IN'); }
+const statObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    statObserver.unobserve(el);
+    const target = parseInt(el.dataset.count, 10);
+    const suffix = el.dataset.suffix || '';
+    const start = performance.now();
+    function tick(now){
+      const p = Math.min((now - start) / 2000, 1);
+      const eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = formatIndian(Math.round(target * eased)) + suffix;
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  });
+}, {threshold:0.4});
+document.querySelectorAll('.stat-num').forEach(el => statObserver.observe(el));
+
+// Moments Carousel
+const momentsTrack = document.getElementById('momentsTrack');
+const momentsNext = document.getElementById('momentsNext');
+let momentIndex = 0;
+momentsNext.addEventListener('click', () => {
+  momentIndex = (momentIndex + 1) % 3;
+  momentsTrack.style.transform = `translateX(-${momentIndex * 260}px)`;
+});
+
+// Donate Modal
+const donateModal = document.getElementById('donateModal');
+document.querySelectorAll('.open-donate-modal').forEach(btn => {
+  btn.addEventListener('click', () => {
+    donateModal.classList.add('open');
+  });
+});
+document.getElementById('modalClose').addEventListener('click', () => {
+  donateModal.classList.remove('open');
+});
+donateModal.addEventListener('click', e => {
+  if (e.target === donateModal) donateModal.classList.remove('open');
+});
+
+// I18N Gujarati / English
+const I18N = {
+  en: {
+    'top.phone':'+91 98765 43210', 'top.loc':'Rajkot, Gujarat, India', 'top.tag':'Vatsalya Group Support Initiative',
+    'nav.home':'Home', 'nav.about':'About Us', 'nav.work':'Our Work', 'nav.vatsalya':'Vatsalya Group', 'nav.trustee':'Trustee', 'nav.programs':'Our Work', 'nav.gallery':'Gallery', 'nav.news':'News', 'nav.contact':'Contact',
+    'cta.donate':'Donate Now',
+    'about.eyebrow':'ABOUT SHREE VASUKI TRUST',
+    'about.title':'Compassion in Action,\nService for All',
+    'about.desc':'Shree Vasuki Trust is a non-profit organization dedicated to animal welfare, community empowerment, and humanitarian service. Rooted in compassion and guided by values, we work every day to bring hope and dignity to those in need.',
+    'about.journey':'Our Journey', 'about.involved':'Get Involved',
+    'val.c1.t':'Compassion', 'val.c1.d':'We serve with empathy and kindness, respecting every life and human dignity.',
+    'val.c2.t':'Integrity', 'val.c2.d':'We uphold transparency, honesty, and accountability in everything we do.',
+    'val.c3.t':'Commitment', 'val.c3.d':'We are dedicated to sustainable impact and continuous service.',
+    'val.c4.t':'Community', 'val.c4.d':'We believe in togetherness and empowering communities to build a better tomorrow.',
+    'story.eyebrow':'OUR STORY', 'story.title':'A Journey of Faith, Love & Service',
+    'story.desc':'Founded on the timeless values of compassion and selfless service, Shree Vasuki Trust began as a humble effort to help stray animals and people in distress. Over the years, with the blessings of our community and supporters, we have grown into a movement of hope.',
+    'story.b1':'Inspired by the teachings of love, service and humanity.',
+    'story.b2':'From feeding the hungry to caring for voiceless animals.',
+    'story.b3':'Empowering communities through health, education and support programs.',
+    'story.b4':'Every small act, when done with love, creates a ripple of change.',
+    'story.btn':'Learn More About Our Journey',
+    'imp.l1':'Lives Touched', 'imp.l2':'Animals Rescued & Cared For', 'imp.l3':'Food Distribution Drives', 'imp.l4':'Dedicated Volunteers',
+    'focus.eyebrow':'WHAT WE DO', 'focus.title':'Our Focus Areas',
+    'focus.c1.t':'Cow & Animal Welfare', 'focus.c1.d':'Rescue, shelter, and care for cows and animals. We provide food, medical care, and a safe home for the voiceless.',
+    'focus.c2.t':'Community Support', 'focus.c2.d':'Supporting underprivileged families through food, clothing, and essential resources with love and respect.',
+    'focus.c3.t':'Health & Nutrition', 'focus.c3.d':'Organizing health camps, medical aid, and nutrition support for healthier and stronger communities.',
+    'focus.c4.t':'Education Support', 'focus.c4.d':'Encouraging education by providing learning materials, fees support, and creating brighter futures for children.',
+    'focus.more':'Explore More',
+    'promise.eyebrow':'WHY PEOPLE TRUST US', 'promise.title':'Our Promise to You',
+    'promise.p1.t':'Transparent & Accountable', 'promise.p1.d':'We maintain complete transparency in our operations and use of donations.',
+    'promise.p2.t':'100% for the Cause', 'promise.p2.d':'Every contribution goes directly to the welfare of animals and people in need.',
+    'promise.p3.t':'Impact Driven', 'promise.p3.d':'We focus on measurable, sustainable impact that changes lives.',
+    'promise.p4.t':'Community First', 'promise.p4.d':'We work closely with local communities to create lasting change together.',
+    'moments.eyebrow':'MOMENTS OF COMPASSION', 'moments.title':'Real Stories. Real Impact.',
+    'cta.b.title':'Together, We Can Create a Better Tomorrow',
+    'cta.b.desc':'Your support empowers lives, protects animals, and builds stronger communities. Be a part of change.',
+    'cta.b.btn':'Support Us Today'
+  },
+  gu: {
+    'top.phone':'+91 98765 43210', 'top.loc':'રાજકોટ, ગુજરાત, ભારત', 'top.tag':'વાત્સલ્ય ગ્રુપ સહાય પહેલ',
+    'nav.home':'હોમ', 'nav.about':'અમારા વિશે', 'nav.work':'અમારું કાર્ય', 'nav.vatsalya':'વાત્સલ્ય ગ્રુપ', 'nav.trustee':'ટ્રસ્ટી', 'nav.programs':'અમારું કાર્ય', 'nav.gallery':'ગેલેરી', 'nav.news':'સમાચાર', 'nav.contact':'સંપર્ક',
+    'cta.donate':'દાન આપો',
+    'about.eyebrow':'શ્રી વાસુકી ટ્રસ્ટ વિશે',
+    'about.title':'સેવા અને કરુણા,\nસૌના માટે સન્માન',
+    'about.desc':'શ્રી વાસુકી ચેરિટેબલ ટ્રસ્ટ પશુ સેવા, વૃદ્ધ સેવા અને સમુદાય કલ્યાણ માટે સમર્પિત એક બિન-નફાકારક સંસ્થા છે. અમે જરૂરિયાતમંદ દરેક વ્યક્તિ સુધી આશા અને સન્માન પહોંચાડવા માટે કાર્યરત છીએ.',
+    'about.journey':'અમારી યાત્રા', 'about.involved':'જોડાવો',
+    'val.c1.t':'કરુણા', 'val.c1.d':'અમે દરેક જીવ પ્રત્યે દયા અને સન્માન સાથે સેવા કરીએ છીએ.',
+    'val.c2.t':'પ્રમાણિકતા', 'val.c2.d':'અમે પારદર્શિતા અને જવાબદારી સાથે દરેક કાર્ય કરીએ છીએ.',
+    'val.c3.t':'સંકલ્પ', 'val.c3.d':'અમે સતત સેવા અને કાયમી પ્રભાવ આપવા માટે પ્રતિબદ્ધ છીએ.',
+    'val.c4.t':'સમુદાય', 'val.c4.d':'અમે સમુદાયને એકસાથે લાવીને સુંદર ભવિષ્યના નિર્માણમાં માનીએ છીએ.',
+    'story.eyebrow':'અમારી વાર્તા', 'story.title':'શ્રદ્ધા, પ્રેમ અને સેવાની યાત્રા',
+    'story.desc':'નિઃસ્વાર્થ સેવાની ભાવના સાથે શરૂ થયેલું શ્રી વાસુકી ટ્રસ્ટ આજે હજારો લોકો અને બોલ્યા વગરના પશુઓની સેવા કરી રહ્યું છે.',
+    'story.b1':'પ્રેમ, સેવા અને માનવતાના મૂલ્યોથી પ્રેરિત.',
+    'story.b2':'ભૂખ્યાને ભોજનથી લઈને બોલ્યા વગરના પશુઓની સંભાળ સુધી.',
+    'story.b3':'આરોગ્ય, શિક્ષણ અને સહાય દ્વારા સમુદાયને સશક્ત બનાવવું.',
+    'story.b4':'પ્રેમથી કરાયેલું દરેક નાનું કાર્ય મોટો બદલાવ લાવે છે.',
+    'story.btn':'અમારી યાત્રા વિશે વધુ જાણો',
+    'imp.l1':'જીવનને સ્પર્શ્યા', 'imp.l2':'પશુઓની સંભાળ', 'imp.l3':'અન્નદાન અભિયાન', 'imp.l4':'સમર્પિત સ્વયંસેવકો',
+    'focus.eyebrow':'અમારું કાર્ય', 'focus.title':'અમારા મુખ્ય સેવા ક્ષેત્રો',
+    'focus.c1.t':'ગૌ અને પશુ કલ્યાણ', 'focus.c1.d':'ગાયો અને પશુઓને આશ્રય, ભોજન અને તબીબી સારવાર પૂરી પાડવી.',
+    'focus.c2.t':'સમુદાય સહાય', 'focus.c2.d':'જરૂરિયાતમંદ પરિવારોને અન્ન અને જરૂરી સંસાધનો પૂરા પાડવા.',
+    'focus.c3.t':'આરોગ્ય અને પોષણ', 'focus.c3.d':'નિઃશુલ્ક તબીબી શિબિર અને પોષણક્ષમ આહાર સહાય.',
+    'focus.c4.t':'શિક્ષણ સહાય', 'focus.c4.d':'બાળકો માટે ભણતરનું સાહિત્ય અને શિક્ષણ સહાય.',
+    'focus.more':'વધુ જાણો',
+    'promise.eyebrow':'શા માટે લોકો અમારો વિશ્વાસ કરે છે', 'promise.title':'અમારું વચન',
+    'promise.p1.t':'પારદર્શી અને જવાબદાર', 'promise.p1.d':'અમે દરેક દાનનો પારદર્શી અને સદુપયોગ કરીએ છીએ.',
+    'promise.p2.t':'૧૦૦% સેવા માટે', 'promise.p2.d':'દરેક દાન સીધું જરૂરિયાતમંદ સુધી પહોંચે છે.',
+    'promise.p3.t':'પ્રભાવશાળી સેવા', 'promise.p3.d':'અમે કાયમી અને સાર્થક બદલાવ પર ધ્યાન આપીએ છીએ.',
+    'promise.p4.t':'સમુદાય પ્રથમ', 'promise.p4.d':'અમે સ્થાનિક સમુદાયો સાથે મળીને કાર્ય કરીએ છીએ.',
+    'moments.eyebrow':'સેવાની ક્ષણો', 'moments.title':'સાચી વાર્તાઓ. સાચો પ્રભાવ.',
+    'cta.b.title':'એકસાથે મળીને આપણે સુંદર ભવિષ્ય બનાવી શકીએ છીએ',
+    'cta.b.desc':'તમારો સહયોગ જીવન બદલે છે અને પશુઓનું રક્ષણ કરે છે. બદલાવનો હિસ્સો બનો.',
+    'cta.b.btn':'આજે જ સહયોગ કરો'
+  }
+};
+
+let currentLang = 'en';
+function applyLang(lang){
+  currentLang = lang;
+  document.documentElement.lang = lang;
+  document.querySelectorAll('.lang-switch button').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+  });
+  const dict = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.dataset.i18n;
+    if (dict[key]){
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') el.placeholder = dict[key];
+      else el.innerText = dict[key];
+    }
+  });
+}
+
+document.querySelectorAll('.lang-switch button').forEach(btn => {
+  btn.addEventListener('click', () => applyLang(btn.dataset.lang));
+});
+</script>
+</body>
+</html>

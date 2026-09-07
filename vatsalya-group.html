@@ -1,0 +1,2948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vatsalya Group — Shree Vasuki Charitable Trust</title>
+  <meta name="description" content="Vatsalya Group is a community-based social support and charitable initiative by Shree Vasuki Charitable Trust. Together in Support. Together in Seva.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    /* =========================================================
+       CSS VARIABLES & RESET
+       ========================================================= */
+    :root {
+      --navy: #151838;
+      --navy-deep: #0e1028;
+      --purple: #34259a;
+      --purple-dark: #241775;
+      --purple-light: #4b3bc5;
+      --purple-50: #f4f3ff;
+      --purple-100: #ede9fe;
+      --purple-200: #ddd6fe;
+      --indigo: #4338ca;
+      --blue-accent: #2563eb;
+      --cyan-accent: #0284c7;
+      --green-accent: #059669;
+      --green-light: #ecfdf5;
+      --green-border: #a7f3d0;
+      --orange-accent: #d97706;
+      --orange-light: #fffbeb;
+      --orange-border: #fde68a;
+      --blue-light: #eff6ff;
+      --blue-border: #bfdbfe;
+      --teal-accent: #0d9488;
+      --teal-light: #f0fdfa;
+      --teal-border: #99f6e4;
+      --accent-yellow: #f59e0b;
+      --gold: #d97706;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+      --bg-light: #f8faff;
+      --bg-card: #ffffff;
+      --border-subtle: #e2e8f0;
+      --shadow-sm: 0 2px 8px rgba(0,0,0,0.04);
+      --shadow-md: 0 8px 24px rgba(52,37,154,0.08);
+      --shadow-lg: 0 16px 40px rgba(52,37,154,0.12);
+      --shadow-xl: 0 24px 50px rgba(52,37,154,0.16);
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-xl: 28px;
+      --radius-full: 9999px;
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-dark);
+      background-color: #fdfdfd;
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    ul, ol {
+      list-style: none;
+    }
+
+    button {
+      cursor: pointer;
+      border: none;
+      background: none;
+      font-family: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* =========================================================
+       TOP BAR
+       ========================================================= */
+    .topbar {
+      background: #11142e;
+      color: #e2e8f0;
+      font-size: 13px;
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .topbar .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .topbar-info {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    .topbar-info a, .topbar-info span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: #cbd5e1;
+    }
+    .topbar-info a:hover {
+      color: #ffffff;
+    }
+    .topbar-info svg {
+      width: 14px;
+      height: 14px;
+      color: #a78bfa;
+    }
+    .topbar-right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .topbar-tag {
+      background: rgba(167, 139, 250, 0.18);
+      color: #c4b5fd;
+      padding: 3px 10px;
+      border-radius: 99px;
+      font-size: 11.5px;
+      font-weight: 600;
+      border: 1px solid rgba(167, 139, 250, 0.3);
+    }
+
+    /* =========================================================
+       HEADER & NAVIGATION
+       ========================================================= */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      transition: var(--transition);
+    }
+    .header-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .logo img {
+      height: 48px;
+      width: auto;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .nav a {
+      font-size: 14.5px;
+      font-weight: 600;
+      color: var(--navy);
+      padding: 8px 12px;
+      border-radius: 8px;
+      position: relative;
+    }
+    .nav a:hover, .nav a.active {
+      color: var(--purple);
+    }
+    .nav a.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 12px;
+      right: 12px;
+      height: 2.5px;
+      background: var(--purple);
+      border-radius: 99px;
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .lang-switch {
+      display: inline-flex;
+      background: #f1f5f9;
+      padding: 3px;
+      border-radius: 99px;
+      border: 1px solid #e2e8f0;
+    }
+    .lang-switch button {
+      padding: 4px 10px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 99px;
+      color: #64748b;
+      transition: var(--transition);
+    }
+    .lang-switch button.active {
+      background: var(--purple);
+      color: #ffffff;
+      box-shadow: 0 2px 6px rgba(52,37,154,0.25);
+    }
+    .search-btn {
+      width: 38px;
+      height: 38px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: var(--navy);
+      transition: var(--transition);
+    }
+    .search-btn:hover {
+      background: var(--purple-100);
+      color: var(--purple);
+    }
+    .search-btn svg {
+      width: 17px;
+      height: 17px;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 10px 22px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 99px;
+      transition: var(--transition);
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(52,37,154,0.3);
+    }
+    .btn-primary:hover {
+      background: linear-gradient(135deg, var(--purple-dark) 0%, var(--purple) 100%);
+      box-shadow: 0 6px 20px rgba(52,37,154,0.4);
+      transform: translateY(-2px);
+      color: #ffffff;
+    }
+    .btn-outline {
+      background: #ffffff;
+      color: var(--purple);
+      border: 1.5px solid var(--purple-200);
+    }
+    .btn-outline:hover {
+      background: var(--purple-50);
+      border-color: var(--purple);
+      transform: translateY(-2px);
+    }
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      width: 36px;
+      height: 36px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 8px;
+      background: #f1f5f9;
+    }
+    .hamburger span {
+      width: 20px;
+      height: 2px;
+      background: var(--navy);
+      transition: var(--transition);
+    }
+
+    /* Mobile Menu */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 82%;
+      max-width: 340px;
+      height: 100vh;
+      background: #ffffff;
+      z-index: 2000;
+      padding: 30px 24px;
+      box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+      transition: right 0.35s ease-in-out;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-y: auto;
+    }
+    .mobile-menu.open {
+      right: 0;
+    }
+    .menu-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
+      z-index: 1999;
+    }
+    .menu-backdrop.open {
+      display: block;
+    }
+    .mobile-menu nav {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 20px;
+    }
+    .mobile-menu .mlink {
+      font-size: 16px;
+      font-weight: 600;
+      padding: 10px 14px;
+      border-radius: 8px;
+      color: var(--navy);
+    }
+    .mobile-menu .mlink:hover {
+      background: var(--purple-50);
+      color: var(--purple);
+    }
+
+    /* =========================================================
+       HERO SECTION
+       ========================================================= */
+    .vatsalya-hero {
+      position: relative;
+      background: #f7f9ff;
+      padding: 60px 0 70px;
+      overflow: hidden;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .vatsalya-hero-bg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 1;
+    }
+    .vatsalya-hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(255, 255, 255, 0.93) 0%, rgba(255, 255, 255, 0.85) 55%, rgba(255, 255, 255, 0.65) 100%);
+      z-index: 2;
+    }
+    .vatsalya-hero-grid {
+      position: relative;
+      z-index: 3;
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(52, 37, 154, 0.08);
+      color: var(--purple);
+      font-size: 13.5px;
+      font-weight: 700;
+      padding: 6px 16px;
+      border-radius: 99px;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(38px, 4.5vw, 54px);
+      font-weight: 700;
+      color: #2b1f7d;
+      line-height: 1.12;
+      margin-bottom: 10px;
+    }
+    .hero-tagline {
+      font-size: clamp(18px, 2.2vw, 22px);
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 18px;
+    }
+    .hero-desc {
+      font-size: 15.5px;
+      line-height: 1.7;
+      color: #475569;
+      margin-bottom: 28px;
+      max-width: 600px;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .hero-visual { display: none; }
+    .hero-actions .btn {
+      padding: 12px 28px;
+      font-size: 15px;
+    }
+    .hero-visual-card {
+      position: relative;
+      background: #ffffff;
+      border-radius: var(--radius-xl);
+      padding: 18px;
+      box-shadow: 0 16px 40px rgba(52,37,154,0.12);
+      border: 1px solid rgba(221, 214, 254, 0.6);
+      overflow: hidden;
+    }
+    .hero-quote-box {
+      margin-top: 0;
+      background: linear-gradient(135deg, #fdf4ff 0%, #f5f3ff 100%);
+      padding: 12px 18px;
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--purple);
+      text-align: center;
+    }
+    .hero-quote-box p {
+      font-family: 'Caveat', cursive;
+      font-size: 20px;
+      font-weight: 700;
+      color: #3b2896;
+      line-height: 1.25;
+    }
+
+    /* =========================================================
+       SECTION GENERAL STYLES
+       ========================================================= */
+    .section {
+      padding: 65px 0;
+      position: relative;
+    }
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 45px;
+    }
+    .section-icon-badge {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, var(--purple-50) 0%, var(--purple-100) 100%);
+      color: var(--purple);
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(52,37,154,0.1);
+    }
+    .section-icon-badge svg {
+      width: 24px;
+      height: 24px;
+    }
+    .section-title {
+      font-size: clamp(26px, 3.2vw, 34px);
+      font-weight: 700;
+      color: #1e1b4b;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+    .section-subtitle {
+      font-size: 15.5px;
+      color: #64748b;
+    }
+
+    /* =========================================================
+       SECTION 2: HOW THE SYSTEM WORKS (3 STEPS)
+       ========================================================= */
+    .how-works-sec {
+      background: #ffffff;
+    }
+    .steps-grid-3 {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr 1.75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    .step-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      transition: var(--transition);
+    }
+    .step-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--purple-200);
+    }
+    .step-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 14px;
+    }
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #6366f1;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .step-title {
+      font-size: 17.5px;
+      font-weight: 700;
+      color: var(--purple);
+      line-height: 1.3;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: #64748b;
+      margin-bottom: 18px;
+      line-height: 1.55;
+    }
+    .fee-mini-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .fee-mini-box {
+      background: #f4f0ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 14px;
+      padding: 18px 10px;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .fee-mini-box:hover {
+      background: #eee8ff;
+      border-color: var(--purple-200);
+    }
+    .fee-mini-box svg {
+      width: 26px;
+      height: 26px;
+      color: var(--purple);
+      margin-bottom: 8px;
+    }
+    .fee-mini-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: #475569;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+    .fee-mini-amount {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--purple);
+    }
+    .step-note {
+      font-size: 12.5px;
+      color: #64748b;
+      line-height: 1.5;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed #e2e8f0;
+    }
+
+    /* Pool Card in Step 2 */
+    .pool-highlight-box {
+      background: #f4f0ff;
+      border: 1px solid #e9d5ff;
+      border-radius: 14px;
+      padding: 26px 16px;
+      text-align: center;
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .pool-highlight-box svg {
+      width: 38px;
+      height: 38px;
+      color: var(--purple);
+      margin-bottom: 10px;
+    }
+    .pool-formula {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--purple);
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+
+    /* Breakdown in Step 3 */
+    .step3-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      margin-bottom: 14px;
+      flex: 1;
+    }
+    .step3-col-card {
+      border-radius: 14px;
+      padding: 14px 10px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .step3-col-card.green {
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+    }
+    .step3-col-card.orange {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+    }
+    .step3-col-card.blue {
+      background: #eff6ff;
+      border: 1px solid #bfdbfe;
+    }
+
+    .step3-pill {
+      padding: 6px 8px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      text-align: center;
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .step3-col-card.green .step3-pill {
+      background: #d1fae5;
+      color: #065f46;
+    }
+    .step3-col-card.orange .step3-pill {
+      background: #fef3c7;
+      color: #92400e;
+    }
+    .step3-col-card.blue .step3-pill {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+
+    .step3-icon {
+      width: 32px;
+      height: 32px;
+      margin: 0 auto 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .step3-col-card.green .step3-icon { color: #059669; }
+    .step3-col-card.orange .step3-icon { color: #d97706; }
+    .step3-col-card.blue .step3-icon { color: #2563eb; }
+
+    .step3-text {
+      font-size: 11px;
+      color: #475569;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .step3-bullets {
+      list-style: disc;
+      padding-left: 16px;
+      margin: 0;
+      font-size: 10.5px;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .step3-bullets li {
+      margin-bottom: 4px;
+    }
+
+    .step3-footer-tag {
+      margin-top: 12px;
+      padding-top: 8px;
+      text-align: center;
+    }
+    .step3-col-card.green .step3-footer-tag { border-top: 1px dashed #a7f3d0; }
+    .step3-col-card.orange .step3-footer-tag { border-top: 1px dashed #fde68a; }
+    .step3-col-card.blue .step3-footer-tag { border-top: 1px dashed #bfdbfe; }
+
+    .step3-footer-label {
+      font-size: 10.5px;
+      color: #64748b;
+      margin-bottom: 2px;
+    }
+    .step3-footer-val {
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .step3-col-card.green .step3-footer-val { color: #047857; }
+    .step3-col-card.orange .step3-footer-val { color: #b45309; }
+    .step3-col-card.blue .step3-footer-val { color: #1d4ed8; }
+
+    /* =========================================================
+       SECTION 3: SIMPLE EXAMPLE & STEP 4 RENEWAL
+       ========================================================= */
+    .example-renewal-sec {
+      background: #f8faff;
+      border-top: 1px solid #edf2f7;
+      border-bottom: 1px solid #edf2f7;
+    }
+    .example-renewal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.6fr;
+      gap: 28px;
+    }
+    .example-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+    }
+    .card-header-flex {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .card-header-flex svg {
+      width: 26px;
+      height: 26px;
+      color: var(--purple);
+    }
+    .card-header-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .card-header-subtitle {
+      font-size: 12.5px;
+      color: #64748b;
+    }
+    .calc-row-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    .calc-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 10px 14px;
+      background: #f8faff;
+      border-radius: 10px;
+      font-size: 13.5px;
+      border: 1px solid #e2e8f0;
+    }
+    .calc-row-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #334155;
+    }
+    .calc-row-amount {
+      font-weight: 700;
+      color: var(--navy);
+    }
+    .total-pill-banner {
+      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+      color: #ffffff;
+      padding: 12px 20px;
+      border-radius: var(--radius-md);
+      text-align: center;
+      font-size: 18px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      box-shadow: 0 4px 14px rgba(52,37,154,0.25);
+    }
+
+    /* Renewal Step 4 */
+    .renewal-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .renewal-inner-grid {
+      display: grid;
+      grid-template-columns: 1.3fr 0.9fr;
+      gap: 20px;
+      align-items: center;
+    }
+    .renewal-text p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+    .cycle-diagram-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 16px;
+      background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
+      border-radius: 20px;
+      border: 1.5px dashed var(--purple-200);
+      position: relative;
+    }
+    .cycle-circle {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      border: 3px solid var(--purple);
+      border-top-color: transparent;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      animation: spinSlow 20s linear infinite;
+    }
+    .cycle-circle-inner {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+    .cycle-circle-inner svg {
+      width: 32px;
+      height: 32px;
+      color: var(--purple);
+      margin-bottom: 4px;
+    }
+    .cycle-label {
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--purple);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    @keyframes spinSlow {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    /* Reference-style example and renewal banner */
+    .example-renewal-sec { background:#f7f9ff; }
+    .example-renewal-grid { gap:10px; }
+    .example-renewal-grid .example-card,
+    .example-renewal-grid .renewal-card { border-radius:12px; padding:14px; }
+    .example-renewal-grid .card-header-flex { margin-bottom:12px; }
+    .example-renewal-grid .calc-row-list { gap:7px; margin-bottom:12px; }
+    .example-renewal-grid .calc-row { padding:8px 12px; }
+    .example-renewal-grid .total-pill-banner { background:linear-gradient(135deg,#f0efff,#e9e8ff); color:#21188c; box-shadow:none; padding:10px 20px; }
+    .example-renewal-grid .renewal-inner-grid { gap:12px; }
+    .example-renewal-grid .cycle-diagram-wrap { min-height:180px; padding:6px; background:transparent; border:0; }
+    .example-renewal-grid .cycle-circle { width:145px; height:145px; border:7px solid #cbd8ff; animation:none; }
+
+    /* =========================================================
+       SECTION 4: CYCLE OF MUTUAL SUPPORT (HORIZONTAL FLOW)
+       ========================================================= */
+    .mutual-cycle-sec {
+      background: #ffffff;
+      padding: 60px 0;
+    }
+    .mutual-cycle-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 45px 35px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+      text-align: center;
+    }
+    .mutual-cycle-header {
+      max-width: 720px;
+      margin: 0 auto 40px;
+    }
+    .mutual-cycle-icon-top {
+      width: 52px;
+      height: 52px;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #6366f1;
+    }
+    .mutual-cycle-icon-top svg {
+      width: 46px;
+      height: 46px;
+    }
+    .mutual-cycle-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: #2e1065;
+      margin-bottom: 8px;
+      letter-spacing: -0.01em;
+    }
+    .mutual-cycle-subtitle {
+      font-size: 14px;
+      color: #64748b;
+      line-height: 1.5;
+    }
+    .cycle-flow-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 6px;
+      max-width: 1140px;
+      margin: 0 auto;
+    }
+    .cycle-flow-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      flex: 1;
+    }
+    .cycle-circle-btn {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background: #f3f0ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 12px;
+      transition: var(--transition);
+    }
+    .cycle-flow-item:hover .cycle-circle-btn {
+      background: #eee8ff;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.15);
+    }
+    .cycle-circle-btn svg {
+      width: 36px;
+      height: 36px;
+      color: #6366f1;
+    }
+    .cycle-flow-label {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: #2e1065;
+      line-height: 1.35;
+      max-width: 125px;
+    }
+    .cycle-flow-arrow {
+      color: #3b82f6;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 992px) {
+      .cycle-flow-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .cycle-flow-arrow {
+        display: none;
+      }
+      .cycle-flow-item {
+        flex: 0 0 calc(33.33% - 20px);
+        margin-bottom: 16px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .cycle-flow-item {
+        flex: 0 0 calc(50% - 16px);
+      }
+    }
+
+    /* =========================================================
+       SECTION 5: MEMBER RESPONSIBILITY & WHY JOIN
+       ========================================================= */
+    .responsibilities-benefits-sec {
+      background: #f8faff;
+      border-top: 1px solid #edf2f7;
+    }
+    .resp-bene-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 32px;
+    }
+    .resp-card-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .resp-inner-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin: 20px 0;
+    }
+    .resp-item {
+      background: #f8faff;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
+      padding: 14px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      transition: var(--transition);
+    }
+    .resp-item:hover {
+      background: var(--purple-50);
+      border-color: var(--purple-200);
+      transform: translateY(-2px);
+    }
+    .resp-item-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: var(--purple-100);
+      color: var(--purple);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .resp-item-icon svg {
+      width: 17px;
+      height: 17px;
+    }
+    .resp-item-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .resp-highlight-bar {
+      background: linear-gradient(135deg, #f5f3ff 0%, #eff6ff 100%);
+      border: 1px solid var(--purple-200);
+      border-radius: 10px;
+      padding: 12px 16px;
+      font-size: 12.5px;
+      font-weight: 600;
+      color: var(--purple);
+      text-align: center;
+      line-height: 1.5;
+    }
+
+    /* Benefits Column */
+    .benefits-card-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+    .benefits-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .benefit-item {
+      padding: 14px 16px;
+      border-radius: 12px;
+      transition: var(--transition);
+    }
+    .benefit-item:hover {
+      transform: translateX(4px);
+    }
+    .benefit-item.green { background: var(--green-light); border-left: 4px solid var(--green-accent); }
+    .benefit-item.gold { background: var(--orange-light); border-left: 4px solid var(--orange-accent); }
+    .benefit-item.indigo { background: #f5f3ff; border-left: 4px solid var(--purple); }
+    .benefit-item.teal { background: var(--teal-light); border-left: 4px solid var(--teal-accent); }
+    .benefit-item.blue { background: var(--blue-light); border-left: 4px solid var(--blue-accent); }
+
+    .benefit-head {
+      font-size: 14px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 4px;
+    }
+    .benefit-item.green .benefit-head { color: var(--green-accent); }
+    .benefit-item.gold .benefit-head { color: var(--orange-accent); }
+    .benefit-item.indigo .benefit-head { color: var(--purple); }
+    .benefit-item.teal .benefit-head { color: var(--teal-accent); }
+    .benefit-item.blue .benefit-head { color: var(--blue-accent); }
+
+    .benefit-desc {
+      font-size: 12.5px;
+      color: #475569;
+      line-height: 1.45;
+    }
+
+    /* Reference-style responsibility and benefits panels */
+    .responsibilities-benefits-sec { background:#f7f9ff; }
+    .resp-bene-grid { grid-template-columns:1.05fr 1fr; gap:10px; }
+    .resp-card-box, .benefits-card-box { border-radius:12px; padding:14px; }
+    .responsibilities-benefits-sec .card-header-title { font-size:18px; }
+    .responsibilities-benefits-sec .card-header-subtitle { font-size:12.5px; }
+    .resp-inner-grid { grid-template-columns:repeat(3,1fr); gap:5px; margin:10px 0; }
+    .resp-item { border-radius:9px; padding:10px 8px; gap:7px; }
+    .resp-item-icon { width:27px; height:27px; border-radius:7px; }
+    .resp-item-text { font-size:12px; line-height:1.3; }
+    .resp-highlight-bar { padding:10px 12px; font-size:12px; }
+    .benefits-stack { display:grid; grid-template-columns:repeat(5,1fr); gap:5px; margin-top:10px; }
+    .benefit-item { padding:10px 8px; border-left:0 !important; border-top:4px solid; border-radius:9px; }
+    .benefit-item.green { border-top-color:var(--green-accent); }
+    .benefit-item.gold { border-top-color:var(--orange-accent); }
+    .benefit-item.indigo { border-top-color:var(--purple); }
+    .benefit-item.teal { border-top-color:var(--teal-accent); }
+    .benefit-item.blue { border-top-color:var(--blue-accent); }
+    .benefit-head { justify-content:center; flex-direction:column; text-align:center; gap:4px; font-size:12px; line-height:1.2; }
+    .benefit-desc { font-size:11px; line-height:1.35; text-align:left; }
+
+    /* =========================================================
+       SECTION 6: OUR 80 • 10 • 10 COMMITMENT
+       ========================================================= */
+    .commitment-sec {
+      background: #ffffff;
+      padding: 70px 0;
+    }
+    .commitment-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .commitment-card {
+      border-radius: var(--radius-lg);
+      padding: 30px 24px;
+      text-align: center;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .commitment-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-lg);
+    }
+    .commitment-card.green {
+      background: linear-gradient(180deg, #ecfdf5 0%, #ffffff 100%);
+      border: 1.5px solid var(--green-border);
+    }
+    .commitment-card.gold {
+      background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+      border: 1.5px solid var(--orange-border);
+    }
+    .commitment-card.blue {
+      background: linear-gradient(180deg, #eff6ff 0%, #ffffff 100%);
+      border: 1.5px solid var(--blue-border);
+    }
+
+    .commit-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+    }
+    .commitment-card.green .commit-icon { background: #d1fae5; color: var(--green-accent); }
+    .commitment-card.gold .commit-icon { background: #fef3c7; color: var(--orange-accent); }
+    .commitment-card.blue .commit-icon { background: #dbeafe; color: var(--blue-accent); }
+
+    .commit-icon svg {
+      width: 28px;
+      height: 28px;
+    }
+    .commit-percentage {
+      font-size: clamp(38px, 4.5vw, 48px);
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .commitment-card.green .commit-percentage { color: var(--green-accent); }
+    .commitment-card.gold .commit-percentage { color: var(--orange-accent); }
+    .commitment-card.blue .commit-percentage { color: var(--blue-accent); }
+
+    .commit-title {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+    .commit-desc {
+      font-size: 13.5px;
+      color: #64748b;
+      line-height: 1.55;
+    }
+
+    /* =========================================================
+       SECTION 7: VISION & MISSION + IMPORTANT INFO
+       ========================================================= */
+    .vision-info-sec {
+      background: #f8faff;
+      border-top: 1px solid #edf2f7;
+    }
+    .vision-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+    .vision-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .vision-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+    }
+    .vision-card:hover {
+      border-color: var(--purple-200);
+      transform: translateY(-2px);
+    }
+    .vision-card-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 12px;
+    }
+    .vision-card-head svg {
+      width: 22px;
+      height: 22px;
+      color: var(--purple);
+    }
+    .vision-card p {
+      font-size: 14px;
+      color: #475569;
+      line-height: 1.65;
+    }
+    .mission-list {
+      margin-top: 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .mission-list li {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .mission-list li::before {
+      content: '•';
+      color: var(--purple);
+      font-size: 18px;
+    }
+
+    /* Important Information Column */
+    .info-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+    }
+    .info-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 18px;
+    }
+    .info-head svg {
+      width: 22px;
+      height: 22px;
+      color: var(--blue-accent);
+    }
+    .info-points-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .info-point-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13px;
+      color: #475569;
+      line-height: 1.55;
+    }
+    .info-point-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: #eff6ff;
+      color: var(--blue-accent);
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* =========================================================
+       SECTION 8: JOIN VATSALYA GROUP CTA BANNER
+       ========================================================= */
+    .vatsalya-cta-sec {
+      background: #ffffff;
+      padding: 60px 0;
+    }
+    .vatsalya-cta-card {
+      background: linear-gradient(135deg, #2b1f7d 0%, #3b2b9e 100%);
+      border-radius: var(--radius-xl);
+      padding: 40px;
+      color: #ffffff;
+      box-shadow: var(--shadow-xl);
+      display: grid;
+      grid-template-columns: 1.35fr 0.95fr;
+      gap: 36px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-left-content {
+      position: relative;
+      z-index: 2;
+    }
+    .cta-logo-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 14px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      margin-bottom: 16px;
+      backdrop-filter: blur(8px);
+    }
+    .cta-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(30px, 3.6vw, 42px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+    .cta-subtitle {
+      font-size: 17px;
+      font-weight: 600;
+      color: #e0e7ff;
+      margin-bottom: 12px;
+    }
+    .cta-desc {
+      font-size: 14.5px;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 22px;
+    }
+    .cta-badges-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 26px;
+    }
+    .cta-badge {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      padding: 8px 14px;
+      border-radius: 99px;
+      font-size: 13px;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .cta-right-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 16px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+    .cta-right-box img {
+      border-radius: var(--radius-md);
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+    }
+
+    /* Reference-style join banner */
+    .vatsalya-cta-sec { background:#ffffff; padding:18px 0 42px; }
+    .vatsalya-cta-card { background-image:url("join vastyla.png"); background-size:cover; background-position:center; border:1px solid #e5e7eb; border-radius:12px; padding:24px 28px; grid-template-columns:1fr; gap:20px; box-shadow:none; }
+    .cta-logo-tag { display:none; }
+    .cta-title { color:#17106d; font-size:36px; margin-bottom:2px; }
+    .cta-subtitle { color:#2c2392; font-size:18px; margin-bottom:6px; }
+    .cta-desc { color:#64748b; font-size:13px; margin-bottom:18px; }
+    .cta-badges-row { gap:10px; margin-bottom:12px; flex-wrap:nowrap; }
+    .cta-badge { background:#ffffff; border:1px solid #edf0f7; color:#30269a; border-radius:10px; padding:10px 14px; font-size:12px; min-height:50px; box-shadow:0 2px 8px rgba(55,48,163,.04); }
+    .cta-left-content > .open-join-modal { display:block; margin:0 auto; }
+    .cta-left-content > .open-join-modal { background:#34259a !important; color:#ffffff !important; border:0 !important; }
+    .cta-right-box { background:transparent; border-radius:0; padding:0; box-shadow:none; }
+    .vatsalya-cta-card .cta-right-box { display:none; }
+    .cta-right-box img { border-radius:10px; height:220px; }
+
+    /* =========================================================
+       SECTION 9: MEMBERSHIP CONTINUATION POLICY (EN & GU)
+       ========================================================= */
+    .policy-sec {
+      background: #f8faff;
+      border-top: 1px solid #edf2f7;
+      padding: 60px 0;
+    }
+    .policy-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 28px;
+    }
+    .policy-box {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      border: 1px solid #e2e8f0;
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .policy-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 1.5px solid #f1f5f9;
+    }
+    .policy-header svg {
+      width: 22px;
+      height: 22px;
+      color: var(--purple);
+    }
+    .policy-content p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #475569;
+      margin-bottom: 12px;
+    }
+    .policy-bullets {
+      margin: 10px 0 14px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .policy-bullets li {
+      font-size: 13px;
+      color: #334155;
+      position: relative;
+      padding-left: 14px;
+      line-height: 1.5;
+    }
+    .policy-bullets li::before {
+      content: '•';
+      color: #ef4444;
+      font-size: 18px;
+      position: absolute;
+      left: 0;
+      top: -2px;
+    }
+    .policy-alert {
+      background: #fef2f2;
+      border-left: 4px solid #ef4444;
+      padding: 12px 14px;
+      border-radius: 8px;
+      margin-top: auto;
+      font-size: 12.5px;
+      line-height: 1.55;
+      color: #991b1b;
+    }
+    .policy-alert b {
+      color: #b91c1c;
+    }
+
+    /* =========================================================
+       FOOTER
+       ========================================================= */
+    .footer {
+      background: var(--navy);
+      color: #ffffff;
+      padding: 70px 0 25px;
+      position: relative;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1.2fr 1.1fr;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+    .footer-brand img {
+      height: 44px;
+      width: auto;
+      margin-bottom: 16px;
+      filter: brightness(12);
+    }
+    .footer-brand p {
+      font-size: 13.5px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 20px;
+    }
+    .social-links {
+      display: flex;
+      gap: 10px;
+    }
+    .social-links a {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: var(--transition);
+    }
+    .social-links a:hover {
+      background: var(--purple-light);
+      transform: translateY(-2px);
+    }
+    .social-links svg {
+      width: 16px;
+      height: 16px;
+    }
+    .footer-col h4 {
+      font-size: 16px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 18px;
+    }
+    .footer-col ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .footer-col a {
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.75);
+      transition: var(--transition);
+    }
+    .footer-col a:hover {
+      color: #ffffff;
+      padding-left: 4px;
+    }
+    .footer-contact-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      font-size: 13.5px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 12px;
+    }
+    .footer-contact-list svg {
+      width: 18px;
+      height: 18px;
+      color: #a78bfa;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.1);
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      color: rgba(255,255,255,0.55);
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    /* =========================================================
+       MODALS & REVEAL ANIMATIONS
+       ========================================================= */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.7s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Registration / Join Modal */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 3000;
+      background: rgba(14, 16, 40, 0.75);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    .modal-card {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 520px;
+      width: 100%;
+      padding: 32px;
+      box-shadow: 0 24px 60px rgba(0,0,0,0.3);
+      position: relative;
+      transform: scale(0.92);
+      transition: var(--transition);
+    }
+    .modal-overlay.active .modal-card {
+      transform: scale(1);
+    }
+    .modal-close-btn {
+      position: absolute;
+      top: 18px;
+      right: 18px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #f1f5f9;
+      color: #64748b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .modal-close-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* =========================================================
+       RESPONSIVE BREAKPOINTS
+       ========================================================= */
+    @media (max-width: 1024px) {
+      .steps-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .example-renewal-grid {
+        grid-template-columns: 1fr;
+      }
+      .resp-bene-grid {
+        grid-template-columns: 1fr;
+      }
+      .commitment-grid {
+        grid-template-columns: 1fr;
+      }
+      .vision-info-grid {
+        grid-template-columns: 1fr;
+      }
+      .policy-grid {
+        grid-template-columns: 1fr;
+      }
+      .cycle-timeline-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav {
+        display: none;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .vatsalya-hero-grid {
+        grid-template-columns: 1fr;
+      }
+      .vatsalya-cta-card {
+        grid-template-columns: 1fr;
+      }
+      .resp-inner-grid {
+        grid-template-columns: 1fr;
+      }
+      .cycle-timeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .renewal-inner-grid {
+        grid-template-columns: 1fr;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    /* Reference-style vision, mission and information panels */
+    .vision-info-sec { background:#f7f9ff; border-top:1px solid #edf2f7; }
+    .vision-info-grid { grid-template-columns:1.05fr 1fr; gap:10px; }
+    .vision-column { display:grid; grid-template-columns:1fr 1fr; gap:8px; background:#fff; border:1px solid #e2e8f0; border-radius:12px; padding:14px; }
+    .vision-panel-title { grid-column:1/-1; display:flex; align-items:center; gap:10px; color:#17106d; font-size:20px; font-weight:700; }
+    .vision-panel-title svg { width:30px; height:30px; color:#30269a; }
+    .vision-card, .info-card { border-radius:10px; padding:14px; box-shadow:none; }
+    .vision-card-head, .info-head { font-size:15px; margin-bottom:10px; color:#17106d; }
+    .vision-card-head svg, .info-head svg { width:26px; height:26px; color:#30269a; }
+    .vision-card p, .info-point-item { font-size:12px; line-height:1.5; }
+    .mission-list { gap:6px; }
+    .mission-list li { font-size:12px; }
+    .info-card { background:#fff; border:1px solid #e2e8f0; }
+    .info-points-list { gap:10px; }
+    .info-point-num { width:34px; height:34px; background:#f0efff; color:#30269a; font-size:17px; flex-shrink:0; }
+  </style>
+</head>
+<body>
+
+  <!-- =========================================================
+       TOPBAR
+       ========================================================= -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-info">
+        <a href="tel:+919876543210" aria-label="Helpline number">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="top.phone">+91 98765 43210</span>
+        </a>
+        <a href="mailto:info@shreevasuki.org" aria-label="Email address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@shreevasuki.org</span>
+        </a>
+        <span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span data-i18n="top.loc">Rajkot, Gujarat, India</span>
+        </span>
+      </div>
+      <div class="topbar-right">
+        <span class="topbar-tag" data-i18n="top.tag">Vatsalya Group Support Initiative</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       HEADER NAVIGATION
+       ========================================================= -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Shree Vasuki Charitable Trust — Home">
+        <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust Logo">
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="about-us.html" data-i18n="nav.about">About Us</a>
+        <a href="vatsalya-group.html" class="active" data-i18n="nav.vatsalya">Vatsalya Group</a>
+        <a href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+        <a href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+        <a href="contact-us.html" data-i18n="nav.contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language selector">
+          <button type="button" class="active" data-lang="en">EN</button>
+          <button type="button" data-lang="gu">ગુ</button>
+        </div>
+        <button class="search-btn" type="button" aria-label="Search website">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </button>
+        <button class="hamburger" id="hamburger" type="button" aria-label="Open mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <nav>
+      <a class="mlink" href="index.html" data-i18n="nav.home">Home</a>
+      <a class="mlink" href="about-us.html" data-i18n="nav.about">About Us</a>
+      <a class="mlink" href="vatsalya-group.html" style="color:var(--purple);font-weight:700" data-i18n="nav.vatsalya">Vatsalya Group</a>
+      <a class="mlink" href="gallery.html" data-i18n="nav.gallery">Gallery</a>
+      <a class="mlink" href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+      <a class="mlink" href="contact-us.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div style="margin-top:20px; display:flex; flex-direction:column; gap:12px;">
+      <a class="btn btn-primary" href="#join" data-i18n="hero.joinBtn">Join Vatsalya Group</a>
+      <a class="btn btn-outline" href="index.html#donate" data-i18n="cta.donate">Donate</a>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       HERO SECTION
+       ========================================================= -->
+  <section class="vatsalya-hero">
+    <img src="banner section vatyala.png" alt="Vatsalya Group Banner Background" class="vatsalya-hero-bg">
+    <div class="vatsalya-hero-overlay"></div>
+    <div class="container vatsalya-hero-grid">
+      <div class="hero-content reveal">
+        <span class="hero-eyebrow" data-i18n="hero.eyebrow">Community Support</span>
+        <h1 class="hero-title" data-i18n="hero.title">Vatsalya Group</h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Together in Support. Together in Seva.</p>
+        <p class="hero-desc" data-i18n="hero.desc">
+          Vatsalya Group is a community-based social support and charitable initiative created with the spirit of Seva, Humanity and Mutual Support. Our purpose is simple: members support one another during the most difficult moments of life, while a portion of every contribution is also dedicated to meaningful charitable activities such as cow feeding, animal welfare, support for the visually impaired and other social causes.
+        </p>
+        <div class="hero-actions">
+          <a href="#join" class="btn btn-primary" data-i18n="hero.joinBtn">Join Vatsalya Group &rarr;</a>
+          <a href="#how-it-works" class="btn btn-outline" data-i18n="hero.howBtn">Learn How It Works</a>
+        </div>
+      </div>
+      <div class="hero-visual reveal">
+        <div class="hero-visual-card">
+          <div class="hero-quote-box">
+            <p data-i18n="hero.quote">“A community that cares, A society that grows.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 2: HOW THE VATSALYA GROUP SYSTEM WORKS (3 STEPS)
+       ========================================================= -->
+  <section class="section how-works-sec" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+        </div>
+        <h2 class="section-title" data-i18n="how.title">How the Vatsalya Group System Works</h2>
+        <p class="section-subtitle" data-i18n="how.subtitle">A simple, transparent and community-driven support model.</p>
+      </div>
+
+      <div class="steps-grid-3">
+        <!-- Step 1 -->
+        <div class="step-card reveal">
+          <div class="step-header">
+            <span class="step-num">1</span>
+            <h3 class="step-title" data-i18n="step1.title">Become a Registered Member</h3>
+          </div>
+          <p class="step-desc" data-i18n="step1.desc">
+            To become part of Vatsalya Group, each person completes the registration process and contributes:
+          </p>
+          <div class="fee-mini-grid">
+            <div class="fee-mini-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              <div class="fee-mini-label" data-i18n="step1.regFee">One-Time Registration Fee</div>
+              <div class="fee-mini-amount">&#8377;400</div>
+            </div>
+            <div class="fee-mini-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <div class="fee-mini-label" data-i18n="step1.memContrib">Member Contribution</div>
+              <div class="fee-mini-amount">&#8377;1,100</div>
+            </div>
+          </div>
+          <div class="step-note" data-i18n="step1.note">
+            The registration fee is separate from the member support contribution. Every registered member becomes part of the Vatsalya Group support network.
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step-card reveal">
+          <div class="step-header">
+            <span class="step-num">2</span>
+            <h3 class="step-title" data-i18n="step2.title">Members Create a Support Pool</h3>
+          </div>
+          <p class="step-desc" data-i18n="step2.desc">
+            The &#8377;1,100 contribution collected from every participating member forms a common support pool.
+          </p>
+          <div class="pool-highlight-box">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="pool-formula" data-i18n="step2.formula">11 Members &times; &#8377;1,100<br>= &#8377;12,100</div>
+          </div>
+          <div class="step-note" data-i18n="step2.note">
+            This &#8377;12,100 becomes the support amount available under the Vatsalya Group system.
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step-card reveal">
+          <div class="step-header">
+            <span class="step-num">3</span>
+            <h3 class="step-title" data-i18n="step3.title">Support in Case of a Member's Death</h3>
+          </div>
+          <p class="step-desc" data-i18n="step3.desc">
+            In the unfortunate event of the death of any registered member, irrespective of the situation and subject to verification and the rules of Vatsalya Group, the collected support fund will be distributed as follows:
+          </p>
+          <div class="step3-cards-grid">
+            <!-- Green Card -->
+            <div class="step3-col-card green">
+              <div class="step3-pill">
+                <div>80%</div>
+                <div style="font-size:11px; font-weight:700;">Family Support</div>
+              </div>
+              <div class="step3-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              </div>
+              <div class="step3-text" data-i18n="step3.b1">
+                80% of the collected amount will be provided as financial assistance to the eligible family / nominee of the deceased member.
+              </div>
+              <div class="step3-footer-tag">
+                <div class="step3-footer-label">From &#8377;12,100:</div>
+                <div class="step3-footer-val" data-i18n="step3.b1calc">80% = &#8377;9,680</div>
+              </div>
+            </div>
+
+            <!-- Orange Card -->
+            <div class="step3-col-card orange">
+              <div class="step3-pill">
+                <div>10%</div>
+                <div style="font-size:11px; font-weight:700;">Social &amp; Charitable Seva</div>
+              </div>
+              <div class="step3-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <ul class="step3-bullets" data-i18n="step3.b2list">
+                <li>Gau Seva / Cow Feeding</li>
+                <li>Animal Feeding &amp; Welfare</li>
+                <li>Support for Andhjan Mandal / Visually Impaired Person</li>
+                <li>Other genuine humanitarian activities approved by Vatsalya Group</li>
+              </ul>
+              <div class="step3-footer-tag">
+                <div class="step3-footer-label">From &#8377;12,100:</div>
+                <div class="step3-footer-val" data-i18n="step3.b2calc">10% = &#8377;1,210</div>
+              </div>
+            </div>
+
+            <!-- Blue Card -->
+            <div class="step3-col-card blue">
+              <div class="step3-pill">
+                <div>10%</div>
+                <div style="font-size:11px; font-weight:700;">Reserve Fund</div>
+              </div>
+              <div class="step3-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="28" height="28"><rect x="3" y="10" width="18" height="11" rx="2"/><path d="M3 10L12 3l9 7"/><line x1="9" y1="14" x2="9" y2="17"/><line x1="15" y1="14" x2="15" y2="17"/></svg>
+              </div>
+              <div class="step3-text" data-i18n="step3.b3">
+                The remaining 10% will be deposited into the designated Vatsalya Group bank account / reserve fund. This reserve can help strengthen the organization and support administration and approved future welfare Group's rules and policy.
+              </div>
+              <div class="step3-footer-tag">
+                <div class="step3-footer-label">From &#8377;12,100:</div>
+                <div class="step3-footer-val" data-i18n="step3.b3calc">10% = &#8377;1,210</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 3: SIMPLE EXAMPLE & STEP 4 RENEWAL
+       ========================================================= -->
+  <section class="section example-renewal-sec">
+    <div class="container">
+      <div class="example-renewal-grid">
+        <!-- Simple Example Card -->
+        <div class="example-card reveal">
+          <div class="card-header-flex">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="12" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/></svg>
+            <div>
+              <h3 class="card-header-title" data-i18n="ex.title">Simple Example</h3>
+              <span class="card-header-subtitle" data-i18n="ex.subtitle">Group of 11 Members</span>
+            </div>
+          </div>
+          <div class="calc-row-list">
+            <div class="calc-row">
+              <span class="calc-row-left">👥 11 &times; &#8377;1,100</span>
+              <span class="calc-row-amount">= &#8377;12,100</span>
+            </div>
+            <div class="calc-row" style="background:#ecfdf5; border-color:#a7f3d0;">
+              <span class="calc-row-left" style="color:#065f46;">🟢 &#8377;9,680</span>
+              <span class="calc-row-amount" style="color:#065f46;" data-i18n="ex.r1">80% Family Support</span>
+            </div>
+            <div class="calc-row" style="background:#fffbeb; border-color:#fde68a;">
+              <span class="calc-row-left" style="color:#92400e;">🟠 &#8377;1,210</span>
+              <span class="calc-row-amount" style="color:#92400e;" data-i18n="ex.r2">10% Charitable Seva</span>
+            </div>
+            <div class="calc-row" style="background:#eff6ff; border-color:#bfdbfe;">
+              <span class="calc-row-left" style="color:#1e40af;">🔵 &#8377;1,210</span>
+              <span class="calc-row-amount" style="color:#1e40af;" data-i18n="ex.r3">10% Group Reserve Fund</span>
+            </div>
+          </div>
+          <div class="total-pill-banner" data-i18n="ex.total">
+            Total = &#8377;12,100
+          </div>
+        </div>
+
+        <!-- Step 4: Renewal Card -->
+        <div class="renewal-card reveal">
+          <div class="card-header-flex">
+            <span class="step-num">4</span>
+            <div>
+              <h3 class="card-header-title" data-i18n="step4.title">Contribution Is Renewed After Support Is Provided</h3>
+              <span class="card-header-subtitle" data-i18n="step4.subtitle">Continuous cycle of mutual assistance</span>
+            </div>
+          </div>
+          <div class="renewal-inner-grid">
+            <div class="renewal-text">
+              <p data-i18n="step4.p1">
+                After support has been provided following the death of a registered member, the remaining active members will contribute <b>&#8377;1,100 again</b> to rebuild the support pool.
+              </p>
+              <p data-i18n="step4.p2">
+                Initially there are 11 members. If one member passes away and support is provided, the remaining 10 active members will make the next contribution of &#8377;1,100 each, subject to the membership rules.
+              </p>
+              <p data-i18n="step4.p3">
+                This helps the Group remain prepared to support another member's family whenever such an unfortunate situation arises.
+              </p>
+            </div>
+            <div class="cycle-diagram-wrap">
+              <div class="cycle-circle"></div>
+              <div class="cycle-circle-inner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                <span class="cycle-label" data-i18n="step4.badge">Contribute<br>Again</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 4: A CYCLE OF MUTUAL SUPPORT
+       ========================================================= -->
+  <section class="section mutual-cycle-sec">
+    <div class="container">
+      <div class="mutual-cycle-card reveal">
+        <div class="mutual-cycle-header">
+          <div class="mutual-cycle-icon-top">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="7" r="4.5" fill="#f3f0ff"/>
+              <circle cx="36" cy="17" r="4.5" fill="#f3f0ff"/>
+              <circle cx="31" cy="35" r="4.5" fill="#f3f0ff"/>
+              <circle cx="13" cy="35" r="4.5" fill="#f3f0ff"/>
+              <circle cx="8" cy="17" r="4.5" fill="#f3f0ff"/>
+              <path d="M22 7C29 7 36 12 36 17C36 24 31 35 31 35C31 35 20 39 13 35C6 31 8 17 8 17C8 12 15 7 22 7Z" stroke-dasharray="3 3"/>
+            </svg>
+          </div>
+          <h2 class="mutual-cycle-title" data-i18n="cycle.title">A Cycle of Mutual Support</h2>
+          <p class="mutual-cycle-subtitle" data-i18n="cycle.subtitle">Every member contributes not only money, but also becomes part of a community committed to helping one another.</p>
+        </div>
+
+        <div class="cycle-flow-container">
+          <!-- Flow 1: Join -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n1">Join</div>
+          </div>
+
+          <div class="cycle-flow-arrow">&rarr;</div>
+
+          <!-- Flow 2: Contribute -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4h6m-6 3.5h6m-6 0a3 3 0 0 0 3 3h.5a3 3 0 0 1 0 6H11m2-12.5v12.5"/><path d="M2 17l6 4 10-5-3-4H9.5"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n2">Contribute</div>
+          </div>
+
+          <div class="cycle-flow-arrow">&rarr;</div>
+
+          <!-- Flow 3: Support a Family -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n3">Support a Family</div>
+          </div>
+
+          <div class="cycle-flow-arrow">&rarr;</div>
+
+          <!-- Flow 4: Perform Seva -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n4">Perform Seva</div>
+          </div>
+
+          <div class="cycle-flow-arrow">&rarr;</div>
+
+          <!-- Flow 5: Rebuild the Fund -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/><rect x="17" y="13" width="4" height="6" rx="1"/><rect x="10" y="16" width="4" height="3" rx="1"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n5">Rebuild the Fund</div>
+          </div>
+
+          <div class="cycle-flow-arrow">&rarr;</div>
+
+          <!-- Flow 6: Continue Supporting -->
+          <div class="cycle-flow-item">
+            <div class="cycle-circle-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <div class="cycle-flow-label" data-i18n="cycle.n6">Continue Supporting</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 5: MEMBER RESPONSIBILITY & WHY BECOME PART
+       ========================================================= -->
+  <section class="section responsibilities-benefits-sec">
+    <div class="container">
+      <div class="resp-bene-grid">
+        <!-- Left: Member Responsibility -->
+        <div class="resp-card-box reveal">
+          <div class="card-header-flex">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><polyline points="17 11 19 13 23 9"/></svg>
+            <div>
+              <h3 class="card-header-title" data-i18n="resp.title">Member Responsibility</h3>
+              <span class="card-header-subtitle" data-i18n="resp.subtitle">Vatsalya Group grows through the participation and efforts of its members.</span>
+            </div>
+          </div>
+
+          <div class="resp-inner-grid">
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i1">Introduce genuine new members to Vatsalya Group</span>
+            </div>
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i2">Explain the purpose and working system clearly</span>
+            </div>
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i3">Encourage responsible participation</span>
+            </div>
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i4">Keep their membership and nominee details updated</span>
+            </div>
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i5">Make required contributions within the prescribed time</span>
+            </div>
+            <div class="resp-item">
+              <div class="resp-item-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+              </div>
+              <span class="resp-item-text" data-i18n="resp.i6">Support the charitable and humanitarian objectives of the Group</span>
+            </div>
+          </div>
+
+          <div class="resp-highlight-bar" data-i18n="resp.bar">
+            The stronger the member community becomes, the greater the support that can be extended to families in times of need.
+          </div>
+        </div>
+
+        <!-- Right: Why Become Part -->
+        <div class="benefits-card-box reveal">
+          <div class="card-header-flex">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <div>
+              <h3 class="card-header-title" data-i18n="why.title">Why Become Part of Vatsalya Group?</h3>
+              <span class="card-header-subtitle" data-i18n="why.subtitle">Key pillars of our community framework</span>
+            </div>
+          </div>
+
+          <div class="benefits-stack">
+            <div class="benefit-item green">
+              <div class="benefit-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+                <span data-i18n="why.b1t">Mutual Family Support</span>
+              </div>
+              <div class="benefit-desc" data-i18n="why.b1d">Your contribution becomes part of a collective effort to support the family of a fellow member during an unfortunate loss.</div>
+            </div>
+
+            <div class="benefit-item gold">
+              <div class="benefit-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                <span data-i18n="why.b2t">Seva With Every Contribution</span>
+              </div>
+              <div class="benefit-desc" data-i18n="why.b2d">A defined portion of the fund is used for humanitarian and charitable activities.</div>
+            </div>
+
+            <div class="benefit-item indigo">
+              <div class="benefit-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                <span data-i18n="why.b3t">Community Participation</span>
+              </div>
+              <div class="benefit-desc" data-i18n="why.b3d">Every member becomes part of a growing network based on compassion, responsibility and cooperation.</div>
+            </div>
+
+            <div class="benefit-item teal">
+              <div class="benefit-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+                <span data-i18n="why.b4t">Transparent Fund Allocation</span>
+              </div>
+              <div class="benefit-desc" data-i18n="why.b4d">The contribution is divided according to a clearly defined 80% + 10% + 10% model.</div>
+            </div>
+
+            <div class="benefit-item blue">
+              <div class="benefit-head">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+                <span data-i18n="why.b5t">Sustainable Support System</span>
+              </div>
+              <div class="benefit-desc" data-i18n="why.b5d">After every eligible assistance payment, participating members contribute again so that the support cycle can continue.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 6: OUR 80 • 10 • 10 COMMITMENT
+       ========================================================= -->
+  <section class="section commitment-sec">
+    <div class="container">
+      <div class="section-header reveal">
+        <div class="section-icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h2 class="section-title" data-i18n="commit.title">Our 80 &bull; 10 &bull; 10 Commitment</h2>
+        <p class="section-subtitle" data-i18n="commit.subtitle">A balanced approach to Family Support, Social Seva and Long-Term Sustainability.</p>
+      </div>
+
+      <div class="commitment-grid">
+        <!-- 80% -->
+        <div class="commitment-card green reveal">
+          <div class="commit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div class="commit-percentage">80%</div>
+          <div class="commit-title" data-i18n="commit.c1t">Family Support Assistance</div>
+          <p class="commit-desc" data-i18n="commit.c1d">For financial assistance to the eligible family / nominee of the deceased registered member.</p>
+        </div>
+
+        <!-- 10% -->
+        <div class="commitment-card gold reveal">
+          <div class="commit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+          </div>
+          <div class="commit-percentage">10%</div>
+          <div class="commit-title" data-i18n="commit.c2t">Social & Charitable Seva</div>
+          <p class="commit-desc" data-i18n="commit.c2d">For charitable Seva including cow feeding, animal welfare, support for visually impaired persons and other approved social causes.</p>
+        </div>
+
+        <!-- 10% -->
+        <div class="commitment-card blue reveal">
+          <div class="commit-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 10h18M5 6l7-3 7 3M4 10v11M20 10v11M8 14v4M12 14v4M16 14v4"/></svg>
+          </div>
+          <div class="commit-percentage">10%</div>
+          <div class="commit-title" data-i18n="commit.c3t">Reserve & Emergency Fund</div>
+          <p class="commit-desc" data-i18n="commit.c3d">For the Vatsalya Group reserve / designated bank fund as per the Group's approved policy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 7: VISION & MISSION + IMPORTANT INFORMATION
+       ========================================================= -->
+  <section class="section vision-info-sec">
+    <div class="container">
+      <div class="vision-info-grid">
+        <!-- Vision & Mission -->
+        <div class="vision-column">
+          <div class="vision-panel-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="4"/><circle cx="16" cy="16" r="4"/><line x1="8.5" y1="8.5" x2="15.5" y2="15.5"/></svg><span>Vision and Mission</span></div>
+          <div class="vision-card reveal">
+            <div class="vision-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+              <span data-i18n="vis.title">Our Vision</span>
+            </div>
+            <p data-i18n="vis.desc">
+              To build a compassionate community where people do not remain alone during difficult times and where every member's contribution creates a positive impact beyond their own family.
+            </p>
+          </div>
+
+          <div class="vision-card reveal">
+            <div class="vision-card-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M22 12h-4M6 12H2M12 6V2M12 22v-4"/></svg>
+              <span data-i18n="mis.title">Our Mission</span>
+            </div>
+            <p data-i18n="mis.desc">
+              To connect people through a transparent community support system that combines:
+            </p>
+            <ul class="mission-list">
+              <li data-i18n="mis.m1">Family Assistance</li>
+              <li data-i18n="mis.m2">Social Responsibility</li>
+              <li data-i18n="mis.m3">Charitable Seva</li>
+              <li data-i18n="mis.m4">Community Participation</li>
+              <li data-i18n="mis.m5">Long-Term Support</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Important Information -->
+        <div class="info-card reveal">
+          <div class="info-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+            <span data-i18n="info.title">Important Information</span>
+          </div>
+
+          <div class="info-points-list">
+            <div class="info-point-item">
+              <span class="info-point-num">1</span>
+              <p data-i18n="info.p1">Vatsalya Group is a community-based mutual support and charitable initiative. It should not be represented as an insurance policy, investment scheme, guaranteed return plan or deposit product unless the organization holds the applicable licences and approvals required by law.</p>
+            </div>
+            <div class="info-point-item">
+              <span class="info-point-num">2</span>
+              <p data-i18n="info.p2">Financial assistance is subject to valid membership, contribution status, nominee information, required documentation, verification of the claim and the official terms and conditions of Vatsalya Group.</p>
+            </div>
+            <div class="info-point-item">
+              <span class="info-point-num">3</span>
+              <p data-i18n="info.p3">The amount of assistance may depend on the number of eligible participating members and the total contribution collected at the relevant time.</p>
+            </div>
+            <div class="info-point-item">
+              <span class="info-point-num">4</span>
+              <p data-i18n="info.p4">All collections, charitable distributions, family assistance payments and reserve-fund deposits should be properly documented and maintained through transparent accounting records.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 8: JOIN VATSALYA GROUP CTA BANNER
+       ========================================================= -->
+  <section class="section vatsalya-cta-sec" id="join">
+    <div class="container">
+      <div class="vatsalya-cta-card reveal">
+        <div class="cta-left-content">
+          <div class="cta-logo-tag">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+            <span>Shree Vasuki Charitable Trust</span>
+          </div>
+          <h2 class="cta-title" data-i18n="ctaBox.title">Join Vatsalya Group</h2>
+          <div class="cta-subtitle" data-i18n="ctaBox.subtitle">One Contribution. One Community. Many Lives Supported.</div>
+          <p class="cta-desc" data-i18n="ctaBox.desc">Become a part of a community built on Seva, Support and Humanity.</p>
+
+          <div class="cta-badges-row">
+            <span class="cta-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/></svg>
+              <span data-i18n="ctaBox.b1">Registration Fee &#8377;400</span>
+            </span>
+            <span class="cta-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              <span data-i18n="ctaBox.b2">Member Contribution &#8377;1,100</span>
+            </span>
+            <span class="cta-badge">
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span data-i18n="ctaBox.b3">80% Family Support &bull; 10% Seva &bull; 10% Reserve</span>
+            </span>
+          </div>
+
+          <button type="button" class="btn btn-outline open-join-modal" style="background:#fff; color:var(--purple); font-weight:700; border:none; padding:12px 28px;" data-i18n="ctaBox.btn">
+            Become a Member &rarr;
+          </button>
+        </div>
+
+        <div class="cta-right-box">
+          <img src="image/vatsalya_cta_heart.png" alt="Small Contributions Create Big Change — Together we support, together we serve" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       SECTION 9: MEMBERSHIP CONTINUATION POLICY (DUAL LANGUAGE)
+       ========================================================= -->
+  <section class="section policy-sec">
+    <div class="container">
+      <div class="policy-grid">
+        <!-- English Policy -->
+        <div class="policy-box reveal">
+          <div class="policy-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>Membership Continuation & Contribution Policy</span>
+          </div>
+          <div class="policy-content">
+            <p>
+              To keep the Vatsalya Group support system active and fair for all members, every registered member must make the required contribution of <b>&#8377;1,100</b> whenever a contribution cycle is announced after the death of an eligible member.
+            </p>
+            <p><b>If any member:</b></p>
+            <ul class="policy-bullets">
+              <li>Fails to pay the required &#8377;1,100 contribution within the prescribed time, or</li>
+              <li>Refuses to make the contribution after an eligible member's death, or</li>
+              <li>Does not wish to continue participating in the support cycle,</li>
+            </ul>
+            <p>
+              then that person's Vatsalya Group membership will be considered <b>terminated from that day</b>.
+            </p>
+            <p>
+              Once the membership is terminated, the person will no longer be considered an active member and will not be eligible for future benefits or financial assistance under the Vatsalya Group support system.
+            </p>
+            <p>
+              Any future rejoining, if permitted, will be subject to the prevailing registration process, membership rules, applicable fees and approval of Vatsalya Group.
+            </p>
+            <div class="policy-alert">
+              <b>Important:</b> Every member must understand that the Vatsalya Group system works through mutual and timely participation. Regular contribution is essential to keep the support cycle active for every member.
+            </div>
+          </div>
+        </div>
+
+        <!-- Gujarati Policy -->
+        <div class="policy-box reveal">
+          <div class="policy-header">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            <span>સભ્યપદ ચાલુ રાખવા અને યોગદાન સંબંધિત નિયમ</span>
+          </div>
+          <div class="policy-content">
+            <p>
+              વાત્સલ્ય ગ્રુપની સહાય વ્યવસ્થા દરેક સભ્ય માટે ન્યાયસંગત અને સતત કાર્યરત રહે તે માટે, કોઈ પાત્ર સભ્યના અવસાન બાદ જ્યારે નવું યોગદાન શરૂ કરવામાં આવે ત્યારે દરેક સક્રિય સભ્યે <b>&#8377;૧,૧૦૦નું ફરજિયાત યોગદાન</b> આપવાનું રહેશે.
+            </p>
+            <p><b>જો કોઈ સભ્ય:</b></p>
+            <ul class="policy-bullets">
+              <li>નક્કી કરેલી સમયમર્યાદામાં &#8377;૧,૧૦૦નું યોગદાન આપવામાં નિષ્ફળ જાય, અથવા</li>
+              <li>કોઈ પાત્ર સભ્યના અવસાન બાદ જરૂરી યોગદાન આપવાનો ઈનકાર કરે, અથવા</li>
+              <li>આગળની સહાય વ્યવસ્થામાં જોડાઈ રહેવા ઇચ્છતો ન હોય,</li>
+            </ul>
+            <p>
+              તો તે વ્યક્તિનું વાત્સલ્ય ગ્રુપનું સભ્યપદ <b>તે જ દિવસથી સમાપ્ત</b> માનવામાં આવશે.
+            </p>
+            <p>
+              સભ્યપદ સમાપ્ત થયા બાદ તે વ્યક્તિને સક્રિય સભ્ય તરીકે ગણવામાં આવશે નહીં અને તેને વાત્સલ્ય ગ્રુપની ભવિષ્યની સહાય અથવા આર્થિક લાભ માટે પાત્ર માનવામાં આવશે નહીં.
+            </p>
+            <p>
+              જો ભવિષ્યમાં ફરીથી સભ્ય તરીકે જોડાવાની મંજૂરી આપવામાં આવે, તો તે સમયના લાગુ પડતા નોંધણી નિયમો, ફી, સભ્યપદની શરતો અને વાત્સલ્ય ગ્રુપની મંજૂરી મુજબ ફરી નોંધણી કરાવવી પડશે.
+            </p>
+            <div class="policy-alert">
+              <b>મહત્વપૂર્ણ:</b> વાત્સલ્ય ગ્રુપની વ્યવસ્થા પરસ્પર સહકાર અને સમયસર યોગદાનના આધાર પર કાર્ય કરે છે. દરેક સભ્યનું સમયસર યોગદાન સમગ્ર સહાય ચક્ર ચાલુ રાખવા માટે અત્યંત જરૂરી છે.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER
+       ========================================================= -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="vasuk logo.png" alt="Shree Vasuki Charitable Trust">
+          </a>
+          <p data-i18n="footer.desc">Serving humanity with compassion, care and commitment. Together we can build a better tomorrow for every individual.</p>
+          <div class="social-links" aria-label="Social media">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.125.556 4.197 1.611 6.024L.107 23.893l6.008-1.576a11.968 11.968 0 0 0 5.916 1.554h.005c6.645 0 12.03-5.385 12.03-12.031 0-3.213-1.252-6.234-3.526-8.508C18.266 1.258 15.244 0 12.031 0zm0 22.015h-.004a9.98 9.98 0 0 1-5.086-1.39l-.365-.216-3.778.991 1.008-3.684-.237-.377a9.97 9.97 0 0 1-1.528-5.308c0-5.518 4.49-10.008 10.012-10.008 2.673 0 5.186 1.041 7.076 2.932a9.946 9.946 0 0 1 2.93 7.075c0 5.518-4.49 10.008-10.008 10.008z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+            <li><a href="about-us.html" data-i18n="nav.about">About Us</a></li>
+            <li><a href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a></li>
+            <li><a href="gallery.html" data-i18n="nav.gallery">Gallery</a></li>
+            <li><a href="trustee.html" data-i18n="nav.trustee">Trustee</a></li>
+            <li><a href="contact-us.html" data-i18n="nav.contact">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.getInTouch">Get in Touch</h4>
+          <ul class="footer-contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span>Shree Vasuki Charitable Trust, Rajkot, Gujarat, India</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <span>+91 98765 43210</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <span>info@shreevasuki.org</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer.pledge">Our Pledge</h4>
+          <p style="font-size:13.5px; color:rgba(255,255,255,0.75); line-height:1.65;" data-i18n="footer.pledgeDesc">
+            Vatsalya Group stands on the pillars of mutual family support and selfless charitable seva. Every life touched is a step toward a kinder, brighter tomorrow.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>Vatsalya Group &mdash; Serving Humanity Through Collective Support</span>
+        <span style="font-family:'Caveat', cursive; font-size:17px; color:#c4b5fd;">Together for a Kinder, Brighter Tomorrow.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       JOIN VATSALYA GROUP MODAL
+       ========================================================= -->
+  <div class="modal-overlay" id="joinModal" aria-hidden="true">
+    <div class="modal-card">
+      <button type="button" class="modal-close-btn" id="closeJoinModal" aria-label="Close modal">&times;</button>
+      <div style="text-align:center; margin-bottom:20px;">
+        <div class="section-icon-badge" style="margin-bottom:10px;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="8.5" cy="7" r="4"/><line x1="20" y1="8" x2="20" y2="14"/><line x1="23" y1="11" x2="17" y2="11"/></svg>
+        </div>
+        <h3 style="font-size:22px; font-weight:700; color:var(--navy);" data-i18n="modal.title">Join Vatsalya Group</h3>
+        <p style="font-size:13.5px; color:#64748b;" data-i18n="modal.subtitle">Become an active member of our mutual support and Seva collective.</p>
+      </div>
+
+      <div style="background:#f8faff; border-radius:12px; padding:16px; margin-bottom:20px; border:1px solid #e2e8f0;">
+        <div style="display:flex; justify-content:space-between; font-size:13.5px; margin-bottom:8px;">
+          <span style="color:#64748b;">One-Time Registration:</span>
+          <b>&#8377;400</b>
+        </div>
+        <div style="display:flex; justify-content:space-between; font-size:13.5px; margin-bottom:8px;">
+          <span style="color:#64748b;">Member Contribution:</span>
+          <b>&#8377;1,100</b>
+        </div>
+        <div style="border-top:1px dashed #cbd5e1; padding-top:8px; display:flex; justify-content:space-between; font-size:14.5px; font-weight:700; color:var(--purple);">
+          <span>Total Joining Amount:</span>
+          <span>&#8377;1,500</span>
+        </div>
+      </div>
+
+      <div style="display:flex; flex-direction:column; gap:10px;">
+        <a href="tel:+919876543210" class="btn btn-primary" style="width:100%; justify-content:center;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span data-i18n="modal.call">Call for Membership Registration</span>
+        </a>
+        <a href="https://wa.me/919876543210?text=Hello%2C%20I%20want%20to%20join%20Vatsalya%20Group." target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width:100%; justify-content:center; color:#059669; border-color:#a7f3d0;">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12.031 0C5.385 0 0 5.385 0 12.031c0 2.125.556 4.197 1.611 6.024L.107 23.893l6.008-1.576a11.968 11.968 0 0 0 5.916 1.554h.005c6.645 0 12.03-5.385 12.03-12.031 0-3.213-1.252-6.234-3.526-8.508C18.266 1.258 15.244 0 12.031 0zm0 22.015h-.004a9.98 9.98 0 0 1-5.086-1.39l-.365-.216-3.778.991 1.008-3.684-.237-.377a9.97 9.97 0 0 1-1.528-5.308c0-5.518 4.49-10.008 10.012-10.008 2.673 0 5.186 1.041 7.076 2.932a9.946 9.946 0 0 1 2.93 7.075c0 5.518-4.49 10.008-10.008 10.008z"/></svg>
+          <span>Connect via WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       JAVASCRIPT FOR INTERACTIONS & REAL-TIME I18N
+       ========================================================= -->
+  <script>
+    // --- Mobile Menu Toggle ---
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuBackdrop = document.getElementById('menuBackdrop');
+
+    function toggleMenu() {
+      const isOpen = mobileMenu.classList.toggle('open');
+      menuBackdrop.classList.toggle('open', isOpen);
+      hamburger.setAttribute('aria-expanded', isOpen);
+    }
+
+    if (hamburger) hamburger.addEventListener('click', toggleMenu);
+    if (menuBackdrop) menuBackdrop.addEventListener('click', toggleMenu);
+
+    // --- Join Modal ---
+    const joinModal = document.getElementById('joinModal');
+    const closeJoinModal = document.getElementById('closeJoinModal');
+    const openJoinBtns = document.querySelectorAll('.open-join-modal');
+
+    openJoinBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        joinModal.classList.add('active');
+        joinModal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    if (closeJoinModal) {
+      closeJoinModal.addEventListener('click', () => {
+        joinModal.classList.remove('active');
+        joinModal.setAttribute('aria-hidden', 'true');
+      });
+    }
+
+    if (joinModal) {
+      joinModal.addEventListener('click', (e) => {
+        if (e.target === joinModal) {
+          joinModal.classList.remove('active');
+          joinModal.setAttribute('aria-hidden', 'true');
+        }
+      });
+    }
+
+    // --- Scroll Reveal Animations ---
+    const reveals = document.querySelectorAll('.reveal');
+    function checkReveal() {
+      const triggerBottom = window.innerHeight * 0.88;
+      reveals.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          el.classList.add('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', checkReveal);
+    window.addEventListener('load', checkReveal);
+
+    // --- Real-time Bilingual (EN / GU) Translation ---
+    const translations = {
+      en: {
+        "top.phone": "+91 98765 43210",
+        "top.loc": "Rajkot, Gujarat, India",
+        "top.tag": "Vatsalya Group Support Initiative",
+        "nav.home": "Home",
+        "nav.about": "About Us",
+        "nav.work": "Our Work",
+        "nav.vatsalya": "Vatsalya Group",
+        "nav.gallery": "Gallery",
+        "nav.trustee": "Trustee",
+        "nav.contact": "Contact",
+        "cta.donate": "Donate",
+        "hero.eyebrow": "Community Support",
+        "hero.title": "Vatsalya Group",
+        "hero.tagline": "Together in Support. Together in Seva.",
+        "hero.desc": "Vatsalya Group is a community-based social support and charitable initiative created with the spirit of Seva, Humanity and Mutual Support. Our purpose is simple: members support one another during the most difficult moments of life, while a portion of every contribution is also dedicated to meaningful charitable activities such as cow feeding, animal welfare, support for the visually impaired and other social causes.",
+        "hero.joinBtn": "Join Vatsalya Group \u2192",
+        "hero.howBtn": "Learn How It Works",
+        "hero.quote": "“A community that cares, A society that grows.”",
+        "how.title": "How the Vatsalya Group System Works",
+        "how.subtitle": "A simple, transparent and community-driven support model.",
+        "step1.title": "Become a Registered Member",
+        "step1.desc": "To become part of Vatsalya Group, each person completes the registration process and contributes:",
+        "step1.regFee": "One-Time Registration Fee",
+        "step1.memContrib": "Member Contribution",
+        "step1.note": "The registration fee is separate from the member support contribution. Every registered member becomes part of the Vatsalya Group support network.",
+        "step2.title": "Members Create a Support Pool",
+        "step2.desc": "The ₹1,100 contribution collected from every participating member forms a common support pool.",
+        "step2.formula": "11 Members × ₹1,100 = ₹12,100",
+        "step2.note": "This ₹12,100 becomes the support amount available under the Vatsalya Group system.",
+        "step3.title": "Support in Case of a Member's Death",
+        "step3.desc": "In the unfortunate event of the death of any registered member, subject to verification and rules, the collected fund will be distributed as follows:",
+        "step3.b1": "80% of collected amount provided as financial assistance to the eligible family / nominee.",
+        "step3.b1calc": "From ₹12,100: 80% = ₹9,680",
+        "step3.b2": "Cow feeding, animal welfare, visually impaired assistance and approved humanitarian causes.",
+        "step3.b2calc": "From ₹12,100: 10% = ₹1,210",
+        "step3.b3": "Deposited into designated bank reserve fund to strengthen group operations & support future welfare.",
+        "step3.b3calc": "From ₹12,100: 10% = ₹1,210",
+        "ex.title": "Simple Example",
+        "ex.subtitle": "Group of 11 Members",
+        "ex.r1": "80% Family Support",
+        "ex.r2": "10% Charitable Seva",
+        "ex.r3": "10% Group Reserve Fund",
+        "ex.total": "Total = ₹12,100",
+        "step4.title": "Contribution Is Renewed After Support Is Provided",
+        "step4.subtitle": "Continuous cycle of mutual assistance",
+        "step4.p1": "After support has been provided following the death of a registered member, the remaining active members will contribute <b>₹1,100 again</b> to rebuild the support pool.",
+        "step4.p2": "Initially there are 11 members. If one member passes away and support is provided, the remaining 10 active members will make the next contribution of ₹1,100 each, subject to the membership rules.",
+        "step4.p3": "This helps the Group remain prepared to support another member's family whenever such an unfortunate situation arises.",
+        "step4.badge": "Contribute<br>Again",
+        "cycle.title": "A Cycle of Mutual Support",
+        "cycle.subtitle": "Every member contributes not only money, but also becomes part of a community committed to helping one another.",
+        "cycle.n1": "Join",
+        "cycle.n2": "Contribute",
+        "cycle.n3": "Support a Family",
+        "cycle.n4": "Perform Seva",
+        "cycle.n5": "Rebuild the Fund",
+        "cycle.n6": "Continue Supporting",
+        "resp.title": "Member Responsibility",
+        "resp.subtitle": "Vatsalya Group grows through the participation and efforts of its members.",
+        "resp.i1": "Introduce genuine new members to Vatsalya Group",
+        "resp.i2": "Explain the purpose and working system clearly",
+        "resp.i3": "Encourage responsible participation",
+        "resp.i4": "Keep their membership and nominee details updated",
+        "resp.i5": "Make required contributions within the prescribed time",
+        "resp.i6": "Support the charitable and humanitarian objectives of the Group",
+        "resp.bar": "The stronger the member community becomes, the greater the support that can be extended to families in times of need.",
+        "why.title": "Why Become Part of Vatsalya Group?",
+        "why.subtitle": "Key pillars of our community framework",
+        "why.b1t": "Mutual Family Support",
+        "why.b1d": "Your contribution becomes part of a collective effort to support the family of a fellow member during an unfortunate loss.",
+        "why.b2t": "Seva With Every Contribution",
+        "why.b2d": "A defined portion of the fund is used for humanitarian and charitable activities.",
+        "why.b3t": "Community Participation",
+        "why.b3d": "Every member becomes part of a growing network based on compassion, responsibility and cooperation.",
+        "why.b4t": "Transparent Fund Allocation",
+        "why.b4d": "The contribution is divided according to a clearly defined 80% + 10% + 10% model.",
+        "why.b5t": "Sustainable Support System",
+        "why.b5d": "After every eligible assistance payment, participating members contribute again so that the support cycle can continue.",
+        "commit.title": "Our 80 • 10 • 10 Commitment",
+        "commit.subtitle": "A balanced approach to Family Support, Social Seva and Long-Term Sustainability.",
+        "commit.c1t": "Family Support Assistance",
+        "commit.c1d": "For financial assistance to the eligible family / nominee of the deceased registered member.",
+        "commit.c2t": "Social & Charitable Seva",
+        "commit.c2d": "For charitable Seva including cow feeding, animal welfare, support for visually impaired persons and other approved social causes.",
+        "commit.c3t": "Reserve & Emergency Fund",
+        "commit.c3d": "For the Vatsalya Group reserve / designated bank fund as per the Group's approved policy.",
+        "vis.title": "Our Vision",
+        "vis.desc": "To build a compassionate community where people do not remain alone during difficult times and where every member's contribution creates a positive impact beyond their own family.",
+        "mis.title": "Our Mission",
+        "mis.desc": "To connect people through a transparent community support system that combines:",
+        "mis.m1": "Family Assistance",
+        "mis.m2": "Social Responsibility",
+        "mis.m3": "Charitable Seva",
+        "mis.m4": "Community Participation",
+        "mis.m5": "Long-Term Support",
+        "info.title": "Important Information",
+        "info.p1": "Vatsalya Group is a community-based mutual support and charitable initiative. It should not be represented as an insurance policy, investment scheme, guaranteed return plan or deposit product unless the organization holds the applicable licences and approvals required by law.",
+        "info.p2": "Financial assistance is subject to valid membership, contribution status, nominee information, required documentation, verification of the claim and the official terms and conditions of Vatsalya Group.",
+        "info.p3": "The amount of assistance may depend on the number of eligible participating members and the total contribution collected at the relevant time.",
+        "info.p4": "All collections, charitable distributions, family assistance payments and reserve-fund deposits should be properly documented and maintained through transparent accounting records.",
+        "ctaBox.title": "Join Vatsalya Group",
+        "ctaBox.subtitle": "One Contribution. One Community. Many Lives Supported.",
+        "ctaBox.desc": "Become a part of a community built on Seva, Support and Humanity.",
+        "ctaBox.b1": "Registration Fee ₹400",
+        "ctaBox.b2": "Member Contribution ₹1,100",
+        "ctaBox.b3": "80% Family Support • 10% Seva • 10% Reserve",
+        "ctaBox.btn": "Become a Member →",
+        "footer.desc": "Serving humanity with compassion, care and commitment. Together we can build a better tomorrow for every individual.",
+        "footer.quickLinks": "Quick Links",
+        "footer.getInTouch": "Get in Touch",
+        "footer.pledge": "Our Pledge",
+        "footer.pledgeDesc": "Vatsalya Group stands on the pillars of mutual family support and selfless charitable seva. Every life touched is a step toward a kinder, brighter tomorrow.",
+        "modal.title": "Join Vatsalya Group",
+        "modal.subtitle": "Become an active member of our mutual support and Seva collective.",
+        "modal.call": "Call for Membership Registration"
+      },
+      gu: {
+        "top.phone": "+91 98765 43210",
+        "top.loc": "રાજકોટ, ગુજરાત, ભારત",
+        "top.tag": "વાત્સલ્ય ગ્રુપ સામાજિક સહાય પહેલ",
+        "nav.home": "મુખ્ય પૃષ્ઠ",
+        "nav.about": "અમારા વિશે",
+        "nav.work": "અમારું કાર્ય",
+        "nav.vatsalya": "વાત્સલ્ય ગ્રુપ",
+        "nav.gallery": "ગેલેરી",
+        "nav.trustee": "ટ્રસ્ટી",
+        "nav.contact": "સંપર્ક",
+        "cta.donate": "દાન કરો",
+        "hero.eyebrow": "સામુદાયિક સહાય",
+        "hero.title": "વાત્સલ્ય ગ્રુપ",
+        "hero.tagline": "સહાયમાં સાથે. સેવામાં સાથે.",
+        "hero.desc": "વાત્સલ્ય ગ્રુપ એ સેવા, માનવતા અને પરસ્પર સહકારની ભાવનાથી રચાયેલી એક સામુદાયિક સામાજિક સહાય અને સેવાકીય પહેલ છે. અમારો ઉદ્દેશ્ય સરળ છે: જીવનની સૌથી મુશ્કેલ ક્ષણોમાં સભ્યો એકબીજાને સહકાર આપે છે, જ્યારે દરેક યોગદાનનો એક ભાગ ગૌ સેવા, જીવદયા, અંધજન મંડળ સહાય અને અન્ય સેવાકીય કાર્યો માટે સમર્પિત થાય છે.",
+        "hero.joinBtn": "વાત્સલ્ય ગ્રુપમાં જોડાઓ →",
+        "hero.howBtn": "સિસ્ટમ કેવી રીતે કાર્ય કરે છે",
+        "hero.quote": "“જે સમુદાય કાળજી રાખે છે, તે સમાજ પ્રગતિ કરે છે.”",
+        "how.title": "વાત્સલ્ય ગ્રુપ વ્યવસ્થા કેવી રીતે કાર્ય કરે છે",
+        "how.subtitle": "એક સરળ, પારદર્શક અને સામુદાયિક સહાય મોડેલ.",
+        "step1.title": "નોંધાયેલ સભ્ય બનો",
+        "step1.desc": "વાત્સલ્ય ગ્રુપનો ભાગ બનવા માટે દરેક વ્યક્તિ નોંધણી પ્રક્રિયા પૂર્ણ કરે છે અને યોગદાન આપે છે:",
+        "step1.regFee": "એક વખતની નોંધણી ફી",
+        "step1.memContrib": "સભ્ય સહાય યોગદાન",
+        "step1.note": "નોંધણી ફી સભ્ય સહાય યોગદાનથી અલગ છે. દરેક નોંધાયેલ સભ્ય વાત્સલ્ય ગ્રુપ સહાય નેટવર્કનો સભ્ય બને છે.",
+        "step2.title": "સભ્યો સહાય ફંડ બનાવે છે",
+        "step2.desc": "દરેક સહભાગી સભ્ય પાસેથી એકત્રિત થયેલ ₹૧,૧૦૦નું યોગદાન એક સંયુક્ત સહાય પૂલ બનાવે છે.",
+        "step2.formula": "૧૧ સભ્યો × ₹૧,૧૦૦ = ₹૧૨,૧૦૦",
+        "step2.note": "આ ₹૧૨,૧૦૦ વાત્સલ્ય ગ્રુપ સિસ્ટમ હેઠળ ઉપલબ્ધ સહાય રકમ બને છે.",
+        "step3.title": "કોઈ સભ્યના અવસાન સમયે સહાય",
+        "step3.desc": "કોઈપણ નોંધાયેલ સભ્યના દુઃખદ અવસાનના કિસ્સામાં, ચકાસણી અને નિયમો મુજબ, એકત્રિત થયેલ ફંડ નીચે મુજબ વિતરિત થશે:",
+        "step3.b1": "એકત્રિત રકમના ૮૦% હિસ્સો દિવંગત સભ્યના પાત્ર પરિવાર/વારસદારને આર્થિક સહાય તરીકે આપવામાં આવશે.",
+        "step3.b1calc": "₹૧૨,૧૦૦ માંથી: ૮૦% = ₹૯,૬૮૦",
+        "step3.b2": "ગૌ સેવા, જીવદયા, અંધજન સહાય અને મંજૂર થયેલા માનવતાવાદી સેવા કાર્યો માટે.",
+        "step3.b2calc": "₹૧૨,૧૦૦ માંથી: ૧૦% = ₹૧,૨૧૦",
+        "step3.b3": "ગ્રુપની કામગીરી અને ભવિષ્યના કલ્યાણ માટે નિયુક્ત બેંક રિઝર્વ ફંડમાં જમા થશે.",
+        "step3.b3calc": "₹૧૨,૧૦૦ માંથી: ૧૦% = ₹૧,૨૧૦",
+        "ex.title": "સરળ ઉદાહરણ",
+        "ex.subtitle": "૧૧ સભ્યોનું જૂથ",
+        "ex.r1": "૮૦% પરિવાર સહાય",
+        "ex.r2": "૧૦% સેવા કાર્યો",
+        "ex.r3": "૧૦% ગ્રુપ રિઝર્વ ફંડ",
+        "ex.total": "કુલ રકમ = ₹૧૨,૧૦૦",
+        "step4.title": "સહાય આપ્યા બાદ યોગદાનનું નવીનીકરણ",
+        "step4.subtitle": "પરસ્પર સહાયનું અવિરત ચક્ર",
+        "step4.p1": "કોઈ સભ્યના અવસાન બાદ સહાય ચૂકવાઈ ગયા પછી, બાકીના સક્રિય સભ્યો સહાય પૂલને ફરીથી બનાવવા માટે <b>ફરીથી ₹૧,૧૦૦નું યોગદાન</b> આપશે.",
+        "step4.p2": "શરૂઆતમાં ૧૧ સભ્યો હોય. એક સભ્યનું અવસાન થતાં અને સહાય અપાયા બાદ, બાકીના ૧૦ સભ્યો નિયમો મુજબ ફરી ₹૧,૧૦૦નું યોગદાન આપશે.",
+        "step4.p3": "આનાથી ભવિષ્યમાં કોઈપણ સભ્યના પરિવારને સહાય આપવા માટે વાત્સલ્ય ગ્રુપ સતત સજ્જ રહે છે.",
+        "step4.badge": "ફરીથી<br>યોગદાન",
+        "cycle.title": "પરસ્પર સહાયનું અવિરત ચક્ર",
+        "cycle.subtitle": "દરેક સભ્ય માત્ર નાણાકીય યોગદાન જ નથી આપતો, પરંતુ એકબીજાને મદદ કરવા પ્રતિબદ્ધ સમુદાયનો હિસ્સો બને છે.",
+        "cycle.n1": "જોડાવો",
+        "cycle.n2": "યોગદાન આપો",
+        "cycle.n3": "પરિવારને સહાય",
+        "cycle.n4": "સેવા કાર્ય",
+        "cycle.n5": "ફંડ પુનઃનિર્માણ",
+        "cycle.n6": "સતત સહયોગ",
+        "resp.title": "સભ્યની જવાબદારીઓ",
+        "resp.subtitle": "વાત્સલ્ય ગ્રુપ તેના સભ્યોના સહકાર અને પ્રયાસોથી આગળ વધે છે.",
+        "resp.i1": "વાત્સલ્ય ગ્રુપમાં સાચા અને વિશ્વસનીય નવા સભ્યોને જોડવા",
+        "resp.i2": "ગ્રુપનો હેતુ અને કાર્યપદ્ધતિ સ્પષ્ટ રીતે સમજાવવી",
+        "resp.i3": "જવાબદાર અને સક્રિય ભાગીદારીને પ્રોત્સાહિત કરવી",
+        "resp.i4": "પોતાની સભ્યપદ અને નોમિનીની વિગતો અદ્યતન રાખવી",
+        "resp.i5": "નક્કી કરેલા સમયમાં જરૂરી યોગદાન આપવું",
+        "resp.i6": "ગ્રુપના સેવાકીય અને માનવતાવાદી ઉદ્દેશ્યોને સમર્થન આપવું",
+        "resp.bar": "જેટલો સભ્ય સમુદાય મજબૂત બનશે, તેટલી જ મુશ્કેલ સમયમાં પરિવારોને વધુ મોટી સહાય આપી શકાશે.",
+        "why.title": "વાત્સલ્ય ગ્રુપમાં શા માટે જોડાવું?",
+        "why.subtitle": "અમારા સામુદાયિક માળખાના મુખ્ય સ્તંભો",
+        "why.b1t": "પરસ્પર પારિવારિક સહાય",
+        "why.b1d": "તમારું યોગદાન કોઈ સભ્યના અણધાર્યા અવસાન સમયે તેના પરિવારને સહારો આપવાના સામૂહિક પ્રયાસનો હિસ્સો બને છે.",
+        "why.b2t": "દરેક યોગદાન સાથે પુણ્ય સેવા",
+        "why.b2d": "ફંડનો એક નિશ્ચિત હિસ્સો માનવતા અને જીવદયાના સેવા કાર્યો માટે ઉપયોગમાં લેવાય છે.",
+        "why.b3t": "સામુદાયિક ભાગીદારી",
+        "why.b3d": "દરેક સભ્ય કરુણા, જવાબદારી અને સહકાર પર આધારિત વિશાળ નેટવર્કનો ભાગ બને છે.",
+        "why.b4t": "પારદર્શક ફંડ વિભાજન",
+        "why.b4d": "યોગદાનની રકમનું ૮૦% + ૧૦% + ૧૦% ના સ્પષ્ટ મોડેલ મુજબ વિતરણ કરવામાં આવે છે.",
+        "why.b5t": "સતત કાર્યરત સહાય સિસ્ટમ",
+        "why.b5d": "દરેક સહાય ચૂકવણી બાદ સભ્યો ફરી યોગદાન આપીને સહાય ચક્રને અવિરત ચાલુ રાખે છે.",
+        "commit.title": "અમારી ૮૦ • ૧૦ • ૧૦ ની પ્રતિબદ્ધતા",
+        "commit.subtitle": "પરિવાર સહાય, સમાજ સેવા અને લાંબાગાળાની સ્થિરતાનો સંતુલિત અભિગમ.",
+        "commit.c1t": "પારિવારિક આર્થિક સહાય",
+        "commit.c1d": "દિવંગત નોંધાયેલ સભ્યના પાત્ર પરિવાર / વારસદારને આર્થિક સહાય પૂરી પાડવા માટે.",
+        "commit.c2t": "સામાજિક અને સેવાકીય કાર્યો",
+        "commit.c2d": "ગૌ સેવા, પશુ કલ્યાણ, અંધજન સહાય અને અન્ય માનવતાવાદી સેવા કાર્યો માટે.",
+        "commit.c3t": "રિઝર્વ અને ઇમરજન્સી ફંડ",
+        "commit.c3d": "વાત્સલ્ય ગ્રુપના નિયમો મુજબ નિયુક્ત બેંક રિઝર્વ ફંડ માટે.",
+        "vis.title": "અમારું વિઝન",
+        "vis.desc": "એક એવા કરુણામય સમાજનું નિર્માણ કરવું જ્યાં મુશ્કેલ સમયમાં કોઈ વ્યક્તિ એકલો ન રહે અને દરેક સભ્યનું યોગદાન પોતાના પરિવારથી આગળ વધીને સમાજમાં પરિવર્તન લાવે.",
+        "mis.title": "અમારું મિશન",
+        "mis.desc": "એક પારદર્શક સામુદાયિક સહાય વ્યવસ્થા દ્વારા લોકોને જોડવા જેમાં સમાવિષ્ટ છે:",
+        "mis.m1": "પારિવારિક સહાય",
+        "mis.m2": "સામાજિક જવાબદારી",
+        "mis.m3": "સેવાકીય સમર્પણ",
+        "mis.m4": "સામુદાયિક ભાગીદારી",
+        "mis.m5": "લાંબાગાળાનો સહયોગ",
+        "info.title": "મહત્વપૂર્ણ માહિતી",
+        "info.p1": "વાત્સલ્ય ગ્રુપ એ પરસ્પર સહાય અને સેવાકીય પહેલ છે. જ્યાં સુધી કાયદાકીય મંજૂરીઓ ન હોય ત્યાં સુધી તેને વીમા પોલિસી, રોકાણ યોજના કે ફિક્સ ડિપોઝિટ તરીકે રજૂ કરી શકાશે નહીં.",
+        "info.p2": "આર્થિક સહાય માન્ય સભ્યપદ, યોગદાનની સ્થિતિ, નોમિની વિગતો અને ગ્રુપના નિયમો તથા ચકાસણીને આધીન રહેશે.",
+        "info.p3": "સહાયની રકમ તે સમયે ઉપલબ્ધ પાત્ર સભ્યોની સંખ્યા અને એકત્રિત થયેલા કુલ યોગદાન પર આધારિત રહેશે.",
+        "info.p4": "તમામ યોગદાન, સહાય ચૂકવણી, સેવા ખર્ચ અને રિઝર્વ ફંડનો હિસાબ પારદર્શક રીતે નોંધવામાં આવે છે.",
+        "ctaBox.title": "વાત્સલ્ય ગ્રુપમાં જોડાઓ",
+        "ctaBox.subtitle": "એક યોગદાન. એક સમુદાય. અનેક પરિવારોને સહારો.",
+        "ctaBox.desc": "સેવા, સહકાર અને માનવતા પર રચાયેલા એક સુંદર સમુદાયનો હિસ્સો બનો.",
+        "ctaBox.b1": "નોંધણી ફી ₹૪૦૦",
+        "ctaBox.b2": "સભ્ય સહાય યોગદાન ₹૧,૧૦૦",
+        "ctaBox.b3": "૮૦% પરિવાર સહાય • ૧૦% સેવા • ૧૦% રિઝર્વ",
+        "ctaBox.btn": "સભ્ય બનો →",
+        "footer.desc": "કરુણા, કાળજી અને પ્રતિબદ્ધતા સાથે માનવતા અને જીવદયાની સેવા. સાથે મળીને આપણે ઉજ્જવળ ભવિષ્ય બનાવી શકીએ.",
+        "footer.quickLinks": "ઝડપી લિંક્સ",
+        "footer.getInTouch": "સંપર્ક કરો",
+        "footer.pledge": "અમારી પ્રતિજ્ઞા",
+        "footer.pledgeDesc": "વાત્સલ્ય ગ્રુપ પરસ્પર પારિવારિક સહાય અને નિઃસ્વાર્થ સેવાના સ્તંભો પર ઊભું છે. દરેક સેવા કાર્ય ઉજ્જવળ આવતીકાલ તરફનું પગલું છે.",
+        "modal.title": "વાત્સલ્ય ગ્રુપમાં જોડાઓ",
+        "modal.subtitle": "પરસ્પર સહાય અને સેવાના સુંદર સમુદાયનો સભ્ય બનો.",
+        "modal.call": "સભ્યપદ નોંધણી માટે કૉલ કરો"
+      }
+    };
+
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-lang]').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      const dict = translations[lang] || translations.en;
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key]) {
+          el.innerHTML = dict[key];
+        }
+      });
+      document.documentElement.lang = lang;
+      localStorage.setItem('shreevasuki_lang', lang);
+    }
+
+    document.querySelectorAll('[data-lang]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
+    // On Load language preference
+    const savedLang = localStorage.getItem('shreevasuki_lang') || 'en';
+    if (savedLang !== 'en') {
+      setLanguage(savedLang);
+    }
+  </script>
+</body>
+</html>

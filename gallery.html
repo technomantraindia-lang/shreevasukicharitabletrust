@@ -1,0 +1,2316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#16164F">
+<meta name="description" content="Photo Gallery - Shree Vasuki Charitable Trust. Moments of Compassion, Service, and Humanitarian Impact.">
+<title>Gallery - Shree Vasuki Charitable Trust | 87 Photos</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Gujarati:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --purple:#34259A;
+  --purple-2:#4B3BC5;
+  --navy:#16164F;
+  --band:#2D218A;
+  --lav:#F4F2FF;
+  --lav-card:#F8F7FF;
+  --lav-border:#E7E3FB;
+  --ink:#12143D;
+  --muted:#585B7A;
+  --white:#FFFFFF;
+  --gold:#C4A574;
+  --radius-lg:22px;
+  --radius-md:16px;
+  --shadow-soft:0 20px 50px rgba(22,22,79,.08);
+  --shadow-lift:0 28px 60px rgba(22,22,79,.14);
+  --ease:cubic-bezier(.22,.61,.36,1);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+html,body{overflow-x:clip}
+body{
+  font-family:'DM Sans',sans-serif;
+  color:var(--ink);
+  background:var(--white);
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+img,video{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+button{font-family:inherit;background:none;border:none;cursor:pointer;color:inherit}
+section{scroll-margin-top:92px}
+.container{width:min(1280px,100% - 48px);margin-inline:auto}
+
+h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-spacing:-.02em}
+
+.eyebrow{
+  display:inline-block;
+  font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--purple);margin-bottom:14px
+}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:600;
+  padding:14px 28px;border-radius:999px;
+  transition:transform .3s var(--ease),box-shadow .3s var(--ease),background .3s,color .3s,border-color .3s;
+  white-space:nowrap
+}
+.btn svg{width:16px;height:16px;flex:none}
+.btn-primary{background:var(--purple);color:#fff;box-shadow:0 12px 26px rgba(52,37,154,.28)}
+.btn-primary:hover{background:var(--purple-2);transform:translateY(-2px);box-shadow:0 16px 32px rgba(52,37,154,.34)}
+.btn-outline{border:1.6px solid var(--purple);color:var(--purple);background:transparent}
+.btn-outline:hover{background:var(--purple);color:#fff;transform:translateY(-2px)}
+.btn-white{background:#fff;color:var(--purple);box-shadow:0 10px 24px rgba(0,0,0,.15)}
+.btn-white:hover{transform:translateY(-2px);box-shadow:0 16px 32px rgba(0,0,0,.22)}
+.btn-sm{padding:10px 22px;font-size:13.5px}
+
+/* Top Bar */
+.topbar{
+  background:#fff;
+  border-bottom:1px solid #ECEAF8;
+  font-size:12.5px;
+  color:var(--muted);
+  padding:8px 0;
+}
+.topbar-inner{
+  max-width:1440px;margin-inline:auto;
+  padding-inline:32px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+/* Top Bar (Standardized) */
+.topbar{
+  background:#11142e;
+  color:#e2e8f0;
+  font-size:13px;
+  padding:8px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.topbar .container, .topbar-inner{
+  max-width:1240px;margin-inline:auto;
+  padding-inline:24px;
+  display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;
+}
+.topbar-left, .topbar-info{
+  display:flex;align-items:center;gap:20px;flex-wrap:wrap;
+}
+.topbar-link, .topbar-info a, .topbar-info span{
+  display:inline-flex;align-items:center;gap:6px;
+  color:#cbd5e1;font-size:13px;transition:color .2s;text-decoration:none;
+}
+.topbar-link svg, .topbar-info svg{width:14px;height:14px;color:#a78bfa;flex-shrink:0}
+.topbar-link:hover, .topbar-info a:hover{color:#ffffff}
+.topbar-right{
+  display:flex;align-items:center;gap:18px;
+}
+.topbar-tag{
+  background:rgba(167, 139, 250, 0.18);
+  color:#c4b5fd;
+  padding:3px 10px;
+  border-radius:99px;
+  font-size:11.5px;
+  font-weight:600;
+  border:1px solid rgba(167, 139, 250, 0.3);
+  display:inline-block;
+}
+
+/* Header (Standardized) */
+.header{
+  position:sticky;top:0;z-index:1000;
+  background:rgba(255,255,255,.98);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+  box-shadow:0 4px 20px rgba(0,0,0,.06);
+  border-bottom:1px solid #f0eefc;
+  transition:box-shadow .3s,background .3s;
+}
+.header.scrolled{box-shadow:0 10px 30px rgba(22,22,79,.08);background:rgba(255,255,255,.98)}
+.header-inner{
+  max-width:1240px;margin-inline:auto;
+  padding:12px 24px;
+  display:flex;align-items:center;justify-content:space-between;gap:20px;
+}
+.logo img{height:48px;width:auto;display:block}
+.nav{display:flex;align-items:center;gap:24px}
+.nav > a{
+  position:relative;display:inline-flex;align-items:center;
+  font-size:14.5px;font-weight:600;color:#151838;
+  padding:8px 12px;border-radius:8px;transition:color .25s;text-decoration:none;
+}
+.nav > a:hover,.nav > a.active{color:var(--purple)}
+.nav > a.active::after{
+  content:"";position:absolute;left:12px;right:12px;bottom:0;height:2.5px;
+  border-radius:999px;background:var(--purple);
+}
+
+.header-actions{display:flex;align-items:center;gap:14px}
+.lang-switch{
+  display:inline-flex;align-items:center;background:#f1f5f9;
+  border:1px solid #e2e8f0;border-radius:99px;padding:3px;
+}
+.lang-switch button{
+  font-size:12px;font-weight:700;letter-spacing:.02em;
+  padding:4px 10px;border-radius:99px;color:#64748b;
+  cursor:pointer;border:none;background:none;transition:all .25s;
+}
+.lang-switch button.active{background:var(--purple);color:#fff;box-shadow:0 2px 6px rgba(52,37,154,.25)}
+.search-btn{
+  width:38px;height:38px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  background:#f1f5f9;color:#151838;transition:background .2s,color .2s;
+  cursor:pointer;border:none;
+}
+.search-btn:hover{background:var(--lav);color:var(--purple)}
+.search-btn svg{width:17px;height:17px}
+.hamburger{display:none;flex-direction:column;gap:5px;width:36px;height:36px;justify-content:center;align-items:center;border-radius:8px;background:#f1f5f9;border:none;cursor:pointer;z-index:130}
+.hamburger span{width:20px;height:2px;border-radius:3px;background:#151838;transition:transform .3s var(--ease),opacity .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{
+  position:fixed;inset:0 0 0 auto;width:min(340px,88vw);z-index:120;
+  background:#fff;box-shadow:-24px 0 60px rgba(22,22,79,.18);
+  padding:96px 28px 32px;
+  transform:translateX(105%);transition:transform .4s var(--ease);
+  display:flex;flex-direction:column;gap:4px;overflow-y:auto
+}
+.mobile-menu.open{transform:none}
+.mobile-menu > nav{display:flex;flex-direction:column}
+.mobile-menu a.mlink{
+  padding:12px 4px;font-size:15px;font-weight:500;color:var(--ink);
+  border-bottom:1px solid #F3F1FC
+}
+.mm-actions{margin-top:22px;display:flex;flex-direction:column;gap:12px}
+.menu-backdrop{
+  position:fixed;inset:0;z-index:110;background:rgba(18,20,61,.45);
+  opacity:0;visibility:hidden;transition:opacity .35s
+}
+.menu-backdrop.show{opacity:1;visibility:visible}
+
+/* HERO SECTION */
+.gallery-hero{
+  padding:64px 0 72px;
+  background:linear-gradient(180deg,#FFFFFF 0%,#F8F7FF 100%);
+  position:relative;overflow:hidden;
+}
+.gallery-hero-grid{
+  display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:60px;
+}
+.gallery-hero-content{max-width:560px}
+.gallery-hero-content h1{
+  font-size:clamp(38px,4.5vw,56px);font-weight:600;color:var(--navy);
+  line-height:1.12;margin-bottom:20px
+}
+.gallery-hero-content p{
+  font-size:16px;color:var(--muted);line-height:1.7;margin-bottom:32px
+}
+.gallery-hero-collage{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:12px;
+  border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(22,22,79,.12);
+  background:#fff;padding:8px
+}
+.collage-img-wrap{
+  aspect-ratio:0.9/1;border-radius:18px;overflow:hidden;position:relative
+}
+.collage-img-wrap img{
+  width:100%;height:100%;object-fit:cover;transition:transform .4s var(--ease)
+}
+.collage-img-wrap:hover img{transform:scale(1.08)}
+
+/* FILTER BAR & SEARCH */
+.filter-sec{padding:32px 0 20px;position:sticky;top:78px;z-index:90;background:rgba(255,255,255,.95);backdrop-filter:blur(12px)}
+.filter-bar-flex{
+  display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;
+  background:#fff;border:1px solid var(--lav-border);border-radius:999px;
+  padding:8px 12px;box-shadow:0 10px 30px rgba(52,37,154,.04)
+}
+.filter-tabs{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.filter-tab{
+  padding:10px 20px;border-radius:999px;font-size:13.5px;font-weight:600;
+  color:var(--muted);transition:all .25s;display:inline-flex;align-items:center;gap:7px
+}
+.filter-tab.active,.filter-tab:hover{
+  background:var(--purple);color:#fff;box-shadow:0 6px 18px rgba(52,37,154,.25)
+}
+.search-box{
+  display:flex;align-items:center;gap:10px;
+  background:var(--lav-card);border:1px solid var(--lav-border);
+  border-radius:999px;padding:8px 18px;min-width:240px
+}
+.search-box input{
+  border:none;background:none;outline:none;font-family:'DM Sans',sans-serif;
+  font-size:13.5px;color:var(--ink);width:100%
+}
+.search-box svg{width:16px;height:16px;color:var(--purple);flex:none}
+
+/* IMPACT STATS BAR */
+.stats-sec{margin:28px 0 40px}
+.stats-box{
+  background:var(--lav-card);border:1px solid var(--lav-border);
+  border-radius:24px;padding:28px 36px;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+  box-shadow:0 12px 36px rgba(52,37,154,.04)
+}
+.stat-card{display:flex;align-items:center;gap:16px;position:relative}
+.stat-card + .stat-card::before{
+  content:"";position:absolute;left:-10px;top:15%;bottom:15%;width:1px;background:var(--lav-border)
+}
+.stat-icon-wrap{
+  width:48px;height:48px;border-radius:50%;background:var(--lav);
+  border:1px solid var(--lav-border);display:flex;align-items:center;justify-content:center;
+  color:var(--purple);flex:none;box-shadow:0 4px 14px rgba(52,37,154,.08)
+}
+.stat-icon-wrap svg{width:22px;height:22px}
+.stat-info strong{display:block;font-size:24px;font-weight:700;color:var(--navy);font-family:'Cormorant Garamond',serif;line-height:1}
+.stat-info span{font-size:13px;color:var(--muted);font-weight:500}
+
+/* PHOTO COUNTER BAR */
+.photo-count-bar{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:24px;font-size:14px;color:var(--muted);font-weight:500
+}
+.photo-count-bar strong{color:var(--purple);font-weight:700}
+
+/* PHOTO GALLERY GRID */
+.gallery-grid-sec{padding:0 0 90px}
+.gallery-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:24px
+}
+.gallery-card{
+  background:#fff;border-radius:20px;overflow:hidden;
+  border:1px solid var(--lav-border);box-shadow:0 10px 30px rgba(22,22,79,.06);
+  transition:transform .35s var(--ease),box-shadow .35s var(--ease);
+  cursor:pointer;position:relative;display:flex;flex-direction:column
+}
+.gallery-card:hover{
+  transform:translateY(-8px);box-shadow:0 22px 50px rgba(52,37,154,.15)
+}
+.gallery-card-img{
+  aspect-ratio:1.25/1;width:100%;overflow:hidden;position:relative
+}
+.gallery-card-img img{
+  width:100%;height:100%;object-fit:cover;transition:transform .5s var(--ease)
+}
+.gallery-card:hover .gallery-card-img img{transform:scale(1.08)}
+.gallery-overlay{
+  position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(22,22,79,.75) 100%);
+  opacity:0;transition:opacity .35s;display:flex;align-items:flex-end;padding:20px;color:#fff;
+  font-size:13.5px;font-weight:500
+}
+.gallery-card:hover .gallery-overlay{opacity:1}
+.gallery-zoom-btn{
+  position:absolute;top:16px;right:16px;width:38px;height:38px;
+  border-radius:50%;background:rgba(255,255,255,.9);color:var(--purple);
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 6px 16px rgba(0,0,0,.15);transform:scale(.8);opacity:0;transition:all .3s
+}
+.gallery-card:hover .gallery-zoom-btn{transform:scale(1);opacity:1}
+.gallery-zoom-btn svg{width:18px;height:18px}
+
+.gallery-card-caption{
+  padding:16px 20px;background:#fff;display:flex;align-items:center;justify-content:space-between;gap:12px
+}
+.gallery-card-caption h4{font-size:14px;font-weight:600;color:var(--navy);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.gallery-card-tag{
+  font-size:11px;font-weight:700;letter-spacing:.05em;color:var(--purple);
+  background:var(--lav);padding:4px 10px;border-radius:99px;flex:none
+}
+
+/* LIGHTBOX MODAL */
+.lightbox-modal{
+  position:fixed;inset:0;z-index:5000;background:rgba(18,20,61,.94);
+  backdrop-filter:blur(16px);display:flex;align-items:center;justify-content:center;
+  opacity:0;visibility:hidden;pointer-events:none;transition:opacity .3s var(--ease)
+}
+.lightbox-modal.open{opacity:1;visibility:visible;pointer-events:auto}
+.lightbox-content{
+  position:relative;max-width:90vw;max-height:88vh;display:flex;flex-direction:column;align-items:center
+}
+.lightbox-content img{
+  max-width:100%;max-height:78vh;border-radius:18px;box-shadow:0 30px 80px rgba(0,0,0,.5);object-fit:contain
+}
+.lightbox-caption{
+  margin-top:16px;color:#fff;font-size:15.5px;font-weight:600;text-align:center
+}
+.lightbox-close{
+  position:absolute;top:-48px;right:0;width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.2);color:#fff;display:flex;align-items:center;justify-content:center;
+  cursor:pointer;transition:background .25s
+}
+.lightbox-close:hover{background:rgba(255,255,255,.4)}
+.lightbox-prev,.lightbox-next{
+  position:absolute;top:50%;transform:translateY(-50%);width:48px;height:48px;
+  border-radius:50%;background:rgba(255,255,255,.2);color:#fff;
+  display:flex;align-items:center;justify-content:center;cursor:pointer;transition:background .25s
+}
+.lightbox-prev{left:-64px}
+.lightbox-next{right:-64px}
+.lightbox-prev:hover,.lightbox-next:hover{background:rgba(255,255,255,.4)}
+
+/* CTA BANNER */
+.cta-banner-sec{margin-bottom:80px}
+.cta-banner-box{
+  background:linear-gradient(135deg,var(--navy) 0%,var(--purple) 100%);
+  border-radius:32px;padding:60px 64px;color:#fff;position:relative;overflow:hidden;
+  box-shadow:0 24px 60px rgba(52,37,154,.28);display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap
+}
+.cta-banner-text h2{font-size:clamp(32px,3.8vw,48px);font-weight:600;margin-bottom:12px;line-height:1.15}
+.cta-banner-text p{font-size:16px;color:rgba(255,255,255,.82);max-width:540px}
+.cta-banner-btns{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+
+/* FOOTER */
+.footer{background:var(--navy);color:#fff;padding:80px 0 30px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr 1.2fr;gap:36px;margin-bottom:60px}
+.footer-brand img{height:54px;width:auto;margin-bottom:18px}
+.footer-brand p{font-size:14px;color:rgba(255,255,255,.75);line-height:1.65;margin-bottom:24px}
+.footer-col h4{font-size:17px;font-weight:600;color:#fff;margin-bottom:22px;font-family:'Cormorant Garamond',serif}
+.footer-col ul{display:flex;flex-direction:column;gap:10px}
+.footer-col a{font-size:14px;color:rgba(255,255,255,.75);transition:color .25s}
+.footer-col a:hover{color:#fff}
+.footer-bottom{
+  padding-top:30px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;align-items:center;justify-content:space-between;
+  font-size:13px;color:rgba(255,255,255,.6)
+}
+
+@media(max-width:1080px){
+  .nav,.header-actions .btn-primary{display:none}
+  .hamburger{display:flex}
+  .gallery-hero-grid{grid-template-columns:1fr}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
+  .stats-box{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .lightbox-prev{left:10px}
+  .lightbox-next{right:10px}
+}
+@media(max-width:640px){
+  .header-inner{padding-inline:18px;height:70px}
+  .logo img{height:40px}
+  .gallery-grid{grid-template-columns:1fr}
+  .stats-box{grid-template-columns:1fr}
+  .filter-bar-flex{border-radius:24px}
+  .search-box{width:100%}
+  .cta-banner-box{padding:36px 28px}
+}
+</style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+<div class="topbar">
+  <div class="container">
+    <div class="topbar-info">
+      <a href="tel:+919876543210" aria-label="Helpline number">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span data-i18n="top.phone">+91 98765 43210</span>
+      </a>
+      <a href="mailto:info@shreevasuki.org" aria-label="Email address">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>info@shreevasuki.org</span>
+      </a>
+      <span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        <span data-i18n="top.loc">Rajkot, Gujarat, India</span>
+      </span>
+    </div>
+    <div class="topbar-right">
+      <span class="topbar-tag" data-i18n="top.tag">Vatsalya Group Support Initiative</span>
+    </div>
+  </div>
+</div>
+
+<!-- Header -->
+<header class="header" id="header">
+  <div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Shree Vasuki Charitable Trust — home">
+      <img src="vasuk logo.png" alt="Shree Vasuki Trust Logo">
+    </a>
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+      <a href="about-us.html" data-i18n="nav.about">About Us</a>
+      <a href="vatsalya-group.html" data-i18n="nav.vatsalya">Vatsalya Group</a>
+      <a href="gallery.html" class="active" data-i18n="nav.gallery">Gallery</a>
+      <a href="trustee.html" data-i18n="nav.trustee">Trustee</a>
+      <a href="contact-us.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" class="active" data-lang="en">EN</button>
+        <button type="button" data-lang="gu">ગુ</button>
+      </div>
+      <button class="search-btn" type="button" aria-label="Search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </button>
+      <button class="hamburger" id="hamburger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+  <div class="menu-backdrop" id="menuBackdrop" aria-hidden="true"></div>
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <nav>
+      <a class="mlink" href="index.html">Home</a>
+      <a class="mlink" href="about-us.html">About Us</a>
+      <a class="mlink" href="vatsalya-group.html">Vatsalya Group</a>
+      <a class="mlink" href="gallery.html" style="color:var(--purple);font-weight:700">Gallery</a>
+      <a class="mlink" href="trustee.html">Trustee</a>
+      <a class="mlink" href="contact-us.html">Contact</a>
+    </nav>
+    <div class="mm-actions">
+      <a class="phone-btn" href="tel:+919876543210" style="justify-content:center">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <span>+91 98765 43210</span>
+      </a>
+      <a href="index.html#donate" class="btn btn-primary">Donate Now</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section class="gallery-hero">
+    <div class="container gallery-hero-grid">
+      <div class="gallery-hero-content">
+        <span class="eyebrow">GALLERY</span>
+        <h1>Moments of<br>Compassion</h1>
+        <p>Explore all 87 moments of love, service, and humanitarian impact created by Shree Vasuki Charitable Trust. Every picture tells a story of hope and compassion.</p>
+        <a href="#photo-grid" class="btn btn-primary">
+          Explore All 87 Photos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+      <div class="gallery-hero-collage">
+        <div class="collage-img-wrap"><img src="image/10.jpeg" alt="Elderly woman with puppies"></div>
+        <div class="collage-img-wrap"><img src="image/2.jpeg" alt="Volunteers serving food"></div>
+        <div class="collage-img-wrap"><img src="image/18.jpeg" alt="Children studying"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter Bar & Search Box -->
+  <section class="filter-sec">
+    <div class="container">
+      <div class="filter-bar-flex">
+        <div class="filter-tabs" id="filterTabs">
+          <button class="filter-tab active" data-filter="all">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            All Photos (87)
+          </button>
+          <button class="filter-tab" data-filter="video">
+            🎥 Videos
+          </button>
+          <button class="filter-tab" data-filter="animal">
+            🐾 Animal Welfare
+          </button>
+          <button class="filter-tab" data-filter="community">
+            👥 Community Support
+          </button>
+          <button class="filter-tab" data-filter="health">
+            🍲 Health &amp; Nutrition
+          </button>
+          <button class="filter-tab" data-filter="education">
+            📚 Education
+          </button>
+          <button class="filter-tab" data-filter="events">
+            📅 Events
+          </button>
+        </div>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+          <input type="text" id="searchInput" placeholder="Search photos...">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact Stats Bar -->
+  <section class="stats-sec">
+    <div class="container">
+      <div class="stats-box">
+        
+        <div class="stat-card">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="stat-info">
+            <strong>10000+</strong>
+            <span>Lives Touched</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+          </div>
+          <div class="stat-info">
+            <strong>2500+</strong>
+            <span>Animals Rescued</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8A6 6 0 006 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 01-3.46 0"/></svg>
+          </div>
+          <div class="stat-info">
+            <strong>500+</strong>
+            <span>Food Distribution Drives</span>
+          </div>
+        </div>
+
+        <div class="stat-card">
+          <div class="stat-icon-wrap">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="stat-info">
+            <strong>50+</strong>
+            <span>Events Organized</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery Grid (87 Real Photos) -->
+  <section class="gallery-grid-sec" id="photo-grid">
+    <div class="container">
+      <div class="photo-count-bar">
+        <span>Showing <strong id="visibleCount">87</strong> of 87 Photos</span>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+
+        <!-- Video Card 1 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Janmashtami Special Seva - Live Video" data-video="vidoes/janmashtami.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/janmashtami.mp4" muted loop playsinline poster="home page banner.png" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Janmashtami Special Seva</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Janmashtami Special Seva — Live Video</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Elder Care & Compassion - Video Seva 2" data-video="vidoes/2.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/2.mp4" muted loop playsinline poster="banner section 2.png" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Elder Care & Compassion</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Elder Care & Compassion — Video Seva 2</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 3 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Daily Food Seva & Serving - Video Seva 3" data-video="vidoes/3.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/3.mp4" muted loop playsinline poster="banner sction 3.png" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Daily Food Seva</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Daily Food Seva & Serving — Video Seva 3</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 4 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Vatsalya Vrudhashram Moments - Video Seva 4" data-video="vidoes/4.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/4.mp4" muted loop playsinline poster="banner section 4.png" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Vatsalya Vrudhashram Moments</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Vatsalya Vrudhashram Moments — Video Seva 4</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 5 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Dignified Elder Care & Warmth - Video Seva 5" data-video="vidoes/5.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/5.mp4" muted loop playsinline poster="image/21.jpeg" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Elder Care & Warmth</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Dignified Elder Care & Warmth — Video Seva 5</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 6 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Community Seva & Support - Video Seva 6" data-video="vidoes/6.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/6.mp4" muted loop playsinline poster="image/38.jpeg" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Community Seva</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Seva & Support — Video Seva 6</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Video Card 7 -->
+        <div class="gallery-card video-card" data-category="video" data-title="Special Celebrations with Elders - Video Seva 7" data-video="vidoes/7.mp4">
+          <div class="gallery-card-img" style="position:relative;">
+            <video src="vidoes/7.mp4" muted loop playsinline poster="image/54.jpeg" style="width:100%;height:100%;object-fit:cover;"></video>
+            <div class="gallery-overlay">Play Video — Celebrations with Elders</div>
+            <div class="video-play-badge" style="position:absolute;top:12px;left:12px;z-index:3;background:rgba(52,37,154,.9);color:#fff;padding:6px 14px;border-radius:999px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:6px;border:1px solid rgba(255,255,255,.3);">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg> Video Seva
+            </div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Special Celebrations with Elders — Video Seva 7</h4>
+            <span class="gallery-card-tag" style="background:#4B3BC5;color:#fff;">🎥 Video Seva</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 1 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #1">
+          <div class="gallery-card-img">
+            <img src="image/gau_seva.png" alt="Animal Welfare & Gau Seva - Photo #1" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #1</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #1</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 2 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #1">
+          <div class="gallery-card-img">
+            <img src="image/1.jpeg" alt="Free Food & Meal Serving Drive - Photo #1" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #1</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #1</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 3 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #2">
+          <div class="gallery-card-img">
+            <img src="image/2.jpeg" alt="Free Food & Meal Serving Drive - Photo #2" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #2</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #2</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 4 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #3">
+          <div class="gallery-card-img">
+            <img src="image/3.jpeg" alt="Free Food & Meal Serving Drive - Photo #3" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #3</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #3</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 5 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #4">
+          <div class="gallery-card-img">
+            <img src="image/4.jpeg" alt="Free Food & Meal Serving Drive - Photo #4" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #4</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #4</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 6 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #5">
+          <div class="gallery-card-img">
+            <img src="image/5.jpeg" alt="Free Food & Meal Serving Drive - Photo #5" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #5</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #5</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 7 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #6">
+          <div class="gallery-card-img">
+            <img src="image/6.jpeg" alt="Free Food & Meal Serving Drive - Photo #6" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #6</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #6</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 8 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #7">
+          <div class="gallery-card-img">
+            <img src="image/7.jpeg" alt="Free Food & Meal Serving Drive - Photo #7" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #7</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #7</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 9 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #8">
+          <div class="gallery-card-img">
+            <img src="image/8.jpeg" alt="Free Food & Meal Serving Drive - Photo #8" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #8</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #8</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 10 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #9">
+          <div class="gallery-card-img">
+            <img src="image/9.jpeg" alt="Free Food & Meal Serving Drive - Photo #9" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #9</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #9</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 11 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #10">
+          <div class="gallery-card-img">
+            <img src="image/10.jpeg" alt="Animal Welfare & Gau Seva - Photo #10" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #10</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #10</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 12 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #11">
+          <div class="gallery-card-img">
+            <img src="image/11.jpeg" alt="Animal Welfare & Gau Seva - Photo #11" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #11</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #11</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 13 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #12">
+          <div class="gallery-card-img">
+            <img src="image/12.jpeg" alt="Animal Welfare & Gau Seva - Photo #12" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #12</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #12</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 14 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #13">
+          <div class="gallery-card-img">
+            <img src="image/13.jpeg" alt="Animal Welfare & Gau Seva - Photo #13" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #13</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #13</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 15 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #14">
+          <div class="gallery-card-img">
+            <img src="image/14.jpeg" alt="Animal Welfare & Gau Seva - Photo #14" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #14</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #14</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 16 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #15">
+          <div class="gallery-card-img">
+            <img src="image/15.jpeg" alt="Free Food & Meal Serving Drive - Photo #15" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #15</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #15</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 17 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #16">
+          <div class="gallery-card-img">
+            <img src="image/16.jpeg" alt="Free Food & Meal Serving Drive - Photo #16" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #16</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #16</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 18 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #17">
+          <div class="gallery-card-img">
+            <img src="image/17.jpeg" alt="Free Food & Meal Serving Drive - Photo #17" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #17</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #17</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 19 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #18">
+          <div class="gallery-card-img">
+            <img src="image/18.jpeg" alt="Free Food & Meal Serving Drive - Photo #18" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #18</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #18</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 20 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #19">
+          <div class="gallery-card-img">
+            <img src="image/19.jpeg" alt="Free Food & Meal Serving Drive - Photo #19" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #19</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #19</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 21 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #20">
+          <div class="gallery-card-img">
+            <img src="image/20.jpeg" alt="Free Food & Meal Serving Drive - Photo #20" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #20</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #20</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 22 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #21">
+          <div class="gallery-card-img">
+            <img src="image/21.jpeg" alt="Free Food & Meal Serving Drive - Photo #21" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #21</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #21</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 23 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #23">
+          <div class="gallery-card-img">
+            <img src="image/23.jpeg" alt="Free Food & Meal Serving Drive - Photo #23" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #23</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #23</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 24 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #24">
+          <div class="gallery-card-img">
+            <img src="image/24.jpeg" alt="Free Food & Meal Serving Drive - Photo #24" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #24</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #24</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 25 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #25">
+          <div class="gallery-card-img">
+            <img src="image/25.jpeg" alt="Student Support & Literacy Drive - Photo #25" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #25</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #25</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 26 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #26">
+          <div class="gallery-card-img">
+            <img src="image/26.jpeg" alt="Student Support & Literacy Drive - Photo #26" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #26</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #26</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 27 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #27">
+          <div class="gallery-card-img">
+            <img src="image/27.jpeg" alt="Student Support & Literacy Drive - Photo #27" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #27</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #27</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 28 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #28">
+          <div class="gallery-card-img">
+            <img src="image/28.jpeg" alt="Student Support & Literacy Drive - Photo #28" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #28</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #28</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 29 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #29">
+          <div class="gallery-card-img">
+            <img src="image/29.jpeg" alt="Student Support & Literacy Drive - Photo #29" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #29</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #29</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 30 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #30">
+          <div class="gallery-card-img">
+            <img src="image/30.jpeg" alt="Student Support & Literacy Drive - Photo #30" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #30</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #30</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 31 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #31">
+          <div class="gallery-card-img">
+            <img src="image/31.jpeg" alt="Student Support & Literacy Drive - Photo #31" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #31</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #31</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 32 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #32">
+          <div class="gallery-card-img">
+            <img src="image/32.jpeg" alt="Student Support & Literacy Drive - Photo #32" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #32</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #32</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 33 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #33">
+          <div class="gallery-card-img">
+            <img src="image/33.jpeg" alt="Student Support & Literacy Drive - Photo #33" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #33</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #33</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 34 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #34">
+          <div class="gallery-card-img">
+            <img src="image/34.jpeg" alt="Student Support & Literacy Drive - Photo #34" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #34</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #34</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 35 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #35">
+          <div class="gallery-card-img">
+            <img src="image/35.jpeg" alt="Student Support & Literacy Drive - Photo #35" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #35</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #35</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 36 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #36">
+          <div class="gallery-card-img">
+            <img src="image/36.jpeg" alt="Community Welfare & Outreach - Photo #36" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #36</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #36</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 37 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #37">
+          <div class="gallery-card-img">
+            <img src="image/37.jpeg" alt="Community Welfare & Outreach - Photo #37" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #37</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #37</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 38 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #38">
+          <div class="gallery-card-img">
+            <img src="image/38.jpeg" alt="Community Welfare & Outreach - Photo #38" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #38</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #38</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 39 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #39">
+          <div class="gallery-card-img">
+            <img src="image/39.jpeg" alt="Community Welfare & Outreach - Photo #39" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #39</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #39</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 40 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #40">
+          <div class="gallery-card-img">
+            <img src="image/40.jpeg" alt="Community Welfare & Outreach - Photo #40" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #40</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #40</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 41 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #41">
+          <div class="gallery-card-img">
+            <img src="image/41.jpeg" alt="Community Welfare & Outreach - Photo #41" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #41</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #41</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 42 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #42">
+          <div class="gallery-card-img">
+            <img src="image/42.jpeg" alt="Community Welfare & Outreach - Photo #42" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #42</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #42</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 43 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #43">
+          <div class="gallery-card-img">
+            <img src="image/43.jpeg" alt="Community Welfare & Outreach - Photo #43" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #43</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #43</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 44 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #44">
+          <div class="gallery-card-img">
+            <img src="image/44.jpeg" alt="Community Welfare & Outreach - Photo #44" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #44</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #44</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 45 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #45">
+          <div class="gallery-card-img">
+            <img src="image/45.jpeg" alt="Community Welfare & Outreach - Photo #45" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #45</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #45</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 46 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #46">
+          <div class="gallery-card-img">
+            <img src="image/46.jpeg" alt="Community Welfare & Outreach - Photo #46" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #46</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #46</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 47 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #47">
+          <div class="gallery-card-img">
+            <img src="image/47.jpeg" alt="Community Welfare & Outreach - Photo #47" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #47</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #47</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 48 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #48">
+          <div class="gallery-card-img">
+            <img src="image/48.jpeg" alt="Community Welfare & Outreach - Photo #48" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #48</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #48</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 49 -->
+        <div class="gallery-card" data-category="community" data-title="Community Welfare & Outreach - Photo #49">
+          <div class="gallery-card-img">
+            <img src="image/49.jpeg" alt="Community Welfare & Outreach - Photo #49" loading="lazy">
+            <div class="gallery-overlay">Community Welfare & Outreach - Photo #49</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Community Welfare & Outreach - Photo #49</h4>
+            <span class="gallery-card-tag">Community Support</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 50 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #50">
+          <div class="gallery-card-img">
+            <img src="image/50.jpeg" alt="Animal Welfare & Gau Seva - Photo #50" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #50</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #50</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 51 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #51">
+          <div class="gallery-card-img">
+            <img src="image/51.jpeg" alt="Animal Welfare & Gau Seva - Photo #51" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #51</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #51</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 52 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #52">
+          <div class="gallery-card-img">
+            <img src="image/52.jpeg" alt="Animal Welfare & Gau Seva - Photo #52" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #52</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #52</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 53 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #53">
+          <div class="gallery-card-img">
+            <img src="image/53.jpeg" alt="Animal Welfare & Gau Seva - Photo #53" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #53</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #53</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 54 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #54">
+          <div class="gallery-card-img">
+            <img src="image/54.jpeg" alt="Animal Welfare & Gau Seva - Photo #54" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #54</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #54</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 55 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #55">
+          <div class="gallery-card-img">
+            <img src="image/55.jpeg" alt="Animal Welfare & Gau Seva - Photo #55" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #55</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #55</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 56 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #56">
+          <div class="gallery-card-img">
+            <img src="image/56.jpeg" alt="Animal Welfare & Gau Seva - Photo #56" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #56</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #56</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 57 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #57">
+          <div class="gallery-card-img">
+            <img src="image/57.jpeg" alt="Animal Welfare & Gau Seva - Photo #57" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #57</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #57</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 58 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #58">
+          <div class="gallery-card-img">
+            <img src="image/58.jpeg" alt="Animal Welfare & Gau Seva - Photo #58" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #58</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #58</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 59 -->
+        <div class="gallery-card" data-category="events" data-title="Trust Activity & Volunteer Event - Photo #59">
+          <div class="gallery-card-img">
+            <img src="image/59.jpeg" alt="Trust Activity & Volunteer Event - Photo #59" loading="lazy">
+            <div class="gallery-overlay">Trust Activity & Volunteer Event - Photo #59</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Trust Activity & Volunteer Event - Photo #59</h4>
+            <span class="gallery-card-tag">Events</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 60 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #60">
+          <div class="gallery-card-img">
+            <img src="image/60.jpeg" alt="Free Food & Meal Serving Drive - Photo #60" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #60</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #60</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 61 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #61">
+          <div class="gallery-card-img">
+            <img src="image/61.jpeg" alt="Free Food & Meal Serving Drive - Photo #61" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #61</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #61</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 62 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #62">
+          <div class="gallery-card-img">
+            <img src="image/62.jpeg" alt="Free Food & Meal Serving Drive - Photo #62" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #62</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #62</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 63 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #63">
+          <div class="gallery-card-img">
+            <img src="image/63.jpeg" alt="Free Food & Meal Serving Drive - Photo #63" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #63</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #63</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 64 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #64">
+          <div class="gallery-card-img">
+            <img src="image/64.jpeg" alt="Free Food & Meal Serving Drive - Photo #64" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #64</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #64</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 65 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #65">
+          <div class="gallery-card-img">
+            <img src="image/65.jpeg" alt="Free Food & Meal Serving Drive - Photo #65" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #65</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #65</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 66 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #66">
+          <div class="gallery-card-img">
+            <img src="image/66.jpeg" alt="Free Food & Meal Serving Drive - Photo #66" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #66</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #66</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 67 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #67">
+          <div class="gallery-card-img">
+            <img src="image/67.jpeg" alt="Free Food & Meal Serving Drive - Photo #67" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #67</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #67</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 68 -->
+        <div class="gallery-card" data-category="health" data-title="Free Food & Meal Serving Drive - Photo #68">
+          <div class="gallery-card-img">
+            <img src="image/68.jpeg" alt="Free Food & Meal Serving Drive - Photo #68" loading="lazy">
+            <div class="gallery-overlay">Free Food & Meal Serving Drive - Photo #68</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Free Food & Meal Serving Drive - Photo #68</h4>
+            <span class="gallery-card-tag">Health & Nutrition</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 69 -->
+        <div class="gallery-card" data-category="events" data-title="Trust Activity & Volunteer Event - Photo #69">
+          <div class="gallery-card-img">
+            <img src="image/69.jpeg" alt="Trust Activity & Volunteer Event - Photo #69" loading="lazy">
+            <div class="gallery-overlay">Trust Activity & Volunteer Event - Photo #69</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Trust Activity & Volunteer Event - Photo #69</h4>
+            <span class="gallery-card-tag">Events</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 70 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #70">
+          <div class="gallery-card-img">
+            <img src="image/70.jpeg" alt="Student Support & Literacy Drive - Photo #70" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #70</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #70</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 71 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #71">
+          <div class="gallery-card-img">
+            <img src="image/71.jpeg" alt="Student Support & Literacy Drive - Photo #71" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #71</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #71</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 72 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #72">
+          <div class="gallery-card-img">
+            <img src="image/72.jpeg" alt="Student Support & Literacy Drive - Photo #72" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #72</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #72</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 73 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #73">
+          <div class="gallery-card-img">
+            <img src="image/73.jpeg" alt="Student Support & Literacy Drive - Photo #73" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #73</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #73</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 74 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #74">
+          <div class="gallery-card-img">
+            <img src="image/74.jpeg" alt="Student Support & Literacy Drive - Photo #74" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #74</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #74</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 75 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #75">
+          <div class="gallery-card-img">
+            <img src="image/75.jpeg" alt="Student Support & Literacy Drive - Photo #75" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #75</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #75</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 76 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #76">
+          <div class="gallery-card-img">
+            <img src="image/76.jpeg" alt="Student Support & Literacy Drive - Photo #76" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #76</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #76</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 77 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #77">
+          <div class="gallery-card-img">
+            <img src="image/77.jpeg" alt="Student Support & Literacy Drive - Photo #77" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #77</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #77</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 78 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #78">
+          <div class="gallery-card-img">
+            <img src="image/78.jpeg" alt="Student Support & Literacy Drive - Photo #78" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #78</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #78</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 79 -->
+        <div class="gallery-card" data-category="education" data-title="Student Support & Literacy Drive - Photo #79">
+          <div class="gallery-card-img">
+            <img src="image/79.jpeg" alt="Student Support & Literacy Drive - Photo #79" loading="lazy">
+            <div class="gallery-overlay">Student Support & Literacy Drive - Photo #79</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Student Support & Literacy Drive - Photo #79</h4>
+            <span class="gallery-card-tag">Education</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 80 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #80">
+          <div class="gallery-card-img">
+            <img src="image/80.jpeg" alt="Animal Welfare & Gau Seva - Photo #80" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #80</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #80</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 81 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #81">
+          <div class="gallery-card-img">
+            <img src="image/81.jpeg" alt="Animal Welfare & Gau Seva - Photo #81" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #81</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #81</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 82 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #82">
+          <div class="gallery-card-img">
+            <img src="image/82.jpeg" alt="Animal Welfare & Gau Seva - Photo #82" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #82</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #82</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 83 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #83">
+          <div class="gallery-card-img">
+            <img src="image/83.jpeg" alt="Animal Welfare & Gau Seva - Photo #83" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #83</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #83</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 84 -->
+        <div class="gallery-card" data-category="animal" data-title="Animal Welfare & Gau Seva - Photo #84">
+          <div class="gallery-card-img">
+            <img src="image/84.jpeg" alt="Animal Welfare & Gau Seva - Photo #84" loading="lazy">
+            <div class="gallery-overlay">Animal Welfare & Gau Seva - Photo #84</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Animal Welfare & Gau Seva - Photo #84</h4>
+            <span class="gallery-card-tag">Animal Welfare</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 85 -->
+        <div class="gallery-card" data-category="events" data-title="Trust Activity & Volunteer Event - Photo #91">
+          <div class="gallery-card-img">
+            <img src="image/91.jpeg" alt="Trust Activity & Volunteer Event - Photo #91" loading="lazy">
+            <div class="gallery-overlay">Trust Activity & Volunteer Event - Photo #91</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Trust Activity & Volunteer Event - Photo #91</h4>
+            <span class="gallery-card-tag">Events</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 86 -->
+        <div class="gallery-card" data-category="events" data-title="Trust Activity & Volunteer Event - Photo #92">
+          <div class="gallery-card-img">
+            <img src="image/92.jpeg" alt="Trust Activity & Volunteer Event - Photo #92" loading="lazy">
+            <div class="gallery-overlay">Trust Activity & Volunteer Event - Photo #92</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Trust Activity & Volunteer Event - Photo #92</h4>
+            <span class="gallery-card-tag">Events</span>
+          </div>
+        </div>
+
+        <!-- Photo Card 87 -->
+        <div class="gallery-card" data-category="events" data-title="Trust Activity & Volunteer Event - Photo #93">
+          <div class="gallery-card-img">
+            <img src="image/93.jpeg" alt="Trust Activity & Volunteer Event - Photo #93" loading="lazy">
+            <div class="gallery-overlay">Trust Activity & Volunteer Event - Photo #93</div>
+            <div class="gallery-zoom-btn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            </div>
+          </div>
+          <div class="gallery-card-caption">
+            <h4>Trust Activity & Volunteer Event - Photo #93</h4>
+            <span class="gallery-card-tag">Events</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call To Action Banner -->
+  <section class="container cta-banner-sec">
+    <div class="cta-banner-box">
+      <div class="cta-banner-text">
+        <span class="eyebrow" style="color:rgba(255,255,255,.8)">BE A PART OF OUR JOURNEY</span>
+        <h2>Together, We Can<br>Create a Better Tomorrow</h2>
+        <p>Your support helps us continue our mission and bring hope to those who need it the most.</p>
+      </div>
+      <div class="cta-banner-btns">
+        <a href="#donate" class="btn btn-white">
+          Donate Now
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="contact-us.html" class="btn btn-outline" style="border-color:#fff;color:#fff;">
+          Volunteer With Us
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <div class="footer-brand">
+          <img src="vasuk logo.png" alt="Shree Vasuki Trust Logo">
+          <p>Dedicated to the welfare of people and animals, working together to build a compassionate and better tomorrow.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-us.html">About Us</a></li>
+            <li><a href="trustee.html">Trustee</a></li>
+            <li><a href="index.html#focus">Our Work</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="index.html#news">News &amp; Events</a></li>
+            <li><a href="contact-us.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Our Work</h4>
+          <ul>
+            <li><a href="#">Cow &amp; Animal Welfare</a></li>
+            <li><a href="#">Community Support</a></li>
+            <li><a href="#">Health &amp; Nutrition</a></li>
+            <li><a href="#">Education Support</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Support Us</h4>
+          <ul>
+            <li><a href="#">Donate Now</a></li>
+            <li><a href="#">Volunteer</a></li>
+            <li><a href="#">Sponsor a Program</a></li>
+            <li><a href="#">Corporate Partnership</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <ul>
+            <li>123, Vasuki Trust Road,<br>Varanasi, Uttar Pradesh – 221001</li>
+            <li><a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><a href="mailto:info@shreevasukitrust.org">info@shreevasukitrust.org</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Shree Vasuki Trust. All Rights Reserved.</p>
+        <p>Designed with ❤️ for a better world</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Lightbox Modal Container -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <div class="lightbox-content">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close modal">✕</button>
+      <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous photo">❮</button>
+      <button class="lightbox-next" id="lightboxNext" aria-label="Next photo">❯</button>
+      <img id="lightboxImg" src="" alt="">
+      <div class="lightbox-caption" id="lightboxCaption"></div>
+    </div>
+  </div>
+
+  <!-- Interactive Filtering & Lightbox Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const filterTabs = document.querySelectorAll('.filter-tab');
+      const galleryCards = document.querySelectorAll('.gallery-card');
+      const searchInput = document.getElementById('searchInput');
+      const visibleCountEl = document.getElementById('visibleCount');
+
+      // Filter functionality
+      filterTabs.forEach(tab => {
+        tab.addEventListener('click', function() {
+          filterTabs.forEach(t => t.classList.remove('active'));
+          this.classList.add('active');
+
+          const filter = this.getAttribute('data-filter');
+          filterGallery(filter, searchInput ? searchInput.value.toLowerCase().trim() : '');
+        });
+      });
+
+      // Search functionality
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const activeTab = document.querySelector('.filter-tab.active');
+          const filter = activeTab ? activeTab.getAttribute('data-filter') : 'all';
+          filterGallery(filter, this.value.toLowerCase().trim());
+        });
+      }
+
+      function filterGallery(filter, query) {
+        let count = 0;
+        galleryCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          const hasVideo = card.hasAttribute('data-video');
+          const title = card.getAttribute('data-title').toLowerCase();
+          const matchesFilter = (filter === 'all' || category === filter || (filter === 'video' && hasVideo));
+          const matchesQuery = (!query || title.includes(query));
+
+          if (matchesFilter && matchesQuery) {
+            card.style.display = 'flex';
+            count++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+        if (visibleCountEl) visibleCountEl.textContent = count;
+      }
+
+      // Lightbox functionality
+      const lightboxModal = document.getElementById('lightboxModal');
+      const lightboxImg = document.getElementById('lightboxImg');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lightboxPrev = document.getElementById('lightboxPrev');
+      const lightboxNext = document.getElementById('lightboxNext');
+
+      let currentVisibleCards = [];
+      let currentIndex = 0;
+
+      galleryCards.forEach((card) => {
+        card.addEventListener('click', function() {
+          currentVisibleCards = Array.from(galleryCards).filter(c => c.style.display !== 'none');
+          currentIndex = currentVisibleCards.indexOf(card);
+          if (currentIndex !== -1) {
+            openLightbox(currentIndex);
+          }
+        });
+      });
+
+      function openLightbox(index) {
+        if (currentVisibleCards.length === 0) return;
+        const card = currentVisibleCards[index];
+        const videoSrc = card.getAttribute('data-video');
+        const title = card.getAttribute('data-title');
+        let lightboxVideo = document.getElementById('lightboxVideo');
+        if (!lightboxVideo) {
+          lightboxVideo = document.createElement('video');
+          lightboxVideo.id = 'lightboxVideo';
+          lightboxVideo.controls = true;
+          lightboxVideo.style.cssText = 'display:none;max-width:min(1100px,92vw);max-height:82vh;border-radius:12px;outline:none;background:#000;';
+          lightboxImg.parentNode.insertBefore(lightboxVideo, lightboxCaption);
+        }
+
+        if (videoSrc) {
+          lightboxImg.style.display = 'none';
+          lightboxVideo.style.display = 'block';
+          lightboxVideo.src = videoSrc;
+          lightboxVideo.play().catch(()=>{});
+        } else {
+          lightboxVideo.pause();
+          lightboxVideo.style.display = 'none';
+          lightboxImg.style.display = 'block';
+          const img = card.querySelector('img');
+          if (img) lightboxImg.src = img.src;
+        }
+
+        lightboxCaption.textContent = title + ` (${index + 1} of ${currentVisibleCards.length})`;
+        lightboxModal.classList.add('open');
+      }
+
+      function closeLightbox() {
+        lightboxModal.classList.remove('open');
+        const lightboxVideo = document.getElementById('lightboxVideo');
+        if (lightboxVideo) lightboxVideo.pause();
+      }
+
+      if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+
+      if (lightboxModal) {
+        lightboxModal.addEventListener('click', function(e) {
+          if (e.target === lightboxModal) closeLightbox();
+        });
+      }
+
+      if (lightboxPrev) {
+        lightboxPrev.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (currentVisibleCards.length === 0) return;
+          currentIndex = (currentIndex - 1 + currentVisibleCards.length) % currentVisibleCards.length;
+          openLightbox(currentIndex);
+        });
+      }
+
+      if (lightboxNext) {
+        lightboxNext.addEventListener('click', function(e) {
+          e.stopPropagation();
+          if (currentVisibleCards.length === 0) return;
+          currentIndex = (currentIndex + 1) % currentVisibleCards.length;
+          openLightbox(currentIndex);
+        });
+      }
+
+      // Mobile Menu toggle
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const menuBackdrop = document.getElementById('menuBackdrop');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+          const isOpen = mobileMenu.classList.toggle('open');
+          hamburger.classList.toggle('open', isOpen);
+          if (menuBackdrop) menuBackdrop.classList.toggle('show', isOpen);
+          document.body.style.overflow = isOpen ? 'hidden' : '';
+        });
+        if (menuBackdrop) {
+          menuBackdrop.addEventListener('click', function() {
+            mobileMenu.classList.remove('open');
+            hamburger.classList.remove('open');
+            menuBackdrop.classList.remove('show');
+            document.body.style.overflow = '';
+          });
+        }
+      }
+
+      // Language Switcher
+      const galleryI18N = {
+        en: {
+          'top.phone': '+91 98765 43210',
+          'top.loc': 'Rajkot, Gujarat, India',
+          'top.tag': 'Vatsalya Group Support Initiative',
+          'nav.home': 'Home',
+          'nav.about': 'About Us',
+          'nav.work': 'Our Work',
+          'nav.vatsalya': 'Vatsalya Group',
+          'nav.gallery': 'Gallery',
+          'nav.trustee': 'Trustee',
+          'nav.contact': 'Contact'
+        },
+        gu: {
+          'top.phone': '+91 98765 43210',
+          'top.loc': 'રાજકોટ, ગુજરાત, ભારત',
+          'top.tag': 'વાત્સલ્ય ગ્રુપ સહાય પહેલ',
+          'nav.home': 'હોમ',
+          'nav.about': 'અમારા વિશે',
+          'nav.work': 'અમારું કાર્ય',
+          'nav.vatsalya': 'વાત્સલ્ય ગ્રુપ',
+          'nav.gallery': 'ગેલેરી',
+          'nav.trustee': 'ટ્રસ્ટી',
+          'nav.contact': 'સંપર્ક'
+        }
+      };
+
+      function setLang(lang) {
+        document.documentElement.lang = lang;
+        localStorage.setItem('site_lang', lang);
+        document.querySelectorAll('.lang-switch button').forEach(b => {
+          b.classList.toggle('active', b.dataset.lang === lang);
+        });
+        const dict = galleryI18N[lang] || galleryI18N.en;
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.dataset.i18n;
+          if (dict[key]) el.textContent = dict[key];
+        });
+      }
+
+      document.querySelectorAll('.lang-switch button').forEach(btn => {
+        btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      });
+
+      const savedLang = localStorage.getItem('site_lang') || localStorage.getItem('svct-lang') || 'en';
+      if (savedLang !== 'en') setLang(savedLang);
+    });
+  </script>
+</body>
+</html>
