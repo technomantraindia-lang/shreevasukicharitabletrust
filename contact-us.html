@@ -545,35 +545,39 @@ h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-s
         <h2>Send Us a Message</h2>
         <p class="sub">Have a question or want to get involved? Fill out the form and our team will get back to you.</p>
         
-        <form action="#" method="POST">
+        <form action="https://formsubmit.co/devilsun807@gmail.com" method="POST" id="contactForm">
+          <input type="hidden" name="_subject" value="New Website Inquiry - Shree Vasuki Charitable Trust">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
           <div class="form-grid-2">
             <div class="field-group">
               <label>Your Name *</label>
-              <input type="text" placeholder="John Doe" required>
+              <input type="text" id="userName" name="name" placeholder="John Doe" required>
             </div>
             <div class="field-group">
               <label>Your Email *</label>
-              <input type="email" placeholder="john@example.com" required>
+              <input type="email" id="userEmail" name="email" placeholder="john@example.com" required>
             </div>
           </div>
           <div class="form-grid-2">
             <div class="field-group">
               <label>Phone Number</label>
-              <input type="tel" placeholder="+91 98765 43210">
+              <input type="tel" id="userPhone" name="phone" placeholder="+91 98765 43210">
             </div>
             <div class="field-group">
               <label>Subject *</label>
-              <input type="text" placeholder="General Inquiry" required>
+              <input type="text" id="userSubject" name="subject" placeholder="General Inquiry" required>
             </div>
           </div>
           <div class="field-group">
-            <label>Your Message *</label>
-            <textarea rows="5" placeholder="How can we help you?" required></textarea>
+            <label>Your Message / Description *</label>
+            <textarea id="userMessage" name="message" rows="5" placeholder="How can we help you?" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary">
-            Send Message
+          <button type="submit" class="btn btn-primary" id="submitBtn">
+            <span>Send Message</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </button>
+          <div id="formAlert" style="display:none; margin-top:15px; padding:12px 16px; border-radius:8px; font-weight:500; font-size:0.95rem;"></div>
         </form>
       </div>
 
@@ -800,6 +804,96 @@ h1,h2,h3,.serif{font-family:'Cormorant Garamond',serif;line-height:1.15;letter-s
 
     const savedLang = localStorage.getItem('site_lang') || localStorage.getItem('svct-lang') || 'en';
     if (savedLang !== 'en') setLang(savedLang);
+
+    // Mobile-optimized SMTP & Email Submission Handler for devilsun807@gmail.com
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+      contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = document.getElementById('submitBtn');
+        const formAlert = document.getElementById('formAlert');
+        const originalBtnHtml = submitBtn.innerHTML;
+        
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Sending Message...</span>';
+        formAlert.style.display = 'none';
+
+        const nameVal = (document.getElementById('userName') ? document.getElementById('userName').value : '').trim();
+        const emailVal = (document.getElementById('userEmail') ? document.getElementById('userEmail').value : '').trim();
+        const phoneVal = (document.getElementById('userPhone') ? document.getElementById('userPhone').value : '').trim() || 'N/A';
+        const subjectVal = (document.getElementById('userSubject') ? document.getElementById('userSubject').value : '').trim();
+        const messageVal = (document.getElementById('userMessage') ? document.getElementById('userMessage').value : '').trim();
+
+        const payload = {
+          "Full Name": nameVal,
+          "Email Address": emailVal,
+          "Phone Number": phoneVal,
+          "Subject": subjectVal,
+          "Message Description": messageVal,
+          "name": nameVal,
+          "email": emailVal,
+          "phone": phoneVal,
+          "subject": subjectVal,
+          "message": messageVal,
+          "_subject": "New Website Inquiry from " + nameVal,
+          "_template": "table",
+          "_captcha": "false"
+        };
+
+        const targetEndpoint = window.location.protocol.startsWith('http') ? 'send-mail.php' : 'https://formsubmit.co/ajax/devilsun807@gmail.com';
+
+        fetch(targetEndpoint, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify(payload)
+        })
+        .then(response => response.json())
+        .then(data => {
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = originalBtnHtml;
+          formAlert.style.display = 'block';
+          formAlert.style.background = '#d1fae5';
+          formAlert.style.color = '#065f46';
+          formAlert.style.border = '1px solid #a7f3d0';
+          formAlert.innerHTML = '✔ Success! All details (Full Name, Email, Phone, Subject, Description) sent to <strong>devilsun807@gmail.com</strong>.';
+          contactForm.reset();
+        })
+        .catch(error => {
+          // Mobile Fallback: Try FormSubmit AJAX JSON directly
+          fetch('https://formsubmit.co/ajax/devilsun807@gmail.com', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Accept': 'application/json'
+            },
+            body: JSON.stringify(payload)
+          })
+          .then(res => res.json())
+          .then(data => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+            formAlert.style.display = 'block';
+            formAlert.style.background = '#d1fae5';
+            formAlert.style.color = '#065f46';
+            formAlert.style.border = '1px solid #a7f3d0';
+            formAlert.innerHTML = '✔ Success! All details sent to <strong>devilsun807@gmail.com</strong>.';
+            contactForm.reset();
+          })
+          .catch(err => {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnHtml;
+            formAlert.style.display = 'block';
+            formAlert.style.background = '#fee2e2';
+            formAlert.style.color = '#991b1b';
+            formAlert.style.border = '1px solid #fca5a5';
+            formAlert.innerHTML = '✖ Email delivery failed. Please email directly to devilsun807@gmail.com.';
+          });
+        });
+      });
+    }
   </script>
   </footer>
 

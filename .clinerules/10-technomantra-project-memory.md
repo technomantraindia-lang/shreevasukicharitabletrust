@@ -5,8 +5,8 @@
 - Workspace: shreevasukicharitabletrust
 - Technology: HTML/CSS/JavaScript
 - Active file at refresh: None
-- Local code graph: 2 files · 0 edges · 0 matched flows
-- Refreshed: 2026-08-24T07:08:24.604Z
+- Local code graph: 12 files · 0 edges · 0 matched flows
+- Refreshed: 2026-09-07T09:18:09.064Z
 
 ## Framework Intelligence (V4.7.8)
 - Profiles: html-static
@@ -15,10 +15,12 @@
 - index.html
 
 ## Recently edited files
-- index.html
+- None recorded yet
 
 ## High-value project files
 - index.html
+- gallery-page.html
+- trustee-page.html
 - .claude/agents/kfc/spec-design.md
 - .claude/agents/kfc/spec-impl.md
 - .claude/agents/kfc/spec-judge.md
@@ -41,4 +43,12 @@
 - .clinerules/technomantra-team-learning.md
 - .vscode/settings.json
 - .vscode/technomantra-project.json
+- about-us.html
+- contact-us.html
+- contact.html
+- gallery.html
 - index.backup-before-hero.html
+- trustee.html
+- vatsalya-group.html
+- vatsalya.html
+- vatsalyagroup.html

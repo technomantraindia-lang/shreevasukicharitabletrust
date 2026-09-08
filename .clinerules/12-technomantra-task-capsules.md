@@ -13,25 +13,22 @@ This workspace uses task capsules so developers can run parallel development wit
 ## Active capsule snapshot
 The extension refreshes this file automatically. Prefer its concise state over old chat history when resuming.
 
-- Capsule ID: tm-cap-744b9f0f085eabe5af63a281
+- Capsule ID: tm-cap-85cb1d02e49766f325f0ca09
 - Isolation: task-capsule-v411
-- Workspace ID: tm-ws-a5ea35e046bd2f99083eaa12
-- Window ID: tm-win-ae8da3ec950ea51430845594
+- Workspace ID: tm-ws-4d8d836ed7fa672b373569c1
+- Window ID: tm-win-4149b24c4f5c432481f56b8f
 - Project: shreevasukicharitabletrust
 - Framework: 
 - Developer mode: smart
 - Model mode: paid/manual
-- Active file: fix_hero.ps1
+- Active file: none
 - Objective: Current developer prompt in this workspace/window only.
 - Blocker: none
 - Next action: Inspect current prompt and workspace evidence before editing.
 
 ## Touched files in this capsule
-- fix_hero.ps1
 
 ## Recent files in this workspace/window
-- fix_hero.ps1
-- index.html
 
 ## Hard rule
 If a file, goal, screenshot, terminal output, or decision is not connected to this capsule, do not use it for the current task.
